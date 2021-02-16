@@ -134,11 +134,10 @@
 
               var object =  JSON.parse(data); 
                 console.log(object);
-                /* var O7ESNM = object; 
-                    if (O7ESNM != "") {
-                            var PWSLMN = object.PWSLMN 
-                            var PWPSWD = object.PWPSWD  
-                            var a = "http://mail.smcthai.co.th:8082/PJ_MAIL/smc/index.php/auth/user/"+PWSLMN+"/"+PWPSWD ;
+                 var Id = object; 
+                    if (Id != "") {
+                            var PositionID = object.PositionID  
+                            var a = "https://projectmanage.webclient.me/index.php/home/summary/"+PositionID ;
                               
                  location.replace(a); 
 
@@ -147,7 +146,7 @@
                              alert("Please Login again"); 
                               $("#username").val("");  
                               $("#password").val(""); 
-                    }  */
+                    }   
 
             });  
 
