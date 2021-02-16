@@ -59,6 +59,19 @@ class Home extends CI_Controller {
 
 	
 	}
+	public function employee()
+	{
+
+		$header['page_name'] = 'จัดการข้อมูลพนักงาน';
+		$header['page_focus'] = 'employee'; 
+		$header['page_menu'] = 0;
+
+		$this->load->view('template/header',$header);
+		#$this->load->view('home');
+		$this->load->view('template/footer');
+
+	
+	}
 
 	
 	public function base()

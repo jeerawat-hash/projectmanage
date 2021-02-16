@@ -3,6 +3,7 @@
 
 
     $project = array("", array("","","","","","","","","","") );
+    $employee = array("", array("","","","","","","","","","") );
 
 
 
@@ -26,6 +27,13 @@
         $project[1][$page_menu] = "active";
         
         break;
+
+      case 'employee':
+        
+        $employee[0] = "menu-open";
+        $employee[1][$page_menu] = "active";
+        
+      break;
        
 
     }
@@ -159,7 +167,7 @@
           </li>
 
 
-          <li class="nav-item">
+          <li class="nav-item <?php echo $employee[0]; ?>">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
@@ -171,7 +179,7 @@
               
                
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?php echo base_url(); ?>index.php/home/employee" class="nav-link <?php echo $employee[1][0]; ?>">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>ผู้ใช้งาน</p>
                 </a>
