@@ -26,7 +26,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">เข้าสู่ระบบเพื่อเริ่มการปฏิบัติงาน</p>
 
-      <form  >
+      
         <div class="input-group mb-3">
           <input type="text" id = "username" class="form-control" placeholder="Username">
           <div class="input-group-append">
@@ -58,7 +58,7 @@
           </div>
           <!-- /.col -->
         </div>
-      </form>
+      
       <!--
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
