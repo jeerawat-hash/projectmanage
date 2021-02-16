@@ -8,7 +8,8 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model("Member_Model");
-
+		$this->load->library("session");
+ 
 
 	}
 	public function index()
@@ -84,7 +85,7 @@ class Home extends CI_Controller {
 	}
 
 
-	public function getuserlogin()
+	public function getuserlogin($username,$password)
 	{ 
 		$member = $this->Member_Model->QueryMemberLogin($username,$password);
 		$this->session->set_userdata(array("MemUsername"=>$member[0]->Username,

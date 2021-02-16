@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" id = "password" class="form-control" placeholder="Password">
+          <input type="password" id = "upassword" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -94,23 +94,22 @@
        $("#btnsubmit").on("click",function(){
         
 
-        var username =  $("#username").val();
+        var username =  $("#username").val(); 
+            if (username.trim() == "") {
+              alert("Please fill Username ");
+              $("#btnsubmit").show();
+              username.focus();
+              return false;
+            }
 
-      if (username.trim() == "") {
-        alert("Please fill Username ");
-        $("#btnsubmit").show();
-        username.focus();
-        return false;
-      }
 
-
-      var password =  $("#password").val();
-      if (password.trim() == "") {
-        alert("Please fill Password ");
-        $("#btnsubmit").show();
-        password.focus();
-        return false;
-      }
+          var upassword =  $("#upassword").val();
+          if (upassword.trim() == "") {
+            alert("Please fill Password ");
+            $("#btnsubmit").show();
+            upassword.focus();
+            return false;
+          }
 
      
        
@@ -118,7 +117,7 @@
               ,
               {
                 username : username,
-                password : password
+                password : upassword
                
               }
               ,
@@ -127,6 +126,7 @@
                // console.log(status);
 
               var object =  JSON.parse(data); 
+                console.log(object);
                 /* var O7ESNM = object; 
                     if (O7ESNM != "") {
                             var PWSLMN = object.PWSLMN 
