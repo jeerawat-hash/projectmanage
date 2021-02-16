@@ -111,11 +111,11 @@
             }
 
 
-          var upassword =  $("#psw").val();
-          if (upassword.trim() == "") {
+          var psw =  $("#psw").val();
+          if (psw.trim() == "") {
             alert("Please fill Password ");
             $("#btnsub").show();
-            upassword.focus();
+            psw.focus();
             return false;
           }
  
@@ -123,13 +123,13 @@
               ,
               {
                 username : username,
-                password : upassword
+                password : psw
                
               }
               ,
               function(data,status,response){
-              // console.log(data);
-               // console.log(status);
+                console.log(data);
+                 console.log(status);
 
               var object =  JSON.parse(data); 
                 console.log(object);
