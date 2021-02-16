@@ -128,9 +128,9 @@
                  var Id = object; 
                     if (Id != "") { 
                             var PositionID = object.PositionID[0];  
-                            var a = "https://projectmanage.webclient.me/index.php/home/summary/"+PositionID ;
+                            var Pagesite = "https://projectmanage.webclient.me/index.php/home/summary/";
                               
-                  location.replace(a); 
+                  location.replace(Pagesite); 
 
                     } else{
 

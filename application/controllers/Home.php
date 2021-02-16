@@ -9,6 +9,10 @@ class Home extends CI_Controller {
 		parent::__construct();
 		$this->load->model("Member_Model");
 		$this->load->library("session"); 
+	    	/*if ( $this->session->userdata("memberID") == "" ) { 
+				redirect("Auth/index");
+				$this->session->sess_destroy();
+		   } */
 	}
 	public function index()
 	{
@@ -18,13 +22,12 @@ class Home extends CI_Controller {
 
 
 	}
-	public function summary($ID)
+	public function summary()
 	{
-        $data["PositionID"] = $this->session->userdata("PositionID"); 
+        
 		$header['page_name'] = 'ภาพรวมการบริหาร';
 		$header['page_focus'] = 'summary'; 
-		$header['page_menu'] = 0;
-        $username = $data["PositionID"]; 
+		$header['page_menu'] = 0; 
 		$this->load->view('template/header',$header);
 		$this->load->view('home');
 		$this->load->view('template/footer');
@@ -105,7 +108,7 @@ class Home extends CI_Controller {
 				   $arrayReturna["Password"][] = $MemPassword;
 				   $arrayReturna["PositionID"][] = $MemPositionID;  
 				  } 
- 
+				 $data["PositionID"] = $this->session->userdata("PositionID"); 	
 				 echo json_encode($arrayReturna);
 	}
 
