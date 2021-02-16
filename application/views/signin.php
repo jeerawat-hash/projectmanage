@@ -136,7 +136,9 @@
                 console.log(object);
                  var Id = object; 
                     if (Id != "") {
-                            var PositionID = object.PositionID  
+                      alert("123");
+                      alert(Id);
+                            var PositionID = object.PositionID[0];  
                             var a = "https://projectmanage.webclient.me/index.php/home/summary/"+PositionID ;
                               
                  location.replace(a); 
