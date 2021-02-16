@@ -16,7 +16,7 @@
         <div class="card-header">
          <!-- <h3 class="card-title">Projects</h3> -->
 
-         <button class="btn btn-primary btn-sm" id="modalToggle">
+         <button class="btn btn-primary btn-sm" id="CreateProject">
                               <i class="fas fa-pencil-alt">
                               </i>
                               เพิ่มโครงการ
@@ -113,7 +113,7 @@
 
 <!---- Modal Create Project ------>
 
-<div id="modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="ModalPeriod" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -123,21 +123,21 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs" id="CreateProjectTab" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#infoPanel" role="tab">รายละเอียด</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#ads" role="tab">งบประมาณ</a>
+            <a class="nav-link" data-toggle="tab" href="#budgetPanel" role="tab">งบประมาณ</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#placementPanel" role="tab">เอกสารที่เกี่ยวข้อง</a>
+            <a class="nav-link" data-toggle="tab" href="#documentPanel" role="tab">เอกสารที่เกี่ยวข้อง</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#schedulePanel" role="tab">ผู้รับผิดชอบ</a>
+            <a class="nav-link" data-toggle="tab" href="#SignGroupPanel" role="tab">ผู้รับผิดชอบ</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#reviewPanel" role="tab">ช่วงการปฏิบัติงาน</a>
+            <a class="nav-link" data-toggle="tab" href="#TimeLinePanel" role="tab">ช่วงการปฏิบัติงาน</a>
           <li>
         </ul>
         
@@ -194,14 +194,14 @@
 
 
 
-            <button class="btn btn-secondary" id="adsContinue">ต่อไป</button>
+            <button class="btn btn-secondary" id="budgetContinue">ต่อไป</button>
           </div>
 
 
 
 
-          <div class="tab-pane fade" id="placementPanel" role="tabpanel">
-            <h4>Placement</h4>
+          <div class="tab-pane fade" id="documentPanel" role="tabpanel">
+            <h4>document</h4>
              
 
 
@@ -220,10 +220,10 @@
 
 
 
-            <button class="btn btn-secondary" id="placementContinue">ต่อไป</button>
+            <button class="btn btn-secondary" id="documentContinue">ต่อไป</button>
           </div>
-          <div class="tab-pane fade" id="schedulePanel" role="tabpanel">
-            <h4>Schedule</h4>
+          <div class="tab-pane fade" id="SignGroupPanel" role="tabpanel">
+            <h4>SignGroup</h4>
            
 
 
@@ -238,11 +238,11 @@
 
 
 
-            <button class="btn btn-secondary" id="scheduleContinue">ต่อไป</button>
+            <button class="btn btn-secondary" id="SignGroupContinue">ต่อไป</button>
           </div>
            
-          <div class="tab-pane fade" id="reviewPanel" role="tabpanel">
-            <h4>Review</h4>
+          <div class="tab-pane fade" id="TimeLinePanel" role="tabpanel">
+            <h4>TimeLine</h4>
 
 
 
@@ -254,9 +254,16 @@
 
 
 
+ 
 
 
-            <button class="btn btn-primary btn-block" id="activate">Activate this Campaign!</button>
+
+
+
+
+
+
+
           </div>
 
 
@@ -342,83 +349,48 @@
 
 
 
-  $('#modalToggle').click(function() {
-    $('#modal').modal({
-      backdrop: 'static'
+  $('#CreateProject').click(function() {
+    $('#ModalPeriod').modal({
+      backdrop: 'static', 
+      keyboard: false
     });
   });
 
-
-
-
-
-
+ 
   $('#infoContinue').click(function (e) {
-    e.preventDefault();
-    $('.modalprogress-bar').css('width', '40%');
-    $('.modalprogress-bar').html('Step 2 of 5');
-    $('#myTab a[href="#ads"]').tab('show');
+    e.preventDefault(); 
+    $('#CreateProjectTab a[href="#budgetPanel"]').tab('show');
+  });
+
+
+ 
+  $('#budgetContinue').click(function (e) {
+    e.preventDefault(); 
+    $('#CreateProjectTab a[href="#documentPanel"]').tab('show');
   });
 
 
 
 
 
-
-
-  $('#adsContinue').click(function (e) {
-    e.preventDefault();
-    $('.modalprogress-bar').css('width', '60%');
-    $('.modalprogress-bar').html('Step 3 of 5');
-    $('#myTab a[href="#placementPanel"]').tab('show');
+  $('#documentContinue').click(function (e) {
+    e.preventDefault(); 
+    $('#CreateProjectTab a[href="#SignGroupPanel"]').tab('show');
   });
 
 
 
 
-
-  $('#placementContinue').click(function (e) {
-    e.preventDefault();
-    $('.modalprogress-bar').css('width', '80%');
-    $('.modalprogress-bar').html('Step 4 of 5');
-    $('#myTab a[href="#schedulePanel"]').tab('show');
-  });
-
-
-
-
-  $('#scheduleContinue').click(function (e) {
-    e.preventDefault();
-    $('.modalprogress-bar').css('width', '100%');
-    $('.modalprogress-bar').html('Step 5 of 5');
-    $('#myTab a[href="#reviewPanel"]').tab('show');
+  $('#SignGroupContinue').click(function (e) {
+    e.preventDefault(); 
+    $('#CreateProjectTab a[href="#TimeLinePanel"]').tab('show');
   });
   
 
 
 
 
-
-  $('#activate').click(function (e) {
-    e.preventDefault();
-    var formData = {
-      campaign_name: $('#campaignName').val(),
-      start_date: $('#start-date').val(),
-      end_date: $('#end-date').val(),
-      days: {
-        sunday: $('#sunday').prop('checked'),
-        monday: $('#monday').prop('checked'),
-        tuesday: $('#tuesday').prop('checked'),
-        wednesday: $('#wednesday').prop('checked'),
-        thurday: $('#thursday').prop('checked'),
-        friday: $('#friday').prop('checked'),
-        saturday: $('#saturday').prop('checked'),
-      },
-      start_time: $('#start-time').val(),
-      end_time: $('#end-time').val()
-    }
-    alert(JSON.stringify(formData));
-  })
+ 
 
 
 
