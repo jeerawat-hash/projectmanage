@@ -26,7 +26,7 @@
 
       <form action="#" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Username">
+          <input type="text" id ="username" class="form-control" placeholder="Username">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" id = "password" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -52,7 +52,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+            <button type="submit"  id = "btnsubmit" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
           </div>
           <!-- /.col -->
         </div>
@@ -89,3 +89,64 @@
 <script src="https://projectmanage.webclient.me/assets/dist/js/adminlte.min.js"></script>
 </body>
 </html>
+
+<script type="text/javascript"> 
+       $("#btnsubmit").on("click",function(){
+        
+
+        var username =  $("#username").val();
+
+      if (username.trim() == "") {
+        alert("Please fill Username ");
+        $("#btnsubmit").show();
+        username.focus();
+        return false;
+      }
+
+
+      var password =  $("#password").val();
+      if (password.trim() == "") {
+        alert("Please fill Password ");
+        $("#btnsubmit").show();
+        password.focus();
+        return false;
+      }
+
+     
+       
+        $.post("https://projectmanage.webclient.me/index.php/home/getuserlogin"
+              ,
+              {
+                username : username,
+                password : password
+               
+              }
+              ,
+              function(data,status,response){
+              // console.log(data);
+               // console.log(status);
+
+              var object =  JSON.parse(data); 
+                /* var O7ESNM = object; 
+                    if (O7ESNM != "") {
+                            var PWSLMN = object.PWSLMN 
+                            var PWPSWD = object.PWPSWD  
+                            var a = "http://mail.smcthai.co.th:8082/PJ_MAIL/smc/index.php/auth/user/"+PWSLMN+"/"+PWPSWD ;
+                              
+                 location.replace(a); 
+
+                    } else{
+
+                             alert("Please Login again"); 
+                              $("#username").val("");  
+                              $("#password").val(""); 
+                    }  */
+
+            });  
+
+
+    }); 
+
+
+
+</script>

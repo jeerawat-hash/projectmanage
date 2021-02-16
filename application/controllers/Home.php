@@ -75,15 +75,30 @@ class Home extends CI_Controller {
 
 	
 	public function base()
-	{
-
-
+	{ 
 		#$this->load->view('welcome_message');
 		#echo $this->Member_Model->DB();
  		print_r($this->Member_Model->QueryMember());
-
-
+ 
 	}
+
+
+	public function getuserlogin()
+	{ 
+		$member = $this->Member_Model->QueryMemberLogin($username,$password);
+		$this->session->set_userdata(array("MemUsername"=>$member[0]->Username,
+										   "MemPassword"=>$member[0]->Password, 
+										   "MemPositionID" => $member[0]->PositionID));
+   
+		 if ( $this->session->userdata("MemPositionID") != "" ) {
+				 $a =  $this->session->userdata("MemPositionID"); 
+				 $d =  $this->session->userdata("MemUsername"); 
+				  redirect("home/summary/".$a.""); 
+			  } else { 
+
+			 }
+	}
+
 
 
 

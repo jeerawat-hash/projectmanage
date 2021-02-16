@@ -20,19 +20,17 @@ class Member_Model extends CI_Model
 	}
 
 	public function QueryMember()
-	{
-
-
-        $this->pmdb = $this->load->database("pmdb",true);
-
-
-        return $this->pmdb->query("SELECT * FROM Member ")->result();
-        
-
+	{ 
+        $this->pmdb = $this->load->database("pmdb",true); 
+        return $this->pmdb->query("SELECT * FROM Member ")->result(); 
 	}
 
 
- 
+	public function QueryMemberLogin($username=null,$password=null)
+	{ 
+        $this->pmdb = $this->load->database("pmdb",true); 
+        return $this->pmdb->query("SELECT * FROM Member where  Username =  '".$username."'  and  Password  = '".$password."'  ")->result(); 
+	}
 
 
 
