@@ -126,13 +126,11 @@
               function(data,status,response){ 
               var object =  JSON.parse(data);  
                  var Id = object; 
-                    if (Id != "") {
-                      alert("123");
-                      alert(Id);
+                    if (Id != "") { 
                             var PositionID = object.PositionID[0];  
                             var a = "https://projectmanage.webclient.me/index.php/home/summary/"+PositionID ;
                               
-                 //location.replace(a); 
+                  location.replace(a); 
 
                     } else{
 
