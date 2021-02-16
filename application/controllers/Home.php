@@ -41,7 +41,7 @@ class Home extends CI_Controller {
 		$header['page_menu'] = 1;
 
 		$this->load->view('template/header',$header);
-		#$this->load->view('home');
+		$this->load->view('project');
 		$this->load->view('template/footer');
 
 	
