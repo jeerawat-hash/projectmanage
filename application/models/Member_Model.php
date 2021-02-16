@@ -15,6 +15,18 @@ class Member_Model extends CI_Model
         }else{
         	return 0;
         }
+
+
+	}
+
+	public function QueryMember()
+	{
+
+
+        $this->pmdb = $this->load->database("pmdb",true);
+
+
+        return $this->pmdb->query("SELECT * FROM Member ")->result();
         
 
 	}

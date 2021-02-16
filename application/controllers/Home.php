@@ -16,11 +16,15 @@ class Home extends CI_Controller {
 	{
 
 		#$this->load->view('welcome_message');
-		echo $this->Member_Model->DB();
-
-
-
-
+		#echo $this->Member_Model->DB();
+ 		print_r($this->Member_Model->QueryMember());
 
 	}
+
+
+
+
+
+
+
 }
