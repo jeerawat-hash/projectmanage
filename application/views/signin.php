@@ -111,7 +111,7 @@
             }
 
 
-          var upassword =  $("#upassword").val();
+          var upassword =  $("#psw").val();
           if (upassword.trim() == "") {
             alert("Please fill Password ");
             $("#btnsub").show();
