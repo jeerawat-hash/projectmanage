@@ -197,6 +197,7 @@
             <h4>เอกสารที่เกี่ยวข้อง</h4>
              
 
+            <div class="card-body">
             <div class="form-group">
 
               <div class="custom-file mb-3">
@@ -205,6 +206,7 @@
               </div>
 
             </div>
+          </div>
 
 
 
@@ -226,7 +228,7 @@
           <div class="tab-pane fade" id="SignGroupPanel" role="tabpanel">
             <h4>กลุ่มผู้รับผิดชอบโครงการ</h4>
            
-
+            <div class="card-body">
             <div class="row">
               <div class="col-8">
                 <div class="form-group">
@@ -307,6 +309,7 @@
 
               </div>
             </div>
+          </div>
 
 
 
