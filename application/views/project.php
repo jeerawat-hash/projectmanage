@@ -128,7 +128,7 @@
             <a class="nav-link active" data-toggle="tab" href="#infoPanel" role="tab">รายละเอียด</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#budgetPanel" role="tab">งบประมาณ</a>
+            <a class="nav-link" data-toggle="tab" href="#budgetPanel" role="tab">งบประมาณและเวลา</a>
           <li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#documentPanel" role="tab">เอกสารที่เกี่ยวข้อง</a>
@@ -145,6 +145,7 @@
 
 
           <div class="tab-pane fade show active" id="infoPanel" role="tabpanel">
+            
             <h4>รายละเอียดโครงการ</h4>
             
  
@@ -167,15 +168,22 @@
             <button class="btn btn-secondary" id="infoContinue">ต่อไป</button>
           </div>
 
-
-
-
+ 
           <div class="tab-pane fade" id="budgetPanel" role="tabpanel">
-            <h4>Ads</h4>
+            <h4>งบประมาณและเวลาในการตรวจสอบ</h4>
              
 
 
-
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="inputBudget">งบประมาณโครงการ</label>
+                    <input type="number" id="inputBudget" class="form-control">
+                  </div> 
+                  <div class="form-group">
+                    <label for="inputPeriodDate">ช่วงเวลาก่อนตรวจความคืบหน้า</label>
+                    <input type="number" id="inputPeriodDate" class="form-control">
+                  </div>
+                </div> 
 
 
 
@@ -189,8 +197,11 @@
 
 
           <div class="tab-pane fade" id="documentPanel" role="tabpanel">
-            <h4>document</h4>
+            <h4>เอกสารที่เกี่ยวข้อง</h4>
              
+
+
+
 
 
 
@@ -211,8 +222,11 @@
             <button class="btn btn-secondary" id="documentContinue">ต่อไป</button>
           </div>
           <div class="tab-pane fade" id="SignGroupPanel" role="tabpanel">
-            <h4>SignGroup</h4>
+            <h4>กลุ่มผู้รับผิดชอบโครงการ</h4>
            
+
+
+
 
 
 
@@ -230,10 +244,7 @@
           </div>
            
           <div class="tab-pane fade" id="TimeLinePanel" role="tabpanel">
-            <h4>TimeLine</h4>
-
-
-
+            <h4>รอบการตรวจความคืบหน้าโครงการ</h4>
 
 
 
@@ -243,12 +254,6 @@
 
 
  
-
-
-
-
-
-
 
 
 
