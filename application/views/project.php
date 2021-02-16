@@ -463,7 +463,7 @@ $(".custom-file-input").on("change", function() {
         html += '</div>';
         html += '</div>';
         html += '<div class="col-2">';
-        html += '<button for="inputDetailPeriodDate" id="removeRow" type="button" class="btn btn-danger">ลบ</button>';
+        html += '<button for="inputDetailPeriodDate" id="removeRow" type="button" class="btn btn-danger form-control">ลบ</button>';
         html += '</div>';
         html += '</div>';
  
