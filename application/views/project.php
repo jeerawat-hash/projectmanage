@@ -446,20 +446,20 @@ $(".custom-file-input").on("change", function() {
     $("#addRow").click(function () {
         var html = '';
            
-        html += '<div class="card-body">'+
-        html += '<div class="row">'+
-        html += '<div class="col-8">'+
-        html += '<div class="form-group">'+
-        html += '<label for="inputPeriodDate">รายละเอียด</label>'+
-        html += '<input type="text" id="inputDetailPeriod" class="form-control">'+
-        html += '</div>'+
-        html += '</div>'+
-        html += '<div class="col-4">'+
-        html += '<div class="form-group">'+
-        html += '<label for="inputDetailPeriodDate">วันที่</label>'+
-        html += '<input type="text" id="inputDetailPeriodDate" class="form-control">'+
-        html += '</div>'+
-        html += '</div>'+
+        html += '<div class="card-body">';
+        html += '<div class="row">';
+        html += '<div class="col-8">';
+        html += '<div class="form-group">';
+        html += '<label for="inputPeriodDate">รายละเอียด</label>';
+        html += '<input type="text" id="inputDetailPeriod" class="form-control">';
+        html += '</div>';
+        html += '</div>';
+        html += '<div class="col-4">';
+        html += '<div class="form-group">';
+        html += '<label for="inputDetailPeriodDate">วันที่</label>';
+        html += '<input type="text" id="inputDetailPeriodDate" class="form-control">';
+        html += '</div>';
+        html += '</div>';
         html += '</div></div>';
  
         $('#newRow').append(html);
