@@ -86,19 +86,29 @@ class Home extends CI_Controller {
 
 
 	public function getuserlogin($username,$password)
-	{ 
-		$member = $this->Member_Model->QueryMemberLogin($username,$password);
-		$this->session->set_userdata(array("MemUsername"=>$member[0]->Username,
-										   "MemPassword"=>$member[0]->Password, 
-										   "MemPositionID" => $member[0]->PositionID));
-           //
-		 if ( $this->session->userdata("MemPositionID") != "" ) {
-				 $a =  $this->session->userdata("MemPositionID"); 
-				 $d =  $this->session->userdata("MemUsername"); 
-				  redirect("home/summary/".$a.""); 
-			  } else { 
-
-			 }
+	{  
+                if ( !isset($_POST["username"])) {
+					echo "Paramiter Invalid";
+				   exit();
+				   }
+ 
+				 $username           =   trim($_POST["username"]) ;
+				 $password           =   trim($_POST["password"]) ;
+				 $member = $this->Member_Model->QueryMemberLogin($username,$password); 
+		 
+		        
+				  $arrayReturna = array();
+ 
+				  foreach ($result as $ResultValue) { 
+				   $MemUsername =  trim(iconv("tis-620", "utf-8", $ResultValue->Username ));
+				   $MemPassword =  trim(iconv("tis-620", "utf-8", $ResultValue->Password ));
+				   $MemPositionID =  trim(iconv("tis-620", "utf-8", $ResultValue->PositionID )); 
+				   $arrayReturna["MemUsername"][] = $MemUsername;
+				   $arrayReturna["MemPassword"][] = $MemPassword;
+				   $arrayReturna["MemPositionID"][] = $MemPositionID;  
+				  } 
+ 
+				 echo json_encode($arrayReturna);
 	}
 
 
