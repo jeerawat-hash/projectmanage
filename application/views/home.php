@@ -24,16 +24,6 @@
                 <h3 class="card-title">ความคืบหน้าโครงการ</h3>
               </div>
               
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-
               <!-- /.card-header -->
               <div class="card-body">
                 
