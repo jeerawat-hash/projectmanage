@@ -227,8 +227,32 @@
             <h4>กลุ่มผู้รับผิดชอบโครงการ</h4>
            
 
+            <div class="row">
+              <div class="col-8">
+                <div class="form-group">
+                  <label for="inputNameStatus">ชื่อ</label>
+                  <select id="inputNameStatus" class="form-control custom-select">
+                    <option selected disabled>กรุณาเลือก</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-4">
+                
+                <div class="form-group">
+                  <label for="inputRoleStatus">สิทธิการใช้งาน</label>
+                  <select id="inputRoleStatus" class="form-control custom-select">
+                    <option selected disabled>กรุณาเลือก</option>
+                    <option>อ่าน</option>
+                    <option>อ่าน/บันทึกผล</option>
+                    <option>อ่าน/บันทึกผล/แก้ไข</option>
+                  </select>
+                </div>
 
-
+              </div>
+            </div>
 
 
 
