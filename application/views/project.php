@@ -461,7 +461,7 @@ $(".custom-file-input").on("change", function() {
         html += '<label for="inputDetailPeriodDate">วันที่</label>';
         html += '<input type="text" id="inputDetailPeriodDate" class="form-control">';
         html += '<div class="col-2">';
-        html += '<button id="removeRow" type="button" class="btn btn-danger">ลบ</button>';
+        html += '<button id="removeRow" type="button" class="btn btn-danger form-control">ลบ</button>';
         html += '</div>';
         html += '</div>';
         html += '</div>';
