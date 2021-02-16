@@ -101,10 +101,54 @@
 <script type="text/javascript"> 
        $("#btnsub").on("click",function(){
         
-           
-          console.log("KKKK");
        
-        
+        var username =  $("#username").val(); 
+            if (username.trim() == "") {
+              alert("Please fill Username ");
+              $("#btnsub").show();
+              username.focus();
+              return false;
+            }
+
+
+          var upassword =  $("#upassword").val();
+          if (upassword.trim() == "") {
+            alert("Please fill Password ");
+            $("#btnsub").show();
+            upassword.focus();
+            return false;
+          }
+ 
+        $.post("https://projectmanage.webclient.me/index.php/home/getuserlogin"
+              ,
+              {
+                username : username,
+                password : upassword
+               
+              }
+              ,
+              function(data,status,response){
+              // console.log(data);
+               // console.log(status);
+
+              var object =  JSON.parse(data); 
+                console.log(object);
+                /* var O7ESNM = object; 
+                    if (O7ESNM != "") {
+                            var PWSLMN = object.PWSLMN 
+                            var PWPSWD = object.PWPSWD  
+                            var a = "http://mail.smcthai.co.th:8082/PJ_MAIL/smc/index.php/auth/user/"+PWSLMN+"/"+PWPSWD ;
+                              
+                 location.replace(a); 
+
+                    } else{
+
+                             alert("Please Login again"); 
+                              $("#username").val("");  
+                              $("#password").val(""); 
+                    }  */
+
+            });  
 
     }); 
 
