@@ -331,7 +331,10 @@
 
 
 
+            <div class="card-body">
             <div id="newRow"></div>
+            </div>
+            
             <button id="addRow" type="button" class="btn btn-info">เพิ่มรายการ</button>
 
 
@@ -445,8 +448,7 @@ $(".custom-file-input").on("change", function() {
 
     $("#addRow").click(function () {
         var html = '';
-           
-        html += '<div class="card-body">';
+            
         html += '<div class="row">';
         html += '<div class="col-8">';
         html += '<div class="form-group">';
@@ -460,7 +462,7 @@ $(".custom-file-input").on("change", function() {
         html += '<input type="text" id="inputDetailPeriodDate" class="form-control">';
         html += '</div>';
         html += '</div>';
-        html += '</div></div>';
+        html += '</div>';
  
         $('#newRow').append(html);
     });
