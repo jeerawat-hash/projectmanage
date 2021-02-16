@@ -117,9 +117,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="wizard-title">เพิ่มโครงการ</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <h5 class="modal-title" id="wizard-title">เพิ่มโครงการ</h5>  
         </button>
       </div>
       <div class="modal-body">
@@ -163,9 +161,9 @@
                   <input type="text" id="inputClientCompany" class="form-control">
                 </div>
               </div> 
- 
+  
 
-            <button class="btn btn-secondary" id="infoContinue">ต่อไป</button>
+
           </div>
 
  
@@ -187,10 +185,9 @@
 
 
 
- 
+  
 
 
-            <button class="btn btn-secondary" id="budgetContinue">ต่อไป</button>
           </div>
 
 
@@ -217,9 +214,7 @@
 
 
 
-
-
-            <button class="btn btn-secondary" id="documentContinue">ต่อไป</button>
+ 
           </div>
           <div class="tab-pane fade" id="SignGroupPanel" role="tabpanel">
             <h4>กลุ่มผู้รับผิดชอบโครงการ</h4>
@@ -238,9 +233,7 @@
 
 
 
-
-
-            <button class="btn btn-secondary" id="SignGroupContinue">ต่อไป</button>
+ 
           </div>
            
           <div class="tab-pane fade" id="TimeLinePanel" role="tabpanel">
@@ -276,7 +269,12 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">บันทึกผล</button>
+
+        <div class="spinner-border text-warning" id="Preload" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+
+        <button type="button" class="btn btn-warning">บันทึก</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
       </div>
     </div>
@@ -343,42 +341,20 @@
 
 
   $('#CreateProject').click(function() {
-    $('#ModalPeriod').modal({
-      backdrop: 'static', 
-      keyboard: false
-    });
-  });
-
- 
-  $('#infoContinue').click(function (e) {
-    e.preventDefault(); 
-    $('#CreateProjectTab a[href="#budgetPanel"]').tab('show');
-  });
-
-
- 
-  $('#budgetContinue').click(function (e) {
-    e.preventDefault(); 
-    $('#CreateProjectTab a[href="#documentPanel"]').tab('show');
-  });
-
-
-
-
-
-  $('#documentContinue').click(function (e) {
-    e.preventDefault(); 
-    $('#CreateProjectTab a[href="#SignGroupPanel"]').tab('show');
-  });
-
-
-
-
-  $('#SignGroupContinue').click(function (e) {
-    e.preventDefault(); 
-    $('#CreateProjectTab a[href="#TimeLinePanel"]').tab('show');
-  });
   
+      $('#ModalPeriod').modal({
+        backdrop: 'static', 
+        keyboard: false
+      });
+
+    });
+
+    
+
+
+
+
+
 
 
 
@@ -389,5 +365,5 @@
 
 
 
-})
+    });
 </script>
