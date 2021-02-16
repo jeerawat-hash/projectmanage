@@ -54,7 +54,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit"  id = "btnsub" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+            <button  id = "btnsub" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
           </div>
           <!-- /.col -->
         </div>
