@@ -381,9 +381,13 @@
             <button class="btn btn-primary btn-block" id="activate">Activate this Campaign!</button>
           </div>
         </div>
+        
+     <!--
         <div class="progress mt-5">
           <div class="modalprogress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Step 1 of 5</div>
         </div>
+     -->
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
