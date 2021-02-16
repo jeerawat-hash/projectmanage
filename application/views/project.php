@@ -464,8 +464,8 @@ $(".custom-file-input").on("change", function() {
         html += '</div>';
         html += '<div class="col-2">';
         html += '<div class="form-group">';
-        html += '<label for="removeRow"></label>';
-        html += '<button id="removeRow" type="button" class="btn btn-danger form-control">ลบ</button>';
+        html += '<label for="removeRow">ลบ</label>';
+        html += '<button id="removeRow" type="button" class="btn btn-danger form-control">X</button>';
         html += '</div>';
         html += '</div>';
         html += '</div>';
