@@ -59,7 +59,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit"  id = "btnsubmit" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+            <button type="submit"  id = "btnsub" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
           </div>
           <!-- /.col -->
         </div>
@@ -94,11 +94,16 @@
 <script src="https://projectmanage.webclient.me/assets/plugins/bootstrap/js/bootstrap.bundle.js"></script>
 <!-- AdminLTE App -->
 <script src="https://projectmanage.webclient.me/assets/dist/js/adminlte.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
 </body>
 </html>
 
 <script type="text/javascript"> 
-       $("#btnsubmit").on("click",function(){
+       $("#btnsub").on("click",function(){
         
            
           console.log("KKKK");
