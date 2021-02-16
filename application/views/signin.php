@@ -31,7 +31,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">เข้าสู่ระบบเพื่อเริ่มการปฏิบัติงาน</p>
 
-      <form action="#" method="post">
+      <form  >
         <div class="input-group mb-3">
           <input type="text" id = "username" class="form-control" placeholder="Username">
           <div class="input-group-append">
@@ -94,11 +94,7 @@
 <script src="https://projectmanage.webclient.me/assets/plugins/bootstrap/js/bootstrap.bundle.js"></script>
 <!-- AdminLTE App -->
 <script src="https://projectmanage.webclient.me/assets/dist/js/adminlte.js"></script>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
+ 
 </body>
 </html>
 
