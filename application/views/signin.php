@@ -111,7 +111,9 @@
             return false;
           }
 
-     
+          console.log(psw);
+          console.log(username);
+          console.log("KKKK");
        
         $.post("https://projectmanage.webclient.me/index.php/home/getuserlogin"
               ,
