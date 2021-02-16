@@ -26,7 +26,7 @@
 
       <form action="#" method="post">
         <div class="input-group mb-3">
-          <input type="text" id ="username" class="form-control" placeholder="Username">
+          <input type="text" id = "username" class="form-control" placeholder="Username">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" id = "upassword" class="form-control" placeholder="Password">
+          <input type="password" id = "psw" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -93,7 +93,7 @@
 <script type="text/javascript"> 
        $("#btnsubmit").on("click",function(){
         
-
+          
         var username =  $("#username").val(); 
             if (username.trim() == "") {
               alert("Please fill Username ");
@@ -103,11 +103,11 @@
             }
 
 
-          var upassword =  $("#upassword").val();
-          if (upassword.trim() == "") {
+          var psw =  $("#psw").val();
+          if (psw.trim() == "") {
             alert("Please fill Password ");
             $("#btnsubmit").show();
-            upassword.focus();
+            psw.focus();
             return false;
           }
 
@@ -117,7 +117,7 @@
               ,
               {
                 username : username,
-                password : upassword
+                password : psw
                
               }
               ,
@@ -143,7 +143,6 @@
                     }  */
 
             });  
-
 
     }); 
 
