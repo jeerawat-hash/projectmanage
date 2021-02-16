@@ -450,17 +450,16 @@ $(".custom-file-input").on("change", function() {
         var html = '';
             
         html += '<div class="row" id="inputDetailPeriodRow">';
-        html += '<div class="col-7">';
+        html += '<div class="col-8">';
         html += '<div class="form-group">';
         html += '<label for="inputPeriodDate">รายละเอียด</label>';
         html += '<input type="text" id="inputDetailPeriod" class="form-control">';
         html += '</div>';
         html += '</div>';
-        html += '<div class="col-3">';
+        html += '<div class="col-4">';
         html += '<div class="form-group">';
         html += '<label for="inputDetailPeriodDate">วันที่</label>';
-        html += '<input type="text" id="inputDetailPeriodDate" class="form-control">';
-        html += '<button id="removeRow" type="button" class="btn btn-danger">ลบ</button>';
+        html += '<input type="text" id="inputDetailPeriodDate" class="form-control"><button id="removeRow" type="button" class="btn btn-danger">ลบ</button>'; 
         html += '</div>';
         html += '</div>';
         html += '</div>';
