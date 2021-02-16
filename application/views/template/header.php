@@ -104,8 +104,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="https://www.eng.kmutnb.ac.th/web/wp-content/uploads/2019/01/logo_kmutnbNew-254x300.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">KM ProjectManagement</span>
+      <img src="https://www.eng.kmutnb.ac.th/web/wp-content/uploads/2019/08/LOGO-KMUTNB--300x300.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">ระบบบริหารโครงการ</span>
     </a>
 
     <!-- Sidebar -->
