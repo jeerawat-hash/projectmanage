@@ -155,15 +155,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
+ 
 
 
             <button class="btn btn-secondary" id="infoContinue">ต่อไป</button>
@@ -172,7 +164,7 @@
 
 
 
-          <div class="tab-pane fade" id="ads" role="tabpanel">
+          <div class="tab-pane fade" id="budgetPanel" role="tabpanel">
             <h4>Ads</h4>
              
 
@@ -181,17 +173,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
             <button class="btn btn-secondary" id="budgetContinue">ต่อไป</button>
