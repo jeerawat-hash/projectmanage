@@ -5,7 +5,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,11 +89,11 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="https://projectmanage.webclient.me/assets/plugins/jquery/jquery.min.js"></script>
+<script src="https://projectmanage.webclient.me/assets/plugins/jquery/jquery.js"></script>
 <!-- Bootstrap 4 -->
-<script src="https://projectmanage.webclient.me/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://projectmanage.webclient.me/assets/plugins/bootstrap/js/bootstrap.bundle.js"></script>
 <!-- AdminLTE App -->
-<script src="https://projectmanage.webclient.me/assets/dist/js/adminlte.min.js"></script>
+<script src="https://projectmanage.webclient.me/assets/dist/js/adminlte.js"></script>
 </body>
 </html>
 
