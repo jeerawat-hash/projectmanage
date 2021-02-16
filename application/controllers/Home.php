@@ -74,7 +74,7 @@ class Home extends CI_Controller {
 	}
 
 	
-	
+
 	public function base()
 	{ 
 		#$this->load->view('welcome_message');
@@ -90,7 +90,7 @@ class Home extends CI_Controller {
 		$this->session->set_userdata(array("MemUsername"=>$member[0]->Username,
 										   "MemPassword"=>$member[0]->Password, 
 										   "MemPositionID" => $member[0]->PositionID));
-   
+           //
 		 if ( $this->session->userdata("MemPositionID") != "" ) {
 				 $a =  $this->session->userdata("MemPositionID"); 
 				 $d =  $this->session->userdata("MemUsername"); 
