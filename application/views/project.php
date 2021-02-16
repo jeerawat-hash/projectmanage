@@ -145,18 +145,24 @@
 
 
           <div class="tab-pane fade show active" id="infoPanel" role="tabpanel">
-            <h4>Information</h4>
+            <h4>รายละเอียดโครงการ</h4>
             
-
-
-
-
-
-
-
-
  
-
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="inputName">ชื่อโครงการ</label>
+                  <input type="text" id="inputName" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="inputDescription">คำอธิบาย</label>
+                  <textarea id="inputDescription" class="form-control" rows="4"></textarea>
+                </div> 
+                <div class="form-group">
+                  <label for="inputClientCompany">บริษัทลูกค้า</label>
+                  <input type="text" id="inputClientCompany" class="form-control">
+                </div>
+              </div> 
+ 
 
             <button class="btn btn-secondary" id="infoContinue">ต่อไป</button>
           </div>
