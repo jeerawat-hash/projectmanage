@@ -331,37 +331,16 @@
 
 
 
-            <div class="card-body">
-              
-              <div class="row">
-                  <div class="col-8">
-                    <div class="form-group">
-                      <label for="inputPeriodDate">รายละเอียด</label>
-                      <input type="text" id="inputDetailPeriod" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-4">
-                     
-                     <div class="form-group">
-                      <label for="inputDetailPeriodDate">วันที่</label>
-                      <input type="text" id="inputDetailPeriodDate" class="form-control">
-                    </div>
+            <div id="newRow"></div>
+            <button id="addRow" type="button" class="btn btn-info">เพิ่มรายการ</button>
 
-                  </div>
-                </div>
 
-            </div>
- 
+
+
+
 
           </div>
-
-
-
-
-
-
-
-
+ 
         </div>
 
      <!--
@@ -444,6 +423,38 @@ $(".custom-file-input").on("change", function() {
 
     <script type="text/javascript">
   $(function () {
+
+
+
+
+    $("#addRow").click(function () {
+        var html = '';
+           
+        html += '<div class="card-body">'+
+        html += '<div class="row">'+
+        html += '<div class="col-8">'+
+        html += '<div class="form-group">'+
+        html += '<label for="inputPeriodDate">รายละเอียด</label>'+
+        html += '<input type="text" id="inputDetailPeriod" class="form-control">'+
+        html += '</div>'+
+        html += '</div>'+
+        html += '<div class="col-4">'+
+        html += '<div class="form-group">'+
+        html += '<label for="inputDetailPeriodDate">วันที่</label>'+
+        html += '<input type="text" id="inputDetailPeriodDate" class="form-control">'+
+        html += '</div>'+
+        html += '</div>'+
+        html += '</div></div>';
+ 
+        $('#newRow').append(html);
+    });
+
+
+
+
+
+
+
 
 
 
