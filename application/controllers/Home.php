@@ -9,11 +9,7 @@ class Home extends CI_Controller {
 		parent::__construct();
 		$this->load->model("Member_Model");
 		$this->load->library("session");
-		if ( $this->session->userdata("PositionID") == "" ) {
-			//    $this->load->view("template/header");
-				redirect("home/index");
-				$this->session->sess_destroy();
-		   }
+	 
 
 	}
 	public function index()
