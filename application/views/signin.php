@@ -118,8 +118,9 @@
             psw.focus();
             return false;
           }
- 
-        $.post("https://projectmanage.webclient.me/index.php/home/getuserlogin"
+          console.log(username);
+                 console.log(psw);
+        $.post("https://projectmanage.webclient.me/index.php/home/login"
               ,
               {
                 username : username,
@@ -128,7 +129,7 @@
               }
               ,
               function(data,status,response){
-                console.log(data);
+                 console.log(data);
                  console.log(status);
 
               var object =  JSON.parse(data); 
