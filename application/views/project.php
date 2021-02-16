@@ -427,6 +427,22 @@ $(".custom-file-input").on("change", function() {
 
 
 
+ 
+
+  $('#CreateProject').click(function() {
+  
+      $('#ModalPeriod').modal({
+        backdrop: 'static', 
+        keyboard: false
+      });
+
+    });
+
+    
+
+
+
+
     $("#addRow").click(function () {
         var html = '';
            
@@ -448,30 +464,6 @@ $(".custom-file-input").on("change", function() {
  
         $('#newRow').append(html);
     });
-
-
-
-
-
-
-
-
-
-
-
-  $('#CreateProject').click(function() {
-  
-      $('#ModalPeriod').modal({
-        backdrop: 'static', 
-        keyboard: false
-      });
-
-    });
-
-    
-
-
-
 
 
 
