@@ -99,7 +99,7 @@ class Home extends CI_Controller {
 		        
 				  $arrayReturna = array();
  
-				  foreach ($result as $ResultValue) { 
+				  foreach ($member as $ResultValue) { 
 				   $MemUsername =  trim(iconv("tis-620", "utf-8", $ResultValue->Username ));
 				   $MemPassword =  trim(iconv("tis-620", "utf-8", $ResultValue->Password ));
 				   $MemPositionID =  trim(iconv("tis-620", "utf-8", $ResultValue->PositionID )); 
