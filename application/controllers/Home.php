@@ -85,7 +85,7 @@ class Home extends CI_Controller {
 	}
 
 
-	public function getuserlogin($username,$password)
+	public function getuserlogin($username=null,$password=null)
 	{  
                 if ( !isset($_POST["username"])) {
 					echo "Paramiter Invalid";
