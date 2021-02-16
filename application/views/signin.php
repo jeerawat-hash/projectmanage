@@ -1,4 +1,5 @@
- 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,6 +98,8 @@
         
        
         var username =  $("#username").val(); 
+
+        console.log(username);
             if (username.trim() == "") {
               alert("Please fill Username ");
               $("#btnsub").show();
