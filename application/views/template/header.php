@@ -1,3 +1,38 @@
+<?php 
+
+
+
+    $project = array("", array("","","","","","","","","","") );
+
+
+
+    switch ($page_focus) {
+      case 'summary':
+        
+        $project[0] = "menu-open";
+        $project[1][$page_menu] = "active";
+
+        break;
+      case 'projectmanage':
+        
+        $project[0] = "menu-open";
+        $project[1][$page_menu] = "active";
+        
+        break;
+
+      case 'search':
+        
+        $project[0] = "menu-open";
+        $project[1][$page_menu] = "active";
+        
+        break;
+       
+
+    }
+
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +124,8 @@
   
           <li class="nav-header">เมนู</li>
  
-          <li class="nav-item menu-open">
+          <!--<li class="nav-item menu-open"> -->
+          <li class="nav-item <?php echo $project[0]; ?>">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
@@ -100,19 +136,19 @@
             <ul class="nav nav-treeview">
               
               <li class="nav-item">
-                <a href="index.html" class="nav-link active">
+                <a href="<?php echo base_url(); ?>index.php/home/summary" class="nav-link <?php echo $project[1][0]; ?>">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>ภาพรวมโครงการ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="project.html" class="nav-link">
+                <a href="<?php echo base_url(); ?>index.php/home/project" class="nav-link <?php echo $project[1][1]; ?>">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>จัดการโครงการ</p>
                 </a>
               </li> 
               <li class="nav-item">
-                <a href="search.html" class="nav-link">
+                <a href="<?php echo base_url(); ?>index.php/home/search" class="nav-link <?php echo $project[1][2]; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>สืบค้นข้อมูล</p>
                 </a>

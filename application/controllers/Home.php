@@ -19,16 +19,48 @@ class Home extends CI_Controller {
 
 
 	}
-	public function home()
+	public function summary()
 	{
 
+		$header['page_name'] = 'ภาพรวมการบริหาร';
+		$header['page_focus'] = 'summary'; 
+		$header['page_menu'] = 0;
 
-		$this->load->view('template/header');
+		$this->load->view('template/header',$header);
 		$this->load->view('home');
 		$this->load->view('template/footer');
 
 	
 	}
+	public function project()
+	{
+		
+
+		$header['page_name'] = 'จัดการโครงการ';
+		$header['page_focus'] = 'projectmanage'; 
+		$header['page_menu'] = 1;
+
+		$this->load->view('template/header',$header);
+		#$this->load->view('home');
+		$this->load->view('template/footer');
+
+	
+	}
+	public function search()
+	{
+
+		$header['page_name'] = 'สืบค้นข้อมูล';
+		$header['page_focus'] = 'search'; 
+		$header['page_menu'] = 2;
+
+		$this->load->view('template/header',$header);
+		#$this->load->view('home');
+		$this->load->view('template/footer');
+
+	
+	}
+
+	
 	public function base()
 	{
 
