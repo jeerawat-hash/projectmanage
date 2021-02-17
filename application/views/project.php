@@ -257,6 +257,12 @@
                   <label for="inputEmployeeGroup1">ชื่อ</label>
                   <select id="inputEmployeeGroup1" class="form-control custom-select">
                     <option value="0" selected disabled>กรุณาเลือก</option>
+                    <?php 
+
+                    print_r($SignMember);
+
+
+                     ?>
                     <option value="A" >A</option>
                     <option value="B" >B</option>
                     <option value="C" >C</option>

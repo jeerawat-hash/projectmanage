@@ -19,10 +19,10 @@ class Member_Model extends CI_Model
 
 	}
 
-	public function QueryMember()
+	public function QueryMemberNotIn($MemberID)
 	{ 
         $this->pmdb = $this->load->database("pmdb",true); 
-        return $this->pmdb->query("SELECT * FROM Member ")->result(); 
+        return $this->pmdb->query(" SELECT * FROM Member WHERE ID != '".$MemberID."' ")->result(); 
 	}
 
 

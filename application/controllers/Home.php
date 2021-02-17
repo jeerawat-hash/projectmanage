@@ -54,6 +54,7 @@ class Home extends CI_Controller {
 
 		$data["MemberID"] = $sess["ID"];
 		$data["MemberName"] = $sess["Name"];
+		$data["SignMember"] = $this->Member_Model->QueryMemberNotIn($sess["ID"]);
 
 		$this->load->view('template/header',$header);
 		$this->load->view('project',$data);
