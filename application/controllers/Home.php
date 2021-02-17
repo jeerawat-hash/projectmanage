@@ -29,13 +29,12 @@ class Home extends CI_Controller {
 		echo $sess["ID"][0];
 		echo $sess["Username"][0];
 		echo $sess["PositionID"][0];
+ 
 
-
-        
 		$header['page_name'] = 'ภาพรวมการบริหารโครงการ';
 		$header['page_focus'] = 'summary'; 
 		$header['page_menu'] = 0; 
-		$header['Name'] = $sess["Username"][0];
+		$header['Name'] = $sess["Name"][0];
 
 		$this->load->view('template/header',$header);
 		$this->load->view('home');
@@ -45,11 +44,13 @@ class Home extends CI_Controller {
 	}
 	public function project()
 	{
-		
+		$sess = $this->session->userdata();
 
 		$header['page_name'] = 'จัดการโครงการ';
 		$header['page_focus'] = 'projectmanage'; 
 		$header['page_menu'] = 1;
+		$header['Name'] = $sess["Name"][0];
+
 
 		$this->load->view('template/header',$header);
 		$this->load->view('project');
@@ -60,10 +61,13 @@ class Home extends CI_Controller {
 	}
 	public function search()
 	{
+		$sess = $this->session->userdata();
 
 		$header['page_name'] = 'สืบค้นข้อมูล';
 		$header['page_focus'] = 'search'; 
 		$header['page_menu'] = 2;
+		$header['Name'] = $sess["Name"][0];
+
 
 		$this->load->view('template/header',$header);
 		#$this->load->view('home');
@@ -72,11 +76,14 @@ class Home extends CI_Controller {
 	
 	}
 	public function employee()
-	{
+	{	
+		$sess = $this->session->userdata();
 
 		$header['page_name'] = 'จัดการข้อมูลพนักงาน';
 		$header['page_focus'] = 'employee'; 
 		$header['page_menu'] = 0;
+		$header['Name'] = $sess["Name"][0];
+		
 
 		$this->load->view('template/header',$header);
 		#$this->load->view('home');
@@ -113,10 +120,12 @@ class Home extends CI_Controller {
 
 				   $MemID =  trim(iconv("tis-620", "utf-8", $ResultValue->ID ));
 				   $MemUsername =  trim(iconv("tis-620", "utf-8", $ResultValue->Username ));
+				   $MemName =  trim(iconv("tis-620", "utf-8", $ResultValue->Name ));
 				   $MemPositionID =  trim(iconv("tis-620", "utf-8", $ResultValue->PositionID )); 
 
 				   $arrayReturna["ID"] = $MemID;
 				   $arrayReturna["Username"] = $MemUsername;
+				   $arrayReturna["Name"] = $MemName;
 				   $arrayReturna["PositionID"] = $MemPositionID; 
 
 				  } 
