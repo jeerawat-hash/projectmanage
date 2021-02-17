@@ -442,15 +442,15 @@ $(".custom-file-input").on("change", function() {
        $(".inputDetailPeriod").each(function(){
 
           var DetailPeriod = $(this).val().trim();
-          DetailPeriodStart += 1;
 
-          DetailPeriodArray[DetailPeriodStart] = DetailPeriod;
+          DetailPeriodArray["Detail"][DetailPeriodStart] = DetailPeriod;
   
+          DetailPeriodStart += 1;
 
         });
 
         console.log(DetailPeriodArray);
-        
+
        $(".inputDetailPeriodDate").each(function(){
 
           var PeriodDate = $(this).val().trim();
