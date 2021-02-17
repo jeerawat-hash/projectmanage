@@ -443,24 +443,34 @@ $(".custom-file-input").on("change", function() {
 
           var DetailPeriod = $(this).val().trim();
 
-          DetailPeriodArray["Detail"][DetailPeriodStart] = DetailPeriod;
+          DetailPeriodArray[DetailPeriodStart] = DetailPeriod;
   
           DetailPeriodStart += 1;
 
         });
-
-        console.log(DetailPeriodArray);
-
+ 
        $(".inputDetailPeriodDate").each(function(){
 
           var PeriodDate = $(this).val().trim();
-
-
-
-
-
+          DatePeriodArray[DatePeriodStart] = PeriodDate;
+ 
+          DatePeriodStart += 1;
 
         });
+
+      var PeriodInfo = { Detail : DetailPeriodArray , Date : DatePeriodArray };
+
+
+      console.log(PeriodInfo);
+
+
+
+
+
+
+
+
+
 
 
 
