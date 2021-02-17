@@ -485,8 +485,10 @@ $(".custom-file-input").on("change", function() {
     $("#ModalPeriod").find("#inputEmployeeGroup2").on("change",function(){
 
 
-
-
+        var Index = $("#ModalPeriod").find('#inputEmployeeGroup2 option:selected').val();
+    
+        $("#ModalPeriod").find("#inputEmployeeGroup1 option[value='"+Index+"']").remove();
+        $("#ModalPeriod").find("#inputEmployeeGroup3 option[value='"+Index+"']").remove(); 
 
 
 
@@ -495,8 +497,10 @@ $(".custom-file-input").on("change", function() {
     $("#ModalPeriod").find("#inputEmployeeGroup3").on("change",function(){
 
 
-
-
+        var Index = $("#ModalPeriod").find('#inputEmployeeGroup3 option:selected').val();
+    
+        $("#ModalPeriod").find("#inputEmployeeGroup1 option[value='"+Index+"']").remove();
+        $("#ModalPeriod").find("#inputEmployeeGroup2 option[value='"+Index+"']").remove(); 
 
 
 
