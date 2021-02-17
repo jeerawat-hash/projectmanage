@@ -528,10 +528,7 @@ $(".custom-file-input").on("change", function() {
         data.append('Employee', Employee );
         data.append('PeriodInfo', PeriodInfo );
         ////// เพิ่มข้อมูลเข้า array    
-        
-
-        console.log(data);
-
+         
 
 
         $("#ModalPeriod").find("#Save").hide();
