@@ -31,7 +31,7 @@ class Home extends CI_Controller {
 		$this->load->view('template/header',$header);
 		$this->load->view('home');
 		$this->load->view('template/footer');
-		$a = $this->session->userdata("Username");
+		$a = $this->session->userdata();
 		
 		print_r($a);
 	}
