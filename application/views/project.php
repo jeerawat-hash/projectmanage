@@ -525,8 +525,8 @@ $(".custom-file-input").on("change", function() {
         data.append('Budget', Budget); 
         data.append('PeriodDate', PeriodDate); 
         data.append('DocFile', DocFile); 
-        //data.append('Employee', Employee );
-        //data.append('PeriodInfo', PeriodInfo );
+        data.append('Employee', JSON.stringify(Employee) );
+        data.append('PeriodInfo', JSON.stringify(PeriodInfo) );
         ////// เพิ่มข้อมูลเข้า array    
          
 
@@ -545,15 +545,13 @@ $(".custom-file-input").on("change", function() {
                 $.ajax({
                    url : "https://projectmanage.webclient.me/index.php/ProjectData/CreateProjectData",
                    type : "POST",
-                   data : {
-                           A: DocFile
-                          },
-                   //contentType : false,
+                   data : data,
+                   contentType : false,
                    cache : false,
-                   //processData : false,
+                   processData : false,
                    success : function(data){
 
-                    console.log(data)
+                    console.log(data);
 
                    },
                    error : function(data){
