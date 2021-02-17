@@ -83,7 +83,7 @@ class Home extends CI_Controller {
 		$header['page_focus'] = 'employee'; 
 		$header['page_menu'] = 0;
 		$header['Name'] = $sess["Name"][0];
-		
+
 
 		$this->load->view('template/header',$header);
 		#$this->load->view('home');
@@ -123,10 +123,10 @@ class Home extends CI_Controller {
 				   $MemName =  trim(iconv("tis-620", "utf-8", $ResultValue->Name ));
 				   $MemPositionID =  trim(iconv("tis-620", "utf-8", $ResultValue->PositionID )); 
 
-				   $arrayReturna["ID"] = $MemID;
-				   $arrayReturna["Username"] = $MemUsername;
-				   $arrayReturna["Name"] = $MemName;
-				   $arrayReturna["PositionID"] = $MemPositionID; 
+				   $arrayReturna["ID"][0] = $MemID;
+				   $arrayReturna["Username"][0] = $MemUsername;
+				   $arrayReturna["Name"][0] = $MemName;
+				   $arrayReturna["PositionID"][0] = $MemPositionID; 
 
 				  } 
 
