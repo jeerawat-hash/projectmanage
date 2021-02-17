@@ -541,9 +541,9 @@ $(".custom-file-input").on("change", function() {
                   $("#ModalPeriod").find("#Save").show();
                   $("#ModalPeriod").find("#Preload").hide();
 
-              /*
+              
                 $.ajax({
-                   url : "",
+                   url : "https://projectmanage.webclient.me/index.php/ProjectData/CreateProjectData",
                    type : "POST",
                    data : data,
                    contentType : false,
@@ -551,6 +551,7 @@ $(".custom-file-input").on("change", function() {
                    processData : false,
                    success : function(data){
 
+                    console.log(data)
 
                    },
                    error : function(data){
@@ -559,7 +560,7 @@ $(".custom-file-input").on("change", function() {
 
                    }
                 });
-                */
+                
 
 
      
