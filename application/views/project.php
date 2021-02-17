@@ -572,6 +572,12 @@ $(".custom-file-input").on("change", function() {
               return false;
 
         }
+       if (DatePeriodStart == 0) {
+
+              alert("Please Fill Period Date");
+              return false;
+
+        }
 
         var PeriodInfo = { Detail : DetailPeriodArray , Date : DatePeriodArray };
         //console.log(PeriodInfo);
