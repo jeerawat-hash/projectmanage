@@ -480,9 +480,7 @@ $(".custom-file-input").on("change", function() {
                        { MemberID1 : EmployeeGroup1, MemberRole : EmployeeRole1 },
                        { MemberID2 : EmployeeGroup2, MemberRole : EmployeeRole2 },
                        { MemberID3 : EmployeeGroup3, MemberRole : EmployeeRole3 } ];
-
-      console.log(Employee);
-
+ 
       ////////// role 
 
 
@@ -527,9 +525,13 @@ $(".custom-file-input").on("change", function() {
         data.append('Budget', Budget); 
         data.append('PeriodDate', PeriodDate); 
         data.append('DocFile', DocFile); 
+        data.append('Employee', Employee );
         data.append('PeriodInfo', PeriodInfo );
         ////// เพิ่มข้อมูลเข้า array    
         
+
+        console.log(data);
+
 
 
         $("#ModalPeriod").find("#Save").hide();
