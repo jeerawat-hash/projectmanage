@@ -20,8 +20,8 @@ class ProjectData extends CI_Controller {
 
 
 
-		echo json_encode($_POST);
-		echo json_encode($_FILES);
+		print_r($_POST);
+		print_r($_FILES);
 
 
 
