@@ -217,7 +217,7 @@
 
             <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">โครงการใกล้ครบกำหนด</h3>
+                <h3 class="card-title">โครงการอยู่ระหว่างส่งมอบ</h3>
               </div>
               
               <!-- /.card-header -->
