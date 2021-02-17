@@ -484,6 +484,12 @@ $(".custom-file-input").on("change", function() {
               return false;
       } 
 
+      if (DocFile == undefined) {
+        
+              alert("Please Upload Docs");
+              return false;
+
+      }
 
       ////////// role 
       var EmployeeGroup0 = $("#ModalPeriod").find("#inputEmployeeGroup0").val(); 
