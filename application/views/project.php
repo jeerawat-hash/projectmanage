@@ -433,15 +433,24 @@ $(".custom-file-input").on("change", function() {
     $("#ModalPeriod").find("#Save").on("click",function(){
 
        
+      var DetailPeriodArray = new Array();
+      var DatePeriodArray = new Array();
+
+
+        DetailPeriodStart = 0;
+        DatePeriodStart = 0;
        $(".inputDetailPeriod").each(function(){
 
           var DetailPeriod = $(this).val().trim();
+          DetailPeriodStart += 1;
 
-          console.log(DetailPeriod);
-
+          DetailPeriodArray[DetailPeriodStart] = DetailPeriod;
+  
 
         });
 
+        console.log(DetailPeriodArray);
+        
        $(".inputDetailPeriodDate").each(function(){
 
           var PeriodDate = $(this).val().trim();
