@@ -462,6 +462,29 @@ $(".custom-file-input").on("change", function() {
       var PeriodDate = $("#ModalPeriod").find("#inputPeriodDate").val(); 
       var DocFile = $('#DocFile').prop('files')[0]; 
 
+
+      if (ProjectName == "") {
+              alert("Please Fill ProjectName");
+              return false;
+      }
+      if (Description == "") {
+              alert("Please Fill Description");
+              return false;
+      }
+      if (ClientCompany == "") {
+              alert("Please Fill ClientCompany");
+              return false;
+      }
+      if (Budget == 0) {
+              alert("Please Fill Budget");
+              return false;
+      }
+      if (PeriodDate == "") {
+              alert("Please Fill PeriodDate");
+              return false;
+      } 
+
+
       ////////// role 
       var EmployeeGroup0 = $("#ModalPeriod").find("#inputEmployeeGroup0").val(); 
       var EmployeeRole0 = $("#ModalPeriod").find("#inputEmployeeRole0").val(); 
@@ -475,6 +498,27 @@ $(".custom-file-input").on("change", function() {
       var EmployeeGroup3 = $("#ModalPeriod").find("#inputEmployeeGroup3").val(); 
       var EmployeeRole3 = $("#ModalPeriod").find("#inputEmployeeRole3").val(); 
 
+
+
+      if (EmployeeGroup1 != null) {
+          if (EmployeeRole1 == null) {
+              alert("Please SelectRole1");
+              return false;
+          }
+      }
+      if (EmployeeGroup2 != null) {
+          if (EmployeeRole2 == null) {
+              alert("Please SelectRole2");
+              return false;
+          }
+      }
+      if (EmployeeGroup3 != null) {
+          if (EmployeeRole3 == null) {
+              alert("Please SelectRole3");
+              return false;
+          }
+      }
+ 
 
       var Employee = [ { Creator : { MemberID : EmployeeGroup0, MemberRole : EmployeeRole0 } },
                        { MemberID1 : EmployeeGroup1, MemberRole : EmployeeRole1 },
@@ -496,8 +540,13 @@ $(".custom-file-input").on("change", function() {
 
           var DetailPeriod = $(this).val().trim();
 
+          if (DetailPeriod == "") {
+              alert("Please Fill Period Detail");
+              return false;
+          }
+
+
           DetailPeriodArray[DetailPeriodStart] = DetailPeriod;
-  
           DetailPeriodStart += 1;
 
         });
@@ -505,12 +554,18 @@ $(".custom-file-input").on("change", function() {
        $(".inputDetailPeriodDate").each(function(){
 
           var PeriodDate = $(this).val().trim();
+
+          if (PeriodDate == "") {
+              alert("Please Fill Period Date");
+              return false;
+          }
+
           DatePeriodArray[DatePeriodStart] = PeriodDate;
- 
           DatePeriodStart += 1;
 
         });
-
+ 
+ 
         var PeriodInfo = { Detail : DetailPeriodArray , Date : DatePeriodArray };
         //console.log(PeriodInfo);
        /////// getData Period /////
@@ -561,12 +616,7 @@ $(".custom-file-input").on("change", function() {
                    }
                 });
                 
-
-
-     
-      
-        
-
+ 
         }, 2000);
 
 
