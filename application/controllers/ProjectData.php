@@ -20,11 +20,47 @@ class ProjectData extends CI_Controller {
 
 
  
-		print_r($_POST);  
-		print_r( json_decode($_POST["Employee"],true));  
-		print_r( json_decode($_POST["PeriodInfo"],true));   
-		print_r($_FILES);
- 
+		#print_r($_POST);  
+		#print_r( json_decode($_POST["Employee"],true));  
+		#print_r( json_decode($_POST["PeriodInfo"],true));   
+		#print_r($_FILES);
+ 		
+
+		$Employee = json_decode($_POST["Employee"],true);
+		$PeriodInfo = json_decode($_POST["PeriodInfo"],true);
+
+		#move_uploaded_file($_FILES["DocFile"]["tmp_name"], "/home/jeerawatme/web/projectmanage.webclient.me/public_html/Files/".$_FILES["DocFile"]["name"]);
+
+		$URL = "https://projectmanage.webclient.me/Files/".$_FILES["DocFile"]["name"];
+
+		$ProjectName = $_POST["ProjectName"];
+		$Description = $_POST["Description"];
+		$ClientCompany = $_POST["ClientCompany"];
+		$Budget = $_POST["Budget"];
+		$PeriodDate = $_POST["PeriodDate"];
+
+
+		$CreatorID = $Employee[0]["Creator"]["MemberID"];
+		$CreatorRole = $Employee[0]["Creator"]["MemberRole"];
+  
+
+		$Member["ID"][] = $Employee[1]["MemberID1"];
+		$Member["ID"][] = $Employee[2]["MemberID2"];
+		$Member["ID"][] = $Employee[3]["MemberID3"];
+		$Member["Role"][] = $Employee[1]["MemberRole"];
+		$Member["Role"][] = $Employee[2]["MemberRole"];
+		$Member["Role"][] = $Employee[3]["MemberRole"];
+
+
+		echo $PeriodInfo["Detail"][0];
+		echo $PeriodInfo["Date"][0];
+
+		print_r($Member);
+
+
+
+
+
  
 	}
 	public function test()
