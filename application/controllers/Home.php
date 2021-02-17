@@ -108,10 +108,10 @@ class Home extends CI_Controller {
 				   $MemPassword =  trim(iconv("tis-620", "utf-8", $ResultValue->Password ));
 				   $MemPositionID =  trim(iconv("tis-620", "utf-8", $ResultValue->PositionID )); 
 
-				   $arrayReturna["ID"][] = $MemID;
-				   $arrayReturna["Username"][] = $MemUsername;
-				   $arrayReturna["Password"][] = $MemPassword;
-				   $arrayReturna["PositionID"][] = $MemPositionID; 
+				   $arrayReturna["ID"] = $MemID;
+				   $arrayReturna["Username"] = $MemUsername;
+				   $arrayReturna["Password"] = $MemPassword;
+				   $arrayReturna["PositionID"] = $MemPositionID; 
 
 				  } 
 
