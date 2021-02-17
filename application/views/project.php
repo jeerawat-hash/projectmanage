@@ -457,11 +457,28 @@ $(".custom-file-input").on("change", function() {
 
       var ProjectName = $("#ModalPeriod").find("#inputProjectName").val(); 
       var Description = $("#ModalPeriod").find("#inputDescription").val(); 
-       
+      var ClientCompany = $("#ModalPeriod").find("#inputClientCompany").val(); 
+      var Budget = $("#ModalPeriod").find("#inputBudget").val(); 
+      var PeriodDate = $("#ModalPeriod").find("#inputPeriodDate").val(); 
+      var DocFile = $('#DocFile').prop('files')[0]; 
+
+      ////////// role 
+      var EmployeeGroup0 = $("#ModalPeriod").find("#inputEmployeeGroup0").val(); 
+      var EmployeeRole0 = $("#ModalPeriod").find("#inputEmployeeRole0").val(); 
+
+      var EmployeeGroup1 = $("#ModalPeriod").find("#inputEmployeeGroup1").val(); 
+      var EmployeeRole1 = $("#ModalPeriod").find("#inputEmployeeRole1").val(); 
+
+      var EmployeeGroup2 = $("#ModalPeriod").find("#inputEmployeeGroup2").val(); 
+      var EmployeeRole2 = $("#ModalPeriod").find("#inputEmployeeRole2").val(); 
+
+      var EmployeeGroup3 = $("#ModalPeriod").find("#inputEmployeeGroup3").val(); 
+      var EmployeeRole3 = $("#ModalPeriod").find("#inputEmployeeRole3").val(); 
+      ////////// role 
 
 
-      alert(Description);
 
+ 
 
        /////// getData Period /////
       var DetailPeriodArray = new Array();
@@ -490,6 +507,13 @@ $(".custom-file-input").on("change", function() {
       var PeriodInfo = { Detail : DetailPeriodArray , Date : DatePeriodArray };
       console.log(PeriodInfo);
        /////// getData Period /////
+
+
+  
+
+        console.log(DocFile);
+
+
 
 
 
