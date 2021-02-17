@@ -124,20 +124,15 @@
               }
               ,
               function(data,status,response){ 
-              var object =  JSON.parse(data);  
-                 var Id = object; 
-                    if (Id != "") { 
-                            var PositionID = object.PositionID[0];  
-                            var Pagesite = "https://projectmanage.webclient.me/index.php/home/summary/";
-                              
-                  location.replace(Pagesite); 
+                  
 
-                    } else{
+                  if (data == 1) {
+                    var Pagesite = "https://projectmanage.webclient.me/index.php/home/summary/";
+                    location.replace(Pagesite);   
+                  }
+                  
 
-                             alert("Please Login again"); 
-                              $("#username").val("");  
-                              $("#password").val(""); 
-                    }   
+                    
 
             });  
 

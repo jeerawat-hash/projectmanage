@@ -133,15 +133,14 @@ class Home extends CI_Controller {
 
 				  $this->session->set_userdata($arrayReturna);
 
-				  echo json_encode($arrayReturna);
+				  echo 1;
 	}
-	public function logout($username=null,$password=null)
+	public function logout()
 	{  
                  
 
-
 			$this->session->sess_destroy();
-
+			redirect("Home/index");
 
 
 	}
