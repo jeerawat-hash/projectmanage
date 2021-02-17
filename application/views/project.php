@@ -175,11 +175,11 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="inputBudget">งบประมาณโครงการ</label>
-                    <input type="number" id="inputBudget" class="form-control">
+                    <input type="number" id="inputBudget" value="0" class="form-control">
                   </div> 
                   <div class="form-group">
-                    <label for="inputPeriodDate">ช่วงเวลาก่อนตรวจความคืบหน้า</label>
-                    <input type="number" id="inputPeriodDate" class="form-control">
+                    <label for="inputPeriodDate">ช่วงเวลาก่อนตรวจความคืบหน้า(<font color="red">จำนวนวัน</font>)</label>
+                    <input type="number" id="inputPeriodDate" value="0" class="form-control">
                   </div>
                 </div> 
 
@@ -232,8 +232,8 @@
             <div  class="row">
               <div class="col-8">
                 <div class="form-group">
-                  <label for="inputEmployeeGroup1">ชื่อ</label>
-                  <select id="inputEmployeeGroup1" class="form-control custom-select">
+                  <label for="inputEmployeeGroup0">ชื่อ</label>
+                  <select id="inputEmployeeGroup0" class="form-control custom-select">
                     <option value="0" selected disabled>A</option> 
                   </select>
                 </div>
@@ -241,8 +241,8 @@
               <div class="col-4">
                 
                 <div class="form-group">
-                  <label for="inputEmployeeRole1">สิทธิการใช้งาน</label>
-                  <select id="inputEmployeeRole1" class="form-control custom-select">
+                  <label for="inputEmployeeRole0">สิทธิการใช้งาน</label>
+                  <select id="inputEmployeeRole0" class="form-control custom-select">
                     <option value="0" selected disabled>อ่าน/บันทึกผล/แก้ไข</option>  
                   </select>
                 </div>
