@@ -226,6 +226,12 @@
                   <p>ผู้ใช้งาน</p>
                 </a>
               </li>  
+              <li class="nav-item">
+                <a href="<?php echo base_url(); ?>index.php/home/logout" class="nav-link">
+                  <i class="fas fa-edit nav-icon"></i>
+                  <p>ออกจากระบบ</p>
+                </a>
+              </li>  
 
 
 
