@@ -564,8 +564,15 @@ $(".custom-file-input").on("change", function() {
           DatePeriodStart += 1;
 
         });
- 
- 
+
+
+       if (DetailPeriodStart == 0) {
+
+              alert("Please Add Period");
+              return false;
+
+        }
+
         var PeriodInfo = { Detail : DetailPeriodArray , Date : DatePeriodArray };
         //console.log(PeriodInfo);
        /////// getData Period /////
@@ -588,8 +595,6 @@ $(".custom-file-input").on("change", function() {
 
         $("#ModalPeriod").find("#Save").hide();
         $("#ModalPeriod").find("#Preload").show();
-
-
 
         setTimeout(function(){ 
 
