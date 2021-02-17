@@ -548,7 +548,7 @@ $(".custom-file-input").on("change", function() {
                    data : {
                            A: data
                           },
-                   //contentType : false,
+                   contentType : false,
                    cache : false,
                    //processData : false,
                    success : function(data){
