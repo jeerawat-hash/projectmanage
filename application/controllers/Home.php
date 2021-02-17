@@ -24,22 +24,24 @@ class Home extends CI_Controller {
 	}
 	public function summary()
 	{
-        
-		$header['page_name'] = 'ภาพรวมการบริหารโครงการ';
-		$header['page_focus'] = 'summary'; 
-		$header['page_menu'] = 0; 
-		$header['Name'] = $sess["Username"][0];
-		
-		$this->load->view('template/header',$header);
-		$this->load->view('home');
-		$this->load->view('template/footer');
-		
 		$sess = $this->session->userdata();
 
 		echo $sess["ID"][0];
 		echo $sess["Username"][0];
 		echo $sess["PositionID"][0];
 
+
+        
+		$header['page_name'] = 'ภาพรวมการบริหารโครงการ';
+		$header['page_focus'] = 'summary'; 
+		$header['page_menu'] = 0; 
+		$header['Name'] = $sess["Username"][0];
+
+		$this->load->view('template/header',$header);
+		$this->load->view('home');
+		$this->load->view('template/footer');
+		
+		
 	}
 	public function project()
 	{
