@@ -258,14 +258,15 @@
                   <select id="inputEmployeeGroup1" class="form-control custom-select">
                     <option value="0" selected disabled>กรุณาเลือก</option>
                     <?php 
+  
+                    foreach ($SignMember as $Member) {
+                    ?>
 
-                    print_r($SignMember);
+                    <option value="<?php echo $Member->ID; ?>" ><?php echo $Member->Name; ?></option>
 
-
-                     ?>
-                    <option value="A" >A</option>
-                    <option value="B" >B</option>
-                    <option value="C" >C</option>
+                    <?php
+                    }
+                     ?> 
                   </select>
                 </div>
               </div>
@@ -289,10 +290,17 @@
                 <div class="form-group">
                   <label for="inputEmployeeGroup2">ชื่อ</label>
                   <select id="inputEmployeeGroup2" class="form-control custom-select">
-                    <option selected disabled>กรุณาเลือก</option>
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
+                    <option value="0" selected disabled>กรุณาเลือก</option>
+                    <?php 
+  
+                    foreach ($SignMember as $Member) {
+                    ?>
+
+                    <option value="<?php echo $Member->ID; ?>" ><?php echo $Member->Name; ?></option>
+
+                    <?php
+                    }
+                     ?> 
                   </select>
                 </div>
               </div>
@@ -316,10 +324,17 @@
                 <div class="form-group">
                   <label for="inputEmployeeGroup3">ชื่อ</label>
                   <select id="inputEmployeeGroup3" class="form-control custom-select">
-                    <option selected disabled>กรุณาเลือก</option>
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
+                    <option value="0" selected disabled>กรุณาเลือก</option>
+                    <?php 
+  
+                    foreach ($SignMember as $Member) {
+                    ?>
+
+                    <option value="<?php echo $Member->ID; ?>" ><?php echo $Member->Name; ?></option>
+
+                    <?php
+                    }
+                     ?> 
                   </select>
                 </div>
               </div>
