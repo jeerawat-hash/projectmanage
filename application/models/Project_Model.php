@@ -22,7 +22,9 @@ class Project_Model extends CI_Model
  		/// Member
         for ($i=0; $i < count($Member["ID"]); $i++) { 
         	 
-        	$this->pmdb->query(" INSERT INTO SignGroup (ID, MemberID, Role) VALUES ('".$GroupID."', '".$Member["ID"][$i]."', '".$Member["Role"][$i]."') ");
+                if ($Member["ID"] != 0) {
+                        $this->pmdb->query(" INSERT INTO SignGroup (ID, MemberID, Role) VALUES ('".$GroupID."', '".$Member["ID"][$i]."', '".$Member["Role"][$i]."') ");
+                }
 
         	$isSuccess = 1;
  
