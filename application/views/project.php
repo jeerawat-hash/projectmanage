@@ -234,7 +234,7 @@
                 <div class="form-group">
                   <label for="inputEmployeeGroup0">ชื่อ</label>
                   <select id="inputEmployeeGroup0" class="form-control custom-select">
-                    <option value="0" selected disabled>A</option> 
+                    <option value="0" selected >A</option> 
                   </select>
                 </div>
               </div>
@@ -243,7 +243,7 @@
                 <div class="form-group">
                   <label for="inputEmployeeRole0">สิทธิการใช้งาน</label>
                   <select id="inputEmployeeRole0" class="form-control custom-select">
-                    <option value="0" selected disabled>อ่าน/บันทึกผล/แก้ไข</option>  
+                    <option value="CER" selected >อ่าน/บันทึกผล/แก้ไข</option>  
                   </select>
                 </div>
 
@@ -257,9 +257,9 @@
                   <label for="inputEmployeeGroup1">ชื่อ</label>
                   <select id="inputEmployeeGroup1" class="form-control custom-select">
                     <option value="0" selected disabled>กรุณาเลือก</option>
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
+                    <option value="A" >A</option>
+                    <option value="B" >B</option>
+                    <option value="C" >C</option>
                   </select>
                 </div>
               </div>
@@ -269,9 +269,9 @@
                   <label for="inputEmployeeRole1">สิทธิการใช้งาน</label>
                   <select id="inputEmployeeRole1" class="form-control custom-select">
                     <option value="0" selected disabled>กรุณาเลือก</option>
-                    <option>อ่าน</option>
-                    <option>อ่าน/บันทึกผล</option>
-                    <option>อ่าน/บันทึกผล/แก้ไข</option>
+                    <option value="R" >อ่าน</option>
+                    <option value="SR" >อ่าน/บันทึกผล</option>
+                    <option value="CER" >อ่าน/บันทึกผล/แก้ไข</option>
                   </select>
                 </div>
 
@@ -296,9 +296,9 @@
                   <label for="inputEmployeeRole2">สิทธิการใช้งาน</label>
                   <select id="inputEmployeeRole2" class="form-control custom-select">
                     <option selected disabled>กรุณาเลือก</option>
-                    <option>อ่าน</option>
-                    <option>อ่าน/บันทึกผล</option>
-                    <option>อ่าน/บันทึกผล/แก้ไข</option>
+                    <option value="R" >อ่าน</option>
+                    <option value="SR" >อ่าน/บันทึกผล</option>
+                    <option value="CER" >อ่าน/บันทึกผล/แก้ไข</option>
                   </select>
                 </div>
 
@@ -323,9 +323,9 @@
                   <label for="inputEmployeeRole3">สิทธิการใช้งาน</label>
                   <select id="inputEmployeeRole3" class="form-control custom-select">
                     <option selected disabled>กรุณาเลือก</option>
-                    <option>อ่าน</option>
-                    <option>อ่าน/บันทึกผล</option>
-                    <option>อ่าน/บันทึกผล/แก้ไข</option>
+                    <option value="R" >อ่าน</option>
+                    <option value="SR" >อ่าน/บันทึกผล</option>
+                    <option value="CER" >อ่าน/บันทึกผล/แก้ไข</option>
                   </select>
                 </div>
 
