@@ -476,24 +476,11 @@ $(".custom-file-input").on("change", function() {
       var EmployeeRole3 = $("#ModalPeriod").find("#inputEmployeeRole3").val(); 
 
 
-      var Creator = new Array();
-      var Staff1 = new Array();
-      var Staff2 = new Array();
-      var Staff3 = new Array();
-      
-      Creator[0] = EmployeeGroup0;
-      Creator[1] = EmployeeRole0;
-
-      Staff1[0] = EmployeeGroup1;
-      Staff1[1] = EmployeeRole1;
-
-      Staff2[0] = EmployeeGroup2;
-      Staff2[1] = EmployeeRole2;
-
-      Staff3[0] = EmployeeGroup3;
-      Staff3[1] = EmployeeRole3;
-
-
+      var Employee = [ { Creator : { MemberID : EmployeeGroup0, MemberRole : EmployeeRole0 } },
+                       { MemberID1 : EmployeeGroup1, MemberRole : EmployeeRole1 },
+                       { MemberID2 : EmployeeGroup2, MemberRole : EmployeeRole2 },
+                       { MemberID3 : EmployeeGroup3, MemberRole : EmployeeRole3 } ];
+ 
       ////////// role 
 
 
@@ -523,7 +510,9 @@ $(".custom-file-input").on("change", function() {
           DatePeriodStart += 1;
 
         });
- 
+
+        var PeriodInfo = { Detail : DetailPeriodArray , Date : DatePeriodArray };
+        //console.log(PeriodInfo);
        /////// getData Period /////
 
 
@@ -536,12 +525,8 @@ $(".custom-file-input").on("change", function() {
         data.append('Budget', Budget); 
         data.append('PeriodDate', PeriodDate); 
         data.append('DocFile', DocFile); 
-        data.append('DetailPeriodArray', DetailPeriodArray );
-        data.append('DatePeriodArray', DatePeriodArray );
-        data.append('Creator', Creator );
-        data.append('Staff1', Staff1 );
-        data.append('Staff2', Staff2 );
-        data.append('Staff3', Staff3 ); 
+        //data.append('Employee', Employee );
+        //data.append('PeriodInfo', PeriodInfo );
         ////// เพิ่มข้อมูลเข้า array    
          
 
@@ -560,13 +545,17 @@ $(".custom-file-input").on("change", function() {
                 $.ajax({
                    url : "https://projectmanage.webclient.me/index.php/ProjectData/CreateProjectData",
                    type : "POST",
-                   data : data,
+                   data : {
+                          data : data,
+                          Employee : Employee,
+                          PeriodInfo : PeriodInfo
+                          },
                    contentType : false,
                    cache : false,
                    processData : false,
                    success : function(data){
 
-                    console.log(data);
+                    console.log(data)
 
                    },
                    error : function(data){
