@@ -546,8 +546,7 @@ $(".custom-file-input").on("change", function() {
                    url : "https://projectmanage.webclient.me/index.php/ProjectData/CreateProjectData",
                    type : "POST",
                    data : {
-                           A: "s",
-                           B: data
+                           A: data
                           },
                    //contentType : false,
                    cache : false,
