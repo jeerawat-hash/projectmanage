@@ -527,6 +527,7 @@ $(".custom-file-input").on("change", function() {
         data.append('DocFile', DocFile); 
         data.append('Employee', Employee );
         data.append('PeriodInfo', PeriodInfo );
+        data.append('PeriodInfoA', DetailPeriodArray );
         ////// เพิ่มข้อมูลเข้า array    
          
 
