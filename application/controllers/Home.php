@@ -26,16 +26,16 @@ class Home extends CI_Controller {
 	{
 		$sess = $this->session->userdata();
 
-		echo $sess["ID"][0];
-		echo $sess["Username"][0];
-		echo $sess["PositionID"][0];
-		echo $sess["Name"][0];
+		echo $sess["ID"];
+		echo $sess["Username"];
+		echo $sess["PositionID"];
+		echo $sess["Name"];
  		print_r($sess);
 
 		$header['page_name'] = 'ภาพรวมการบริหารโครงการ';
 		$header['page_focus'] = 'summary'; 
 		$header['page_menu'] = 0; 
-		$header['Name'] = $sess["Name"][0];
+		$header['Name'] = $sess["Name"];
 
 		$this->load->view('template/header',$header);
 		$this->load->view('home');
@@ -50,7 +50,7 @@ class Home extends CI_Controller {
 		$header['page_name'] = 'จัดการโครงการ';
 		$header['page_focus'] = 'projectmanage'; 
 		$header['page_menu'] = 1;
-		$header['Name'] = $sess["Name"][0];
+		$header['Name'] = $sess["Name"];
 
 
 		$this->load->view('template/header',$header);
@@ -67,7 +67,7 @@ class Home extends CI_Controller {
 		$header['page_name'] = 'สืบค้นข้อมูล';
 		$header['page_focus'] = 'search'; 
 		$header['page_menu'] = 2;
-		$header['Name'] = $sess["Name"][0];
+		$header['Name'] = $sess["Name"];
 
 
 		$this->load->view('template/header',$header);
@@ -83,7 +83,7 @@ class Home extends CI_Controller {
 		$header['page_name'] = 'จัดการข้อมูลพนักงาน';
 		$header['page_focus'] = 'employee'; 
 		$header['page_menu'] = 0;
-		$header['Name'] = $sess["Name"][0];
+		$header['Name'] = $sess["Name"];
 
 
 		$this->load->view('template/header',$header);
@@ -121,13 +121,13 @@ class Home extends CI_Controller {
 
 				   $MemID =  trim(iconv("tis-620", "utf-8", $ResultValue->ID ));
 				   $MemUsername =  trim(iconv("tis-620", "utf-8", $ResultValue->Username ));
-				   $MemName =  trim(iconv("tis-620", "utf-8", $ResultValue->Name ));
+				   $MemName =  $ResultValue->Name;
 				   $MemPositionID =  trim(iconv("tis-620", "utf-8", $ResultValue->PositionID )); 
 
-				   $arrayReturna["ID"][0] = $MemID;
-				   $arrayReturna["Username"][0] = $MemUsername;
-				   $arrayReturna["Name"][0] = $MemName;
-				   $arrayReturna["PositionID"][0] = $MemPositionID; 
+				   $arrayReturna["ID"] = $MemID;
+				   $arrayReturna["Username"] = $MemUsername;
+				   $arrayReturna["Name"] = $MemName;
+				   $arrayReturna["PositionID"] = $MemPositionID; 
 
 				  } 
 
