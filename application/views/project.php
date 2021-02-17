@@ -476,8 +476,8 @@ $(".custom-file-input").on("change", function() {
 
         var Index = $("#ModalPeriod").find('#inputEmployeeGroup1 option:selected').val();
     
-        $("#ModalPeriod").find("#inputEmployeeGroup2 option:eq(${Index})").remove();
-        $("#ModalPeriod").find("#inputEmployeeGroup3 option:eq(${Index})").remove();
+        $("#ModalPeriod").find("#inputEmployeeGroup2 option[value='"+Index+"']").remove();
+        $("#ModalPeriod").find("#inputEmployeeGroup3 option[value='"+Index+"']").remove(); 
 
 
     });
