@@ -454,8 +454,11 @@ $(".custom-file-input").on("change", function() {
 
     $("#ModalPeriod").find("#Save").on("click",function(){
 
+
+      var ProjectName = $("#ModalPeriod").find("#inputProjectName").val(); 
        
 
+      alert(ProjectName);
 
 
        /////// getData Period /////
