@@ -20,11 +20,11 @@ class ProjectData extends CI_Controller {
 
 
 
-		#print_r($_POST);
+		print_r($_POST);
 		 
 		#print_r($_POST["Employee"]); 
 
-		echo var_dump($_POST["PeriodInfo"]);
+		print_r($_POST["PeriodInfoA"]);
 	 
 		
 		#print_r($_FILES);
