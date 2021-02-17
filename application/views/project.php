@@ -474,6 +474,12 @@ $(".custom-file-input").on("change", function() {
 
       var EmployeeGroup3 = $("#ModalPeriod").find("#inputEmployeeGroup3").val(); 
       var EmployeeRole3 = $("#ModalPeriod").find("#inputEmployeeRole3").val(); 
+
+
+      var Employee = [Owner : { MemberID : EmployeeGroup0, MemberRole : EmployeeRole0 }];
+
+      console.log(Employee);
+
       ////////// role 
 
 
@@ -504,17 +510,61 @@ $(".custom-file-input").on("change", function() {
 
         });
 
-      var PeriodInfo = { Detail : DetailPeriodArray , Date : DatePeriodArray };
-      console.log(PeriodInfo);
+        var PeriodInfo = { Detail : DetailPeriodArray , Date : DatePeriodArray };
+        //console.log(PeriodInfo);
        /////// getData Period /////
 
 
   
+        var data = new FormData();      
+        ////// เพิ่มข้อมูลเข้า          
+        data.append('ProjectName', ProjectName); 
+        data.append('Description', Description); 
+        data.append('ClientCompany', ClientCompany); 
+        data.append('Budget', Budget); 
+        data.append('PeriodDate', PeriodDate); 
+        data.append('DocFile', DocFile); 
+        data.append('PeriodInfo', PeriodInfo );
+        ////// เพิ่มข้อมูลเข้า array    
+        
 
-        console.log(DocFile);
+
+        $("#ModalPeriod").find("#Save").hide();
+        $("#ModalPeriod").find("#Preload").show();
 
 
 
+        setTimeout(function(){ 
+
+                  $("#ModalPeriod").find("#Save").show();
+                  $("#ModalPeriod").find("#Preload").hide();
+
+              /*
+                $.ajax({
+                   url : "",
+                   type : "POST",
+                   data : data,
+                   contentType : false,
+                   cache : false,
+                   processData : false,
+                   success : function(data){
+
+
+                   },
+                   error : function(data){
+
+
+
+                   }
+                });
+                */
+
+
+     
+      
+        
+
+        }, 2000);
 
 
 
