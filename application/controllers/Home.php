@@ -31,8 +31,9 @@ class Home extends CI_Controller {
 		$this->load->view('template/header',$header);
 		$this->load->view('home');
 		$this->load->view('template/footer');
-		echo $this->session->userdata("Username");
-	
+		$a = $this->session->userdata("Username");
+		
+		print_r($a);
 	}
 	public function project()
 	{
