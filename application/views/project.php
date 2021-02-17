@@ -548,9 +548,9 @@ $(".custom-file-input").on("change", function() {
                    data : {
                            A: "s"
                           },
-                   contentType : false,
+                   //contentType : false,
                    cache : false,
-                   processData : false,
+                   //processData : false,
                    success : function(data){
 
                     console.log(data)
