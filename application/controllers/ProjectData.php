@@ -20,8 +20,7 @@ class ProjectData extends CI_Controller {
 
 
 
-		print_r($_POST); 
-		echo $_POST["Creator"][1];
+		print_r($_POST['data']);  
 		#print_r($_FILES);
 
 
