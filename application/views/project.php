@@ -474,10 +474,10 @@ $(".custom-file-input").on("change", function() {
 
     $("#ModalPeriod").find("#inputEmployeeGroup1").on("change",function(){
 
-
-        var a = $("#ModalPeriod").find('#inputEmployeeGroup1 option:selected').val();
-
-        alert(a);
+        var Index = $("#ModalPeriod").find('#inputEmployeeGroup1 option:selected').val();
+    
+        $("#ModalPeriod").find("#inputEmployeeGroup2 option:eq(${Index})").remove();
+        $("#ModalPeriod").find("#inputEmployeeGroup3 option:eq(${Index})").remove();
 
 
     });
