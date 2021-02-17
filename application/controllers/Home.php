@@ -52,9 +52,11 @@ class Home extends CI_Controller {
 		$header['page_menu'] = 1;
 		$header['Name'] = $sess["Name"];
 
+		$data["MemberID"] = $sess["ID"];
+		$data["MemberName"] = $sess["Name"];
 
 		$this->load->view('template/header',$header);
-		$this->load->view('project');
+		$this->load->view('project',$data);
 		$this->load->view('template/footer');
 
 

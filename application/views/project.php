@@ -234,7 +234,7 @@
                 <div class="form-group">
                   <label for="inputEmployeeGroup0">ชื่อ</label>
                   <select id="inputEmployeeGroup0" class="form-control custom-select">
-                    <option value="0" selected >A</option> 
+                    <option value="<?php echo $MemberID; ?>" selected ><?php echo $MemberName; ?></option> 
                   </select>
                 </div>
               </div>
