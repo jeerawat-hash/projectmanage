@@ -21,7 +21,10 @@ class ProjectData extends CI_Controller {
 
 
 		print_r($_POST);  
+		print_r( json_decode($_POST["Employee"],true));  
+		print_r( json_decode($_POST["PeriodInfo"],true));   
 		print_r($_FILES);
+
 
 
 
