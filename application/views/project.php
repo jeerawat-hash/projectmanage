@@ -476,7 +476,10 @@ $(".custom-file-input").on("change", function() {
       var EmployeeRole3 = $("#ModalPeriod").find("#inputEmployeeRole3").val(); 
 
 
-      var Employee = [Owner : { MemberID : EmployeeGroup0, MemberRole : EmployeeRole0 }];
+      var Employee = [ { MemberID : EmployeeGroup0, MemberRole : EmployeeRole0 },
+                       { MemberID : EmployeeGroup1, MemberRole : EmployeeRole1 },
+                       { MemberID : EmployeeGroup2, MemberRole : EmployeeRole2 },
+                       { MemberID : EmployeeGroup3, MemberRole : EmployeeRole3 } ];
 
       console.log(Employee);
 
