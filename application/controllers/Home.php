@@ -25,7 +25,7 @@ class Home extends CI_Controller {
 	public function summary()
 	{
         
-		$header['page_name'] = 'ภาพรวมการบริหาร';
+		$header['page_name'] = 'ภาพรวมการบริหารโครงการ';
 		$header['page_focus'] = 'summary'; 
 		$header['page_menu'] = 0; 
 		$this->load->view('template/header',$header);

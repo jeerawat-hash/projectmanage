@@ -359,7 +359,7 @@
           <span class="sr-only">Loading...</span>
         </div>
 
-        <button type="button" class="btn btn-warning">บันทึก</button>
+        <button type="button" class="btn btn-warning" id="Save" >บันทึก</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
       </div>
     </div>
@@ -426,6 +426,48 @@ $(".custom-file-input").on("change", function() {
 
     <script type="text/javascript">
   $(function () {
+
+
+
+    //// hide preload 
+    $("#ModalPeriod").find("#Preload").hide();
+
+    $("#ModalPeriod").find("#Save").on("click",function(){
+
+
+
+      alert();
+
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
