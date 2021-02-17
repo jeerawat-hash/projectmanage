@@ -26,11 +26,11 @@ class Home extends CI_Controller {
 	{
 		$sess = $this->session->userdata();
 
-		echo $sess["ID"];
-		echo $sess["Username"];
-		echo $sess["PositionID"];
-		echo $sess["Name"];
- 		print_r($sess);
+		#echo $sess["ID"];
+		#echo $sess["Username"];
+		#echo $sess["PositionID"];
+		#echo $sess["Name"];
+ 		#print_r($sess);
 
 		$header['page_name'] = 'ภาพรวมการบริหารโครงการ';
 		$header['page_focus'] = 'summary'; 
