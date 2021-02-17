@@ -28,12 +28,18 @@ class Home extends CI_Controller {
 		$header['page_name'] = 'ภาพรวมการบริหารโครงการ';
 		$header['page_focus'] = 'summary'; 
 		$header['page_menu'] = 0; 
+		$header['Name'] = $sess["Username"][0];
+		
 		$this->load->view('template/header',$header);
 		$this->load->view('home');
 		$this->load->view('template/footer');
-		$a = $this->session->userdata();
 		
-		print_r($a);
+		$sess = $this->session->userdata();
+
+		echo $sess["ID"][0];
+		echo $sess["Username"][0];
+		echo $sess["PositionID"][0];
+
 	}
 	public function project()
 	{
