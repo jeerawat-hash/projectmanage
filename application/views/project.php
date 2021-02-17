@@ -229,6 +229,28 @@
             <h4>กลุ่มผู้รับผิดชอบโครงการ</h4>
            
             <div class="card-body">
+            <div hidden class="row">
+              <div class="col-8">
+                <div class="form-group">
+                  <label for="inputEmployeeGroup1">ชื่อ</label>
+                  <select id="inputEmployeeGroup1" class="form-control custom-select">
+                    <option value="0" selected disabled>A</option> 
+                  </select>
+                </div>
+              </div>
+              <div class="col-4">
+                
+                <div class="form-group">
+                  <label for="inputEmployeeRole1">สิทธิการใช้งาน</label>
+                  <select id="inputEmployeeRole1" class="form-control custom-select">
+                    <option value="0" selected disabled>อ่าน/บันทึกผล/แก้ไข</option>  
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+
             <div class="row">
               <div class="col-8">
                 <div class="form-group">
@@ -433,10 +455,12 @@ $(".custom-file-input").on("change", function() {
     $("#ModalPeriod").find("#Save").on("click",function(){
 
        
+
+
+
+       /////// getData Period /////
       var DetailPeriodArray = new Array();
       var DatePeriodArray = new Array();
-
-
         DetailPeriodStart = 0;
         DatePeriodStart = 0;
        $(".inputDetailPeriod").each(function(){
@@ -459,10 +483,8 @@ $(".custom-file-input").on("change", function() {
         });
 
       var PeriodInfo = { Detail : DetailPeriodArray , Date : DatePeriodArray };
-
-
       console.log(PeriodInfo);
-
+       /////// getData Period /////
 
 
 
