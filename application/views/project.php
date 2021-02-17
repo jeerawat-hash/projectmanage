@@ -149,8 +149,8 @@
  
               <div class="card-body">
                 <div class="form-group">
-                  <label for="inputName">ชื่อโครงการ</label>
-                  <input type="text" id="inputName" class="form-control">
+                  <label for="inputProjectName">ชื่อโครงการ</label>
+                  <input type="text" id="inputProjectName" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="inputDescription">คำอธิบาย</label>
@@ -201,8 +201,8 @@
             <div class="form-group">
 
               <div class="custom-file mb-3">
-                <input type="file" class="custom-file-input" id="customFile" name="filename">
-                <label class="custom-file-label" for="customFile">เลือกไฟล์</label>
+                <input type="file" class="custom-file-input" id="DocFile" name="filename">
+                <label class="custom-file-label" for="DocFile">เลือกไฟล์</label>
               </div>
 
             </div>
@@ -232,8 +232,35 @@
             <div class="row">
               <div class="col-8">
                 <div class="form-group">
-                  <label for="inputNameStatus">ชื่อ</label>
-                  <select id="inputNameStatus" class="form-control custom-select">
+                  <label for="inputEmployeeGroup1">ชื่อ</label>
+                  <select id="inputEmployeeGroup1" class="form-control custom-select">
+                    <option value="0" selected disabled>กรุณาเลือก</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-4">
+                
+                <div class="form-group">
+                  <label for="inputEmployeeRole1">สิทธิการใช้งาน</label>
+                  <select id="inputEmployeeRole1" class="form-control custom-select">
+                    <option value="0" selected disabled>กรุณาเลือก</option>
+                    <option>อ่าน</option>
+                    <option>อ่าน/บันทึกผล</option>
+                    <option>อ่าน/บันทึกผล/แก้ไข</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-8">
+                <div class="form-group">
+                  <label for="inputEmployeeGroup2">ชื่อ</label>
+                  <select id="inputEmployeeGroup2" class="form-control custom-select">
                     <option selected disabled>กรุณาเลือก</option>
                     <option>A</option>
                     <option>B</option>
@@ -244,8 +271,8 @@
               <div class="col-4">
                 
                 <div class="form-group">
-                  <label for="inputRoleStatus">สิทธิการใช้งาน</label>
-                  <select id="inputRoleStatus" class="form-control custom-select">
+                  <label for="inputEmployeeRole2">สิทธิการใช้งาน</label>
+                  <select id="inputEmployeeRole2" class="form-control custom-select">
                     <option selected disabled>กรุณาเลือก</option>
                     <option>อ่าน</option>
                     <option>อ่าน/บันทึกผล</option>
@@ -259,8 +286,8 @@
             <div class="row">
               <div class="col-8">
                 <div class="form-group">
-                  <label for="inputNameStatus">ชื่อ</label>
-                  <select id="inputNameStatus" class="form-control custom-select">
+                  <label for="inputEmployeeGroup3">ชื่อ</label>
+                  <select id="inputEmployeeGroup3" class="form-control custom-select">
                     <option selected disabled>กรุณาเลือก</option>
                     <option>A</option>
                     <option>B</option>
@@ -271,35 +298,8 @@
               <div class="col-4">
                 
                 <div class="form-group">
-                  <label for="inputRoleStatus">สิทธิการใช้งาน</label>
-                  <select id="inputRoleStatus" class="form-control custom-select">
-                    <option selected disabled>กรุณาเลือก</option>
-                    <option>อ่าน</option>
-                    <option>อ่าน/บันทึกผล</option>
-                    <option>อ่าน/บันทึกผล/แก้ไข</option>
-                  </select>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-8">
-                <div class="form-group">
-                  <label for="inputNameStatus">ชื่อ</label>
-                  <select id="inputNameStatus" class="form-control custom-select">
-                    <option selected disabled>กรุณาเลือก</option>
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-4">
-                
-                <div class="form-group">
-                  <label for="inputRoleStatus">สิทธิการใช้งาน</label>
-                  <select id="inputRoleStatus" class="form-control custom-select">
+                  <label for="inputEmployeeRole3">สิทธิการใช้งาน</label>
+                  <select id="inputEmployeeRole3" class="form-control custom-select">
                     <option selected disabled>กรุณาเลือก</option>
                     <option>อ่าน</option>
                     <option>อ่าน/บันทึกผล</option>
@@ -326,9 +326,7 @@
            
           <div class="tab-pane fade" id="TimeLinePanel" role="tabpanel">
             <h4>รอบการตรวจความคืบหน้าโครงการ</h4>
-
-
-
+ 
 
 
             <div class="card-body">
@@ -434,9 +432,26 @@ $(".custom-file-input").on("change", function() {
 
     $("#ModalPeriod").find("#Save").on("click",function(){
 
+       
+       $(".inputDetailPeriod").each(function(){
+
+          var DetailPeriod = $(this).val().trim();
+
+          console.log(DetailPeriod);
 
 
-      alert();
+        });
+
+       $(".inputDetailPeriodDate").each(function(){
+
+          var PeriodDate = $(this).val().trim();
+
+
+
+
+
+
+        });
 
 
 
@@ -495,13 +510,13 @@ $(".custom-file-input").on("change", function() {
         html += '<div class="col-7">';
         html += '<div class="form-group">';
         html += '<label for="inputPeriodDate">รายละเอียด</label>';
-        html += '<input type="text" id="inputDetailPeriod" class="form-control">';
+        html += '<input type="text" id="inputDetailPeriod" class="form-control inputDetailPeriod">';
         html += '</div>';
         html += '</div>';
         html += '<div class="col-3">';
         html += '<div class="form-group">';
         html += '<label for="inputDetailPeriodDate">วันที่</label>';
-        html += '<input type="text" id="inputDetailPeriodDate" class="form-control">';
+        html += '<input type="text" id="inputDetailPeriodDate" class="form-control inputDetailPeriodDate">';
         html += '</div>';
         html += '</div>';
         html += '<div class="col-2">';
