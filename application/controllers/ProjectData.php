@@ -17,19 +17,16 @@ class ProjectData extends CI_Controller {
 	}
 	public function CreateProjectData()
 	{
-
-
  
 		#print_r($_POST);  
 		#print_r( json_decode($_POST["Employee"],true));  
 		#print_r( json_decode($_POST["PeriodInfo"],true));   
 		#print_r($_FILES);
  		
-
 		$Employee = json_decode($_POST["Employee"],true);
 		$PeriodInfo = json_decode($_POST["PeriodInfo"],true);
 
-		#move_uploaded_file($_FILES["DocFile"]["tmp_name"], "/home/jeerawatme/web/projectmanage.webclient.me/public_html/Files/".$_FILES["DocFile"]["name"]);
+		move_uploaded_file($_FILES["DocFile"]["tmp_name"], "/home/jeerawatme/web/projectmanage.webclient.me/public_html/Files/".$_FILES["DocFile"]["name"]);
 
 		$URL = "https://projectmanage.webclient.me/Files/".$_FILES["DocFile"]["name"];
 
@@ -52,18 +49,10 @@ class ProjectData extends CI_Controller {
 		$Member["Role"][] = $Employee[3]["MemberRole"];
 
 
-		echo $PeriodInfo["Detail"][0];
-		echo $PeriodInfo["Date"][0];
-		echo $CreatorID;
-		echo $CreatorRole;
-
-		print_r($Member);
+ 		echo  $this->Project_Model->CreateProject(date("Y-m-d"),date("Y-m-d"),$ProjectName,$Description,$ClientCompany,$Budget,$PeriodDate,$CreatorID,$CreatorRole,$Member,$PeriodInfo,$URL);
 
 
 
-
-
- 
 	}
 	public function test()
 	{

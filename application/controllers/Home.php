@@ -45,7 +45,8 @@ class Home extends CI_Controller {
 		$this->load->view('template/header',$header);
 		$this->load->view('project');
 		$this->load->view('template/footer');
-
+		
+		echo $this->session->userdata("Username");
 	
 	}
 	public function search()
@@ -95,21 +96,27 @@ class Home extends CI_Controller {
  
 				 $username           =   trim($_POST["username"]) ;
 				 $password           =   trim($_POST["password"]) ;
-				 $member = $this->Member_Model->QueryMemberLogin($username,$password); 
-		 
-		        
+				 $member = $this->Member_Model->QueryMemberLogin($username,$password);
+
 				  $arrayReturna = array();
  
 				  foreach ($member as $ResultValue) { 
+
+				   $MemID =  trim(iconv("tis-620", "utf-8", $ResultValue->ID ));
 				   $MemUsername =  trim(iconv("tis-620", "utf-8", $ResultValue->Username ));
 				   $MemPassword =  trim(iconv("tis-620", "utf-8", $ResultValue->Password ));
 				   $MemPositionID =  trim(iconv("tis-620", "utf-8", $ResultValue->PositionID )); 
+
+				   $arrayReturna["ID"][] = $MemID;
 				   $arrayReturna["Username"][] = $MemUsername;
 				   $arrayReturna["Password"][] = $MemPassword;
-				   $arrayReturna["PositionID"][] = $MemPositionID;  
+				   $arrayReturna["PositionID"][] = $MemPositionID; 
+
 				  } 
-				 $data["PositionID"] = $this->session->userdata("PositionID"); 	
-				 echo json_encode($arrayReturna);
+
+				  $this->session->set_userdata($arrayReturna);
+
+				  echo json_encode($arrayReturna);
 	}
 
 

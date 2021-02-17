@@ -485,7 +485,7 @@ $(".custom-file-input").on("change", function() {
       } 
 
       if (DocFile == undefined) {
-        
+
               alert("Please Upload Docs");
               return false;
 
@@ -624,6 +624,12 @@ $(".custom-file-input").on("change", function() {
                    success : function(data){
 
                     console.log(data);
+                    if (data == 1) {
+
+                      alert("success");
+                    
+                    }
+
 
                    },
                    error : function(data){
