@@ -567,7 +567,7 @@ $(".custom-file-input").on("change", function() {
                    processData : false,
                    success : function(data){
 
-                    console.log(data)
+                    console.log(data);
 
                    },
                    error : function(data){
