@@ -476,10 +476,10 @@ $(".custom-file-input").on("change", function() {
       var EmployeeRole3 = $("#ModalPeriod").find("#inputEmployeeRole3").val(); 
 
 
-      var Employee = [ { MemberID : EmployeeGroup0, MemberRole : EmployeeRole0 },
-                       { MemberID : EmployeeGroup1, MemberRole : EmployeeRole1 },
-                       { MemberID : EmployeeGroup2, MemberRole : EmployeeRole2 },
-                       { MemberID : EmployeeGroup3, MemberRole : EmployeeRole3 } ];
+      var Employee = [ { Creator : { MemberID : EmployeeGroup0, MemberRole : EmployeeRole0 } },
+                       { MemberID1 : EmployeeGroup1, MemberRole : EmployeeRole1 },
+                       { MemberID2 : EmployeeGroup2, MemberRole : EmployeeRole2 },
+                       { MemberID3 : EmployeeGroup3, MemberRole : EmployeeRole3 } ];
 
       console.log(Employee);
 
