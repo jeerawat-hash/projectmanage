@@ -129,6 +129,11 @@
                   if (data == 1) {
                     var Pagesite = "https://projectmanage.webclient.me/index.php/home/summary/";
                     location.replace(Pagesite);   
+                  }else{
+
+                    alert("Fail");
+                    return false;
+                    
                   }
                   
 

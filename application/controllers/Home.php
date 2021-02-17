@@ -113,7 +113,9 @@ class Home extends CI_Controller {
 					echo "Paramiter Invalid";
 				   exit();
 				   }
- 
+ 					
+				   $is_success = 0;
+
 				 $username           =   trim($_POST["username"]) ;
 				 $password           =   trim($_POST["password"]) ;
 				 $member = $this->Member_Model->QueryMemberLogin($username,$password);
@@ -132,11 +134,12 @@ class Home extends CI_Controller {
 				   $arrayReturna["Name"] = $MemName;
 				   $arrayReturna["PositionID"] = $MemPositionID; 
 
+				   $is_success = 1;
 				  } 
 
 				  $this->session->set_userdata($arrayReturna);
 
-				  echo 1;
+				  echo $is_success;
 	}
 	public function logout()
 	{  
