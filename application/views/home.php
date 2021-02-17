@@ -269,7 +269,7 @@
                           <small> ดำเนินการแล้วเสร็จ </small>
                           <div class="progress">
                             <div class="progress-bar bg-warning progress-bar-striped" role="progressbar"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                               <span class="sr-only">100% Complete </span>
                             </div>
                           </div>
