@@ -468,6 +468,49 @@ $(".custom-file-input").on("change", function() {
     <script type="text/javascript">
   $(function () {
 
+ 
+
+
+
+    $("#ModalPeriod").find("#inputEmployeeGroup1").on("change",function(){
+
+
+        var a = $("#ModalPeriod").find('#inputEmployeeGroup1 option:selected').val();
+
+        alert(a);
+
+
+    });
+
+    $("#ModalPeriod").find("#inputEmployeeGroup2").on("change",function(){
+
+
+
+
+
+
+
+    });
+
+    $("#ModalPeriod").find("#inputEmployeeGroup3").on("change",function(){
+
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
 
 
     //// hide preload 
