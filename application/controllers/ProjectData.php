@@ -54,6 +54,8 @@ class ProjectData extends CI_Controller {
 
 		echo $PeriodInfo["Detail"][0];
 		echo $PeriodInfo["Date"][0];
+		echo $CreatorID;
+		echo $CreatorRole;
 
 		print_r($Member);
 
