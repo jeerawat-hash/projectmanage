@@ -105,12 +105,10 @@ class Home extends CI_Controller {
 
 				   $MemID =  trim(iconv("tis-620", "utf-8", $ResultValue->ID ));
 				   $MemUsername =  trim(iconv("tis-620", "utf-8", $ResultValue->Username ));
-				   $MemPassword =  trim(iconv("tis-620", "utf-8", $ResultValue->Password ));
 				   $MemPositionID =  trim(iconv("tis-620", "utf-8", $ResultValue->PositionID )); 
 
 				   $arrayReturna["ID"] = $MemID;
 				   $arrayReturna["Username"] = $MemUsername;
-				   $arrayReturna["Password"] = $MemPassword;
 				   $arrayReturna["PositionID"] = $MemPositionID; 
 
 				  } 
@@ -118,6 +116,16 @@ class Home extends CI_Controller {
 				  $this->session->set_userdata($arrayReturna);
 
 				  echo json_encode($arrayReturna);
+	}
+	public function logout($username=null,$password=null)
+	{  
+                 
+
+
+			$this->session->sess_destroy();
+
+
+
 	}
 
 
