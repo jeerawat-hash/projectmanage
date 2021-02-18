@@ -458,7 +458,32 @@ $(".custom-file-input").on("change", function() {
                  status = '<span class="badge badge-success">เสร็จสิ้น</span>';
 
               }
- 
+
+              var Operand = '<button class="btn btn-primary btn-sm" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
+              
+
+              if (obj[i].Policy == "CER") {
+
+                  Operand += '<button class="btn btn-primary btn-sm" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
+
+                  Operand += '<button class="btn btn-warning btn-sm" href="#"> <i class="fas fa-pencil-alt"></i>แก้ไข</button>'; 
+
+                  Operand += '<button class="btn btn-success btn-sm" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
+
+                  Operand += '<button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" > <i class="fas fa-trash"> </i> ลบ </button> ';
+
+
+              }
+
+              if (obj[i].Policy == "SR") {
+
+                  Operand += '<button class="btn btn-primary btn-sm" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
+
+                  Operand += '<button class="btn btn-success btn-sm" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
+
+              }
+
+
               
               html += '<tr>';
               html += '<td>';
@@ -473,13 +498,8 @@ $(".custom-file-input").on("change", function() {
               html += '<td class="project-state">';
               html += status;
               html += '<td class="project-actions text-right">';
-
-              html += '<a class="btn btn-primary btn-sm" href="#">';
-              html += '<i class="fas fa-folder"></i>ดูข้อมูล</a>';
-              html += '<a class="btn btn-info btn-sm" href="#">';
-              html += '<i class="fas fa-pencil-alt">';
-              html += '+</i>แก้ไข</a> <button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" >';
-              html += '<i class="fas fa-trash"> </i> ลบ </button> </td></tr>';
+              html += Operand;
+              html += '</td></tr>';
 
         }
 
