@@ -459,14 +459,14 @@ $(".custom-file-input").on("change", function() {
 
               }
 
-              var Operand = '<button class="btn btn-primary btn-sm" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
+              var Operand = '<button class="btn btn-primary btn-sm ProjectView" data-projectid="'+obj[i].ID+'" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
               
 
               if (obj[i].Policy == "CER") {
   
-                  Operand += '<button class="btn btn-warning btn-sm" href="#"> <i class="fas fa-pencil-alt"></i>แก้ไข</button>'; 
+                  Operand += '<button class="btn btn-warning btn-sm ProjectEdit" data-projectid="'+obj[i].ID+'"> <i class="fas fa-pencil-alt"></i>แก้ไข</button>'; 
 
-                  Operand += '<button class="btn btn-success btn-sm" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
+                  Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
 
                   Operand += '<button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" > <i class="fas fa-trash"> </i> ลบ </button> ';
 
@@ -476,7 +476,7 @@ $(".custom-file-input").on("change", function() {
               if (obj[i].Policy == "SR") {
  
 
-                  Operand += '<button class="btn btn-success btn-sm" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
+                  Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
 
               }
 
@@ -525,9 +525,29 @@ $(".custom-file-input").on("change", function() {
 
 
       alert(GroupID + ' ' + ProjectID);
+ 
+
+    });
 
 
+    $("#ProjectsTable").find("#ProjectsTableDetail").on("click",'.ProjectStamp',function(){
 
+      var ProjectID = $(this).attr("data-projectid");
+
+
+      alert("Stamp "+ProjectID);
+ 
+
+    });
+
+
+    $("#ProjectsTable").find("#ProjectsTableDetail").on("click",'.ProjectEdit',function(){
+
+      var ProjectID = $(this).attr("data-projectid");
+
+
+      alert("ProjectEdit "+ProjectID);
+ 
 
     });
 
