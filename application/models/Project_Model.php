@@ -3,6 +3,16 @@ class Project_Model extends CI_Model
 { 
 
 
+        public function GetDataProjects()
+        {
+
+
+                $this->pmdb = $this->load->database("pmdb",true); 
+
+                return $this->pmdb->query(" SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1)/(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) * 100) ) as percent FROM Project a where IsSuccess = 0 ")->result();
+
+
+        }
         public function GetDataPercent($ProjectID)
         {
 

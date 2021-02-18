@@ -15,6 +15,14 @@ class ProjectData extends CI_Controller {
 
  
 	}
+	public function GetDataProjects()
+	{
+
+
+		echo json_encode($this->Project_Model->GetDataProjects());
+
+
+	}
 	public function CreateProjectData()
 	{
  
