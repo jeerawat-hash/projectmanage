@@ -500,7 +500,7 @@ $(".custom-file-input").on("change", function() {
 
 
 
-    $("#ProjectTable").on("click",'.ProjectDel',function(){
+    $("#ProjectsTable").find("#ProjectsTableDetail").on("click",'.ProjectDel',function(){
 
 
       var GroupID = $(this).attr("data-groupid");
