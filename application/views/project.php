@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="card-body p-0">
-          <table class="table table-striped projects">
+          <table class="table table-striped projects" id="ProjectsTable">
               <thead>
                   <tr> 
                       <th style="width: 20%">
@@ -48,52 +48,20 @@
                       </th>
                   </tr>
               </thead>
-              <tbody>
-                  <tr> 
-                      <td>
-                          <a>
-                              ระบบบริการโครงการ
-                          </a>
-                          <br/>
-                          <small>
-                              สร้างวันที่ 01-01-2019
-                          </small>
-                          <br>
-                          <small>
-                              กำหนดส่ง 01-01-2020
-                          </small>
-                      </td>
-                      
-                      <td class="project_progress">
-                          <div class="progress progress-sm">
-                              <div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
-                              </div>
-                          </div>
-                          <small>
-                             ดำเนินการแล้ว 57%
-                          </small>
-                      </td>
-                      <td class="project-state">
-                          <span class="badge badge-warning">ดำเนินการ</span>
-                      </td>
-                      <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="#">
-                              <i class="fas fa-folder">
-                              </i>
-                              ดูข้อมูล
-                          </a>
-                          <a class="btn btn-info btn-sm" href="#">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              แก้ไข
-                          </a>
-                          <a class="btn btn-danger btn-sm" href="#">
-                              <i class="fas fa-trash">
-                              </i>
-                              ลบ
-                          </a>
-                      </td>
-                  </tr>
+              <tbody id="ProjectsTableDetail">
+                  
+
+
+
+
+
+
+
+
+
+
+
+
                   
               </tbody>
           </table>
@@ -467,6 +435,55 @@ $(".custom-file-input").on("change", function() {
 
     <script type="text/javascript">
   $(function () {
+
+
+
+
+
+    var html = '';
+    html += '<tr>'+
+    html += '<td>'+
+    html += '<a>'+
+    html += 'ระบบบริการโครงการ'+
+    html += '</a><br/><small>สร้างวันที่ 01-01-2019 </small> <br> <small> กำหนดส่ง 01-01-2020</small>'+
+    html += '</td>'+
+    html += '<td class="project_progress">'+
+    html += '<div class="progress progress-sm">'+
+    html += '<div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">'+
+    html += '</div></div><small> ดำเนินการแล้ว 57% </small> </td>'+
+    html += '<td class="project-state">'+
+    html += '<span class="badge badge-warning">ดำเนินการ</span></td>'+
+    html += '<td class="project-actions text-right">'+
+    html += '<a class="btn btn-primary btn-sm" href="#">'+
+    html += '<i class="fas fa-folder"></i>ดูข้อมูล</a>'+
+    html += '<a class="btn btn-info btn-sm" href="#">'+
+    html += '<i class="fas fa-pencil-alt">'+
+    html += '+</i>แก้ไข</a> <a class="btn btn-danger btn-sm" href="#">'+
+    html += '<i class="fas fa-trash"> </i> ลบ </a> </td></tr>';
+
+
+
+
+
+
+
+
+    $("#ProjectsTable").find("#ProjectsTableDetail").html(html);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
