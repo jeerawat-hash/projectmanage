@@ -474,8 +474,7 @@ $(".custom-file-input").on("change", function() {
               }
 
               if (obj[i].Policy == "SR") {
-
-                  Operand += '<button class="btn btn-primary btn-sm" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
+ 
 
                   Operand += '<button class="btn btn-success btn-sm" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
 
