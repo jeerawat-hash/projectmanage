@@ -459,7 +459,8 @@ $(".custom-file-input").on("change", function() {
 
               }
 
-              var Operand = '<button class="btn btn-primary btn-sm ProjectView" data-projectid="'+obj[i].ID+'" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
+              //var Operand = '<button class="btn btn-primary btn-sm ProjectView" data-projectid="'+obj[i].ID+'" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
+              var Operand = '<a href="https://projectmanage.webclient.me/index.php/home/projectinfo/'+obj[i].ID+'" class="btn btn-primary btn-sm">ดูข้อมูล</a>';
               
 
               if (obj[i].Policy == "CER") {
