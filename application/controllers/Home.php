@@ -63,6 +63,23 @@ class Home extends CI_Controller {
 
 	
 	}
+	public function projectinfo()
+	{
+
+		$sess = $this->session->userdata();
+		$header['page_name'] = 'ข้อมูลโครงการ';
+		$header['page_focus'] = 'projectmanage'; 
+		$header['page_menu'] = 1;
+		$header['Name'] = $sess["Name"];
+
+
+		$this->load->view('template/header',$header);
+		$this->load->view('projectdetail');
+		$this->load->view('template/footer');
+
+
+
+	}
 	public function search()
 	{
 		$sess = $this->session->userdata();
