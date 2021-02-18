@@ -443,7 +443,9 @@ $(".custom-file-input").on("change", function() {
     $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataProjects",function(data){
 
         var obj = JSON.parse(data);
- 
+  
+
+        console.log(obj);
 
         var html = '';
         for (var i = 0; i < obj.length; i++) {
