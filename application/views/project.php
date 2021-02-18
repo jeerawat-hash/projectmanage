@@ -478,8 +478,8 @@ $(".custom-file-input").on("change", function() {
               html += '<i class="fas fa-folder"></i>ดูข้อมูล</a>';
               html += '<a class="btn btn-info btn-sm" href="#">';
               html += '<i class="fas fa-pencil-alt">';
-              html += '+</i>แก้ไข</a> <a class="btn btn-danger btn-sm" href="#">';
-              html += '<i class="fas fa-trash"> </i> ลบ </a> </td></tr>';
+              html += '+</i>แก้ไข</a> <button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" >';
+              html += '<i class="fas fa-trash"> </i> ลบ </button> </td></tr>';
 
         }
 
@@ -496,6 +496,23 @@ $(".custom-file-input").on("change", function() {
 
 
 
+
+
+
+
+    $("#ProjectTable").on("click",'.ProjectDel',function(){
+
+
+      var GroupID = $(this).attr("data-groupid");
+      var ProjectID = $(this).attr("data-projectid");
+
+
+      alert(GroupID + ' ' + ProjectID);
+
+
+
+
+    });
 
 
 
