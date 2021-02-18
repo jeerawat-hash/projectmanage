@@ -3,15 +3,26 @@ class Project_Model extends CI_Model
 { 
 
 
-        public function GetDataProjects()
+        public function GetDataProjects($Member)
         {
 
 
                 $this->pmdb = $this->load->database("pmdb",true); 
 
-                return $this->pmdb->query(" SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1)/(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) * 100) ) as percent,
+                /*return $this->pmdb->query(" SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1)/(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) * 100) ) as percent,
                 ( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) - (SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1 )) ) as Progress
                 FROM Project a where IsSuccess = 0 ")->result();
+                */
+
+                return $this->pmdb->query(" SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = ab.ID and DueStatus = 1)/(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = ab.ID) * 100) ) as percent,
+                ( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = ab.ID) - (SELECT count(*) FROM ProjectPeriod WHERE ProjectID = ab.ID and DueStatus = 1 )) ) as Progress ,
+                (
+                SELECT a.Role FROM SignGroup a 
+                join Member b on a.MemberID = b.ID
+                join Project c on a.ID = c.SignGroupID where a.MemberID = ".$Member." and c.ID = ab.ID
+                ) as a
+                FROM Project ab where IsSuccess = 0 ")->result();
+ 
 
 
         }

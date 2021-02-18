@@ -8,6 +8,7 @@ class ProjectData extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model("Project_Model"); 
+		$this->load->library("session"); 
 
 	}
 	public function index()
@@ -18,8 +19,9 @@ class ProjectData extends CI_Controller {
 	public function GetDataProjects()
 	{
 
+		$sess = $this->session->userdata();
 
-		echo json_encode($this->Project_Model->GetDataProjects());
+		echo json_encode($this->Project_Model->GetDataProjects($sess["ID"]));
 
 
 	}
