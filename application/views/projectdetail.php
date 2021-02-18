@@ -44,27 +44,19 @@
 
 
                     <div class="post clearfix">
-                      <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
+                      <div class="user-block"> 
                         <span class="username">
-                          <a href="#">Sarah Ross</a>
+                          รายการ 
                         </span>
-                      </div>
-                      <!-- /.user-block -->
+                      </div> 
                       <p>
-                        Lorem ipsum represents a long-held tradition for designers,
-                        typographers and the like. Some people hate it and argue for
-                        its demise, but others ignore.
-                      </p>
-                      <p>
-                        <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 2</a>
-                      </p>
+                        บันทึกข้อความ
+                      </p> 
                     </div>
  
 
 
-
-
+ 
 
 
 
@@ -74,39 +66,27 @@
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-              <h3 class="text-primary"><i class="fas fa-paint-brush"></i> AdminLTE v3</h3>
-              <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p>
+              <h3 class="text-primary">ชื่อโครงการ</h3>
+              <p class="text-muted">รายละเอียดโครงการ</p>
               <br>
               <div class="text-muted">
-                <p class="text-sm">Client Company
+                <p class="text-sm">ลูกค้า
                   <b class="d-block">Deveint Inc</b>
                 </p>
-                <p class="text-sm">Project Leader
+                <p class="text-sm">ผู้ดูแลโครงการ
                   <b class="d-block">Tony Chicken</b>
                 </p>
               </div>
 
-              <h5 class="mt-5 text-muted">Project files</h5>
+              <h5 class="mt-5 text-muted">เอกสารโครงการ</h5>
               <ul class="list-unstyled">
                 <li>
                   <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Functional-requirements.docx</a>
-                </li>
-                <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-pdf"></i> UAT.pdf</a>
-                </li>
-                <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-envelope"></i> Email-from-flatbal.mln</a>
-                </li>
-                <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-image "></i> Logo.png</a>
-                </li>
-                <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Contract-10_12_2014.docx</a>
-                </li>
+                </li>   
               </ul>
-              <div class="text-center mt-5 mb-3">
-                <a href="#" class="btn btn-sm btn-primary">Add files</a>
-                <a href="#" class="btn btn-sm btn-warning">Report contact</a>
+              <div class="text-center mt-5 mb-3"> 
+
+                
               </div>
             </div>
           </div>
