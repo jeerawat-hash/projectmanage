@@ -628,29 +628,39 @@ $(".custom-file-input").on("change", function() {
 
 
       if (ProjectName == "") {
-              alert("Please Fill ProjectName");
+              //alert("Please Fill ProjectName");
+              swal("ผิดพลาด!", "กรุณาระบุชื่อโครงการ", "error");
               return false;
       }
       if (Description == "") {
-              alert("Please Fill Description");
+              //alert("Please Fill Description");
+              swal("ผิดพลาด!", "กรุณาระบุรายละเอียด", "error"); 
               return false;
       }
       if (ClientCompany == "") {
-              alert("Please Fill ClientCompany");
+              //alert("Please Fill ClientCompany");
+              swal("ผิดพลาด!", "กรุณาระบุข้อมูลบริษัท", "error"); 
+
               return false;
       }
       if (Budget == 0) {
-              alert("Please Fill Budget");
+              //alert("Please Fill Budget");
+              swal("ผิดพลาด!", "กรุณาระบุจำนวนงบประมาณ", "error"); 
+
               return false;
       }
       if (PeriodDate == "") {
-              alert("Please Fill PeriodDate");
+              //alert("Please Fill PeriodDate");
+              swal("ผิดพลาด!", "กรุณาระบุวันที่แจ้งเตือน", "error"); 
+
               return false;
       } 
 
       if (DocFile == undefined) {
 
-              alert("Please Upload Docs");
+              //alert("Please Upload Docs");
+              swal("ผิดพลาด!", "กรุณาระบุเอกสารที่เกี่ยวข้อง", "error"); 
+
               return false;
 
       }
@@ -672,19 +682,25 @@ $(".custom-file-input").on("change", function() {
 
       if (EmployeeGroup1 != null) {
           if (EmployeeRole1 == null) {
-              alert("Please SelectRole1");
+              //alert("Please SelectRole1");
+              swal("ผิดพลาด!", "กรุณาระบุสิทธิการเข้าถึงข้อมูลลำดับที่ 1", "error"); 
+
               return false;
           }
       }
       if (EmployeeGroup2 != null) {
           if (EmployeeRole2 == null) {
-              alert("Please SelectRole2");
+              //alert("Please SelectRole2");
+              swal("ผิดพลาด!", "กรุณาระบุสิทธิการเข้าถึงข้อมูลลำดับที่ 2", "error"); 
+              
               return false;
           }
       }
       if (EmployeeGroup3 != null) {
           if (EmployeeRole3 == null) {
-              alert("Please SelectRole3");
+              //alert("Please SelectRole3");
+              swal("ผิดพลาด!", "กรุณาระบุสิทธิการเข้าถึงข้อมูลลำดับที่ 3", "error"); 
+              
               return false;
           }
       }
@@ -711,7 +727,9 @@ $(".custom-file-input").on("change", function() {
           var DetailPeriod = $(this).val().trim();
 
           if (DetailPeriod == "") {
-              alert("Please Fill Period Detail");
+              //alert("Please Fill Period Detail");
+              swal("ผิดพลาด!", "กรุณาระบุข้อมูลรอบการดำเนินการโครงการ", "error"); 
+
               return false;
           }
 
@@ -726,7 +744,9 @@ $(".custom-file-input").on("change", function() {
           var PeriodDate = $(this).val().trim();
 
           if (PeriodDate == "") {
-              alert("Please Fill Period Date");
+              //alert("Please Fill Period Date");
+              swal("ผิดพลาด!", "กรุณาระบุข้อมูลวันที่รอบการดำเนินการโครงการ", "error"); 
+
               return false;
           }
 
@@ -738,13 +758,17 @@ $(".custom-file-input").on("change", function() {
 
        if (DetailPeriodStart == 0) {
 
-              alert("Please Add Period");
+              //alert("Please Add Period");
+              swal("ผิดพลาด!", "กรุณาเพิ่มข้อมูลรอบการดำเนินการโครงการ", "error"); 
+
               return false;
 
         }
        if (DatePeriodStart == 0) {
 
-              alert("Please Fill Period Date");
+              //alert("Please Fill Period Date");
+              swal("ผิดพลาด!", "กรุณาระบุข้อมูลวันที่รอบการดำเนินการโครงการ", "error"); 
+              
               return false;
 
         }
@@ -773,10 +797,7 @@ $(".custom-file-input").on("change", function() {
         $("#ModalPeriod").find("#Preload").show();
 
         setTimeout(function(){ 
-
-                  $("#ModalPeriod").find("#Save").show();
-                  $("#ModalPeriod").find("#Preload").hide();
-
+ 
               
                 $.ajax({
                    url : "https://projectmanage.webclient.me/index.php/ProjectData/CreateProjectData",
@@ -790,8 +811,18 @@ $(".custom-file-input").on("change", function() {
                     console.log(data);
                     if (data == 1) {
 
-                      alert("success");
-                    
+                      $("#ModalPeriod").find("#Save").show();
+                      $("#ModalPeriod").find("#Preload").hide();
+                      //alert("success");
+                      swal("สำเร็จ!", "ดำเนินการเพิ่มข้อมูลสำเร็จ", "success"); 
+                      $("#ModalPeriod").hide();
+                      
+                    }else{
+                      swal("ผิดพลาด!", "ดำเนินการเพิ่มข้อมูลล้มเหลวกรุณาลองใหม่ภายหลัง", "error"); 
+
+                      $("#ModalPeriod").find("#Save").show();
+                      $("#ModalPeriod").find("#Preload").hide();
+                      return false;
                     }
 
 

@@ -72,6 +72,8 @@
 
 
 
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   <!-- jQuery -->
   <script src="https://projectmanage.webclient.me/assets/plugins/jquery/jquery.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
