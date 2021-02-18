@@ -463,9 +463,7 @@ $(".custom-file-input").on("change", function() {
               
 
               if (obj[i].Policy == "CER") {
-
-                  Operand += '<button class="btn btn-primary btn-sm" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
-
+  
                   Operand += '<button class="btn btn-warning btn-sm" href="#"> <i class="fas fa-pencil-alt"></i>แก้ไข</button>'; 
 
                   Operand += '<button class="btn btn-success btn-sm" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
