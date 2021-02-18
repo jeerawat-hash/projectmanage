@@ -443,31 +443,42 @@ $(".custom-file-input").on("change", function() {
     $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataProjects",function(data){
 
         var obj = JSON.parse(data);
-
-        console.log(obj);
+ 
 
         var html = '';
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < obj.length; i++) {
+
+
+              var status = '<span class="badge badge-warning">ดำเนินการ</span>';
+
+              if (obj[i].Progress == 0) {
+
+                 status = '<span class="badge badge-success">เสร็จสิ้น</span>';
+
+              }
+ 
               
               html += '<tr>';
               html += '<td>';
               html += '<a>';
-              html += 'ระบบบริการโครงการ'+i;
-              html += '</a><br/><small>สร้างวันที่ 01-01-2019 </small> <br> <small> กำหนดส่ง 01-01-2020</small>';
+              html += obj[i].Name;
+              html += '</a><br/><small>สร้างวันที่ '+obj[i].BeginDate+' </small> <br> <small> กำหนดส่ง '+obj[i].EndDate+'</small>';
               html += '</td>';
               html += '<td class="project_progress">';
               html += '<div class="progress progress-sm">';
-              html += '<div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">';
-              html += '</div></div><small> ดำเนินการแล้ว 57% </small> </td>';
+              html += '<div class="progress-bar bg-green" role="progressbar" aria-valuenow="'+obj[i].percent+'" aria-valuemin="0" aria-valuemax="100" style="width: '+obj[i].percent+'%">';
+              html += '</div></div><small> ดำเนินการแล้ว '+obj[i].percent+'% </small> </td>';
               html += '<td class="project-state">';
-              html += '<span class="badge badge-warning">ดำเนินการ</span></td>';
+              html += status;
               html += '<td class="project-actions text-right">';
+
               html += '<a class="btn btn-primary btn-sm" href="#">';
               html += '<i class="fas fa-folder"></i>ดูข้อมูล</a>';
               html += '<a class="btn btn-info btn-sm" href="#">';
               html += '<i class="fas fa-pencil-alt">';
               html += '+</i>แก้ไข</a> <a class="btn btn-danger btn-sm" href="#">';
               html += '<i class="fas fa-trash"> </i> ลบ </a> </td></tr>';
+
         }
 
 
