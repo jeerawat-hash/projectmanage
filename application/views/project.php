@@ -789,8 +789,8 @@ $(".custom-file-input").on("change", function() {
  
 
       var ProjectID = $("#EditProject").find("#ProjectID").val();
-      var EditDate = $("#EditProject").find("inputEditDate").val();
-      var Comment = $("#EditProject").find("inputComment").val();
+      var EditDate = $("#EditProject").find("#inputEditDate").val();
+      var Comment = $("#EditProject").find("#inputComment").val();
 
       if (Comment == "") {
           swal("แจ้งเตือน!", "กรุณาระบุรายละเอียดการแก้ไขโครงการ", "error");
