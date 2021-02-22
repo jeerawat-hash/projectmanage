@@ -65,8 +65,13 @@ class Home extends CI_Controller {
 
 	
 	}
-	public function projectinfo()
+	public function projectinfo($ProjectID)
 	{
+
+		if (!isset($ProjectID)) {
+			redirect("Home/project");
+			exit();
+		}
 
 		$sess = $this->session->userdata();
 		$header['page_name'] = 'ข้อมูลโครงการ';
@@ -75,26 +80,16 @@ class Home extends CI_Controller {
 		$header['Name'] = $sess["Name"];
 
 
-
-
-
+		
+		$data["ProjectINFO"] =  $this->Project_Model->GetDataProjectsInfo($ProjectID);
 
 		$this->load->view('template/header',$header);
-		$this->load->view('projectdetail');
+		$this->load->view('projectdetail',$data);
 		$this->load->view('template/footer');
 
 
 
-	}
-	public function infocode()
-	{
-
-
-		print_r( $this->Project_Model->GetDataProjectsInfo(5));
-		
-
-
-	}
+	} 
 	public function search()
 	{
 		$sess = $this->session->userdata();
