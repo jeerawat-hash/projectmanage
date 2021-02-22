@@ -46,7 +46,7 @@
                     ?>
 
 
-                   
+                    
 
                     <div class="post clearfix">
                       <div class="user-block"> 
@@ -55,8 +55,29 @@
                         </span>
                       </div> 
                       <p>
-                         <?php echo $ProjectINFO["Period"][$i]->Comment; ?>
+                         วันที่ <?php echo  '<font color="red">'.$ProjectINFO["Period"][$i]->DueDate.'</font>'; ?>
                       </p> 
+                      <p> 
+                         <?php 
+                          if ($ProjectINFO["Period"][$i]->Comment == "" ) {
+                            echo '<font color="red">ไม่มีบันทึกภายใน</font>';
+                          }else{
+
+                            echo '<font color="green">'.$ProjectINFO["Period"][$i]->Comment.'</font>';
+                          }
+                          ?>
+                      </p> 
+                      <p> 
+                         <?php 
+                          if ($ProjectINFO["Period"][$i]->SignStatus == "" ) {
+                            echo '<font color="red">รอลงบันทึก</font>';
+                          }else{
+
+                            echo '<font color="green">บันทึกโดย '.$ProjectINFO["Period"][$i]->SignStatus.'</font>';
+                          }
+                          ?>
+                      </p> 
+
                     </div>
  
 
