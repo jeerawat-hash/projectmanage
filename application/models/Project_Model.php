@@ -51,7 +51,7 @@ class Project_Model extends CI_Model
                 join Member b on a.MemberID = b.ID
                 join Project c on a.ID = c.SignGroupID where a.MemberID = ".$Member." and c.ID = ab.ID
                 ) as Policy
-                FROM Project ab where IsSuccess = 0 ")->result();
+                FROM Project ab where IsSuccess = 0 and IsCancel = 0 ")->result();
  
 
 
