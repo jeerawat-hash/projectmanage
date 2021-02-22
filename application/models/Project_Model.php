@@ -4,13 +4,13 @@ class Project_Model extends CI_Model
 
         public function EditProject($ProjectID,$EditDate,$Comment)
         {
+                
                 $this->pmdb = $this->load->database("pmdb",true); 
 
 
                 $Project =  $this->pmdb->query("  UPDATE Project SET EndDate = '".$EditDate."' , Remark = '".$Comment."' WHERE ID = '".$ProjectID."'  ");
 
                 return 1;
-
 
         }
         public function DelProject($ProjectID,$Comment)

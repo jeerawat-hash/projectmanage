@@ -810,7 +810,17 @@ $(".custom-file-input").on("change", function() {
           },function(data){
 
 
-            console.log(data);
+            if (data == 1) {
+                 $("#EditProject").modal("hide");
+                 swal("สำเร็จ!", "แก้ไขโครงการสำเร็จ", "success");
+                 $("#EditProject").find("#Preload").hide();
+                 $("#EditProject").find("#Save").show();
+              }else{
+                 $("#EditProject").modal("hide");
+                 swal("ล้มเหลว!", "กรุณาลองใหม่ภายหลัง", "error");
+                 $("#EditProject").find("#Preload").hide();
+                 $("#EditProject").find("#Save").show();
+              }
 
 
         });

@@ -17,12 +17,12 @@ class ProjectData extends CI_Controller {
  
 	}
 	public function EditProject()
-	{
-
-
-		print_r($_POST);
-
-		//echo $this->Project_Model->EditProject($ProjectID,$EditDate,$Comment);
+	{ 
+		
+		$ProjectID = $_POST["ProjectID"];
+		$EditDate = $_POST["EditDate"];
+		$Comment = $_POST["Comment"];
+		echo $this->Project_Model->EditProject($ProjectID,$EditDate,$Comment);
 
 	}
 	public function DelProject()
