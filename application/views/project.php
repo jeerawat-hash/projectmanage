@@ -410,6 +410,8 @@
         <div class="modal-body">
 
 
+          <input type="text" id="PeriodID" hidden>
+
           <div class="container">
                         
             <div class="row">
@@ -733,6 +735,7 @@ $(".custom-file-input").on("change", function() {
 
             //console.log(obj);
 
+            $("#StampProject").find("#PeriodID").text(obj[0].ID);
             $("#StampProject").find("#textPreiodDetail").text(obj[0].PeriodDetail);
             $("#StampProject").find("#txtPreiodDate").text(obj[0].DueDate);
  
@@ -785,8 +788,10 @@ $(".custom-file-input").on("change", function() {
 
     $("#StampProject").find("#Save").on("click",function(){
 
+        var periodid = $("#StampProject").find("#PeriodID").val();
 
-        
+        alert(periodid);
+          
       //swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
       
 
