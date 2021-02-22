@@ -816,7 +816,17 @@ $(".custom-file-input").on("change", function() {
           }
           ,function(data){
 
-            console.log(data);
+            if (data == 1) {
+                 $("#DelProject").modal("hide");
+                 swal("สำเร็จ!", "ยกเลิกโครงการสำเร็จ", "success");
+                 $("#DelProject").find("#Preload").hide();
+                 $("#DelProject").find("#Save").show();
+              }else{
+                 $("#DelProject").modal("hide");
+                 swal("ล้มเหลว!", "กรุณาลองใหม่ภายหลัง", "error");
+                 $("#DelProject").find("#Preload").hide();
+                 $("#DelProject").find("#Save").show();
+              }
 
         });
 

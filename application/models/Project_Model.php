@@ -3,6 +3,17 @@ class Project_Model extends CI_Model
 { 
 
 
+        public function DelProject($ProjectID,$Comment)
+        {
+
+                $this->pmdb = $this->load->database("pmdb",true); 
+
+                $Period =  $this->pmdb->query(" UPDATE Project SET Remark = '".$Comment."',IsCancel = '1' WHERE Project.ID = '".$ProjectID."' ");
+
+                return 1;
+
+        }
+
         public function StampPeriodProject($PeriodID,$Comment,$SignStatus)
         {
 
