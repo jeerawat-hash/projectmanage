@@ -733,9 +733,9 @@ $(".custom-file-input").on("change", function() {
 
             var obj = JSON.parse(data);
 
-            //console.log(obj);
+            console.log(obj);
 
-            $("#StampProject").find("#PeriodID").text(obj[0].ID);
+            $("#StampProject").find("#PeriodID").val(obj[0].ID);
             $("#StampProject").find("#textPreiodDetail").text(obj[0].PeriodDetail);
             $("#StampProject").find("#txtPreiodDate").text(obj[0].DueDate);
  
