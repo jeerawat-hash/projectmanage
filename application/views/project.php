@@ -415,12 +415,12 @@
             <div class="row">
               <div class="col-6">
                   <div class="form-group">
-                    <label >รายละเอียด</label>
+                    <label> <font color="red">รายละเอียด</font></label>
                   </div> 
               </div>
               <div class="col-6">
                   <div class="form-group">
-                    <label >วันที่</label>
+                    <label ><font color="red">วันที่</font></label>
                   </div> 
               </div>
             </div>
