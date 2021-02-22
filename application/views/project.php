@@ -578,7 +578,7 @@ $(".custom-file-input").on("change", function() {
 
                   Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
 
-                  Operand += '<button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" > <i class="fas fa-trash"> </i> ลบ </button> ';
+                  Operand += '<button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" > <i class="fas fa-trash"> </i> ยกเลิก </button> ';
 
 
               }
