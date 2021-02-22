@@ -424,6 +424,10 @@
                   </div> 
               </div>
             </div>
+            
+
+            <input type="text" id="ProjectID" hidden >
+
 
             <div class="row">
               <div class="col-12">
@@ -712,6 +716,7 @@ $(".custom-file-input").on("change", function() {
         keyboard: false});
 
       $("#StampProject").find("#Preload").hide();
+      $("#StampProject").find("#ProjectID").val(ProjectID);
 
 
     });
@@ -759,8 +764,20 @@ $(".custom-file-input").on("change", function() {
 
     $("#StampProject").find("#Save").on("click",function(){
 
- 
-      swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
+
+        var projectId = $("#StampProject").find("#ProjectID").val();
+
+        alert(projectId);
+        /*
+        $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataAscPreiod",
+          {}
+          ,function(){
+
+
+
+          });
+        */
+      //swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
       
 
 

@@ -6,7 +6,7 @@ class Home extends CI_Controller {
 
 	function __construct()
 	{
-		
+
 		parent::__construct();
 		$this->load->model("Member_Model");
 		$this->load->model("Project_Model"); 
@@ -14,6 +14,10 @@ class Home extends CI_Controller {
 		$this->load->library("session"); 
 
 		$sess = $this->session->userdata();
+
+	    	 
+
+
 
 	    	 
 	}
