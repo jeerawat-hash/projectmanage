@@ -641,7 +641,7 @@ $(".custom-file-input").on("change", function() {
 
                 if (obj[i].Progress == 0) {
 
-                   status = '<span class="badge badge-success">เสร็จสิ้น</span>';
+                   status = '<span class="badge badge-success">เสร็จสิ้นรอการส่งมอบ</span>';
 
                 }
 
