@@ -7,6 +7,7 @@
   echo $ProjectINFO["ProjectInfo"][0]->Detail;
   echo $ProjectINFO["ProjectInfo"][0]->Budget;
   echo $ProjectINFO["ProjectInfo"][0]->DocFile;
+  echo $ProjectINFO["ProjectInfo"][0]->CoutPreiod;
 
 
   //echo $ProjectINFO["Period"];
@@ -34,7 +35,7 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">งบประมาณโครงการ</span>
-                      <span class="info-box-number text-center text-muted mb-0">2,000 บาท</span>
+                      <span class="info-box-number text-center text-muted mb-0"><?php echo number_format($ProjectINFO["ProjectInfo"][0]->Budget,2); ?> บาท</span>
                     </div>
                   </div>
                 </div>
@@ -42,7 +43,7 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">รายการดำเนินโครงการ</span>
-                      <span class="info-box-number text-center text-muted mb-0">20</span>
+                      <span class="info-box-number text-center text-muted mb-0"><?php echo echo $ProjectINFO["ProjectInfo"][0]->CoutPreiod; ?></span>
                     </div>
                   </div>
                 </div>
