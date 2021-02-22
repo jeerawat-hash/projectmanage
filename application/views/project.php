@@ -532,7 +532,7 @@
         </div>
         <div class="modal-body">
 
-
+          <input type="text" id="ProjectID" hidden>
 
            <div class="container">
                         
@@ -773,8 +773,9 @@ $(".custom-file-input").on("change", function() {
         keyboard: false});
 
       $("#EditProject").find("#Preload").hide();
+      $("#EditProject").find("#ProjectID").val(ProjectID);
 
-
+ 
 
     });
 
@@ -786,8 +787,26 @@ $(".custom-file-input").on("change", function() {
     $("#EditProject").find("#Save").on("click",function(){
 
  
+
+      var ProjectID = $("#EditProject").find("#ProjectID").val();
+
+
+      alert(ProjectID);
+
       //alert("Project Edit");
-      swal("แจ้งเตือน!", "แก้ไขโครงการ", "info");
+      //swal("แจ้งเตือน!", "แก้ไขโครงการ", "info");
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     });
