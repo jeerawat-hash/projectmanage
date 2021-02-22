@@ -100,10 +100,10 @@ print_r($ProjectINFO);
               <br>
               <div class="text-muted">
                 <p class="text-sm">ลูกค้า
-                  <b class="d-block">Deveint Inc</b>
+                  <b class="d-block"><?php echo $ProjectINFO["ProjectInfo"][0]->ClientCompany; ?></b>
                 </p>
                 <p class="text-sm">ผู้ดูแลโครงการ
-                  <b class="d-block">Tony Chicken</b>
+                  <b class="d-block"><?php echo $ProjectINFO["ProjectInfo"][0]->CreateMemberName; ?></b>
                 </p>
               </div>
 
