@@ -610,7 +610,7 @@ $(".custom-file-input").on("change", function() {
     $(".datepickerclass").datepicker({
             uiLibrary: 'bootstrap4',
             minDate: 0,
-            dateFormat: 'dd-mm-yyyy'
+            dateFormat: 'dd-mm-yy'
     });
 
     //////// Date picker init ///////
