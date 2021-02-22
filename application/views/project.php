@@ -381,8 +381,117 @@
 
 
 
+<!---- Modal StampProject  ------>
+  <div id="StampProject" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">บันทึกผลโครงการ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
 
 
+
+
+          <p>Modal body text goes here.</p>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          
+          <div class="spinner-border text-warning" id="Preload" role="status">
+          <span class="sr-only">Loading...</span>
+          </div>
+
+        <button type="button" class="btn btn-success" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---- Modal StampProject  ------>
+
+
+
+<!---- Modal DelProject  ------>
+  <div id="DelProject" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">ยกเลิกโครงการ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+
+
+          <p>Modal body text goes here.</p>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          
+          <div class="spinner-border text-warning" id="Preload" role="status">
+          <span class="sr-only">Loading...</span>
+          </div>
+
+        <button type="button" class="btn btn-success" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---- Modal DelProject  ------>
+
+
+
+<!---- Modal EditProject  ------>
+  <div id="EditProject" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">แก้ไขวันที่ส่งมอบโครงการ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+
+
+          <p>Modal body text goes here.</p>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          
+          <div class="spinner-border text-warning" id="Preload" role="status">
+          <span class="sr-only">Loading...</span>
+          </div>
+
+        <button type="button" class="btn btn-success" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---- Modal EditProject  ------>
 
 
 
@@ -525,8 +634,9 @@ $(".custom-file-input").on("change", function() {
       var ProjectID = $(this).attr("data-projectid");
 
 
-      alert(GroupID + ' ' + ProjectID);
- 
+      //alert(GroupID + ' ' + ProjectID);
+    $("#DelProject").modal({backdrop: 'static', 
+        keyboard: false});
 
     });
 
@@ -536,8 +646,11 @@ $(".custom-file-input").on("change", function() {
       var ProjectID = $(this).attr("data-projectid");
 
 
-      alert("Stamp "+ProjectID);
- 
+      //alert("Stamp "+ProjectID);
+  
+      $("#StampProject").modal({backdrop: 'static', 
+        keyboard: false});
+
 
     });
 
