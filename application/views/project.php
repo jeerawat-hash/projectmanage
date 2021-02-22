@@ -791,8 +791,31 @@ $(".custom-file-input").on("change", function() {
         var periodid = $("#StampProject").find("#PeriodID").val();
         var Comment = $("#StampProject").find("#inputComment").val();
         alert(periodid + Comment);
+
+        if (Comment == "") {
+          swal("แจ้งเตือน!", "กรุณาระบุรายละเอียดการปฏิบัติงาน", "error");
+          return false;
+        }
           
-      //swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
+        
+        $.post("https://projectmanage.webclient.me/index.php/ProjectData/StampPeriodProject",
+          {
+            PeriodID : periodid,
+            Comment : Comment
+          },function(data){
+
+
+            console.log(data);
+
+
+
+          });
+
+
+
+
+
+        //swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
       
 
 

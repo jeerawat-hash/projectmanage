@@ -17,6 +17,12 @@ class ProjectData extends CI_Controller {
  
 	}
 
+	public function StampPeriodProject()
+	{
+
+		print_r($_POST); 
+
+	}
 	public function GetDataAscPreiod()
 	{
 
