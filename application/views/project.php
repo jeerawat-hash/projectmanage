@@ -804,20 +804,17 @@ $(".custom-file-input").on("change", function() {
             Comment : Comment
           },function(data){
 
-
-            console.log(data);
-
-
+              if (data == 1) {
+                 $("#StampProject").modal("hide");
+                 swal("สำเร็จ!", "บันทึกรายการปฏิบัติงานสำเร็จ", "success");
+              }else{
+                 $("#StampProject").modal("hide");
+                 swal("ล้มเหลว!", "กรุณาลองใหม่ภายหลัง", "error");
+              }
 
           });
 
-
-
-
-
-        //swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
-      
-
+ 
 
     });
 

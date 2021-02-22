@@ -3,6 +3,17 @@ class Project_Model extends CI_Model
 { 
 
 
+        public function StampPeriodProject($PeriodID,$Comment,$SignStatus)
+        {
+                
+                $this->pmdb = $this->load->database("pmdb",true); 
+
+                $Period =  $this->pmdb->query(" UPDATE ProjectPeriod SET SignStatus = '".$SignStatus."',Comment = '".$Comment."' WHERE ProjectPeriod.ID = '".$PeriodID."' ");
+
+                return 1;
+
+        }
+
         public function GetDataAscPreiod($ProjectID)
         {
 
