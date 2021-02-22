@@ -50,24 +50,10 @@
 
                     <div class="post clearfix">
                       <div class="user-block">  
-                        <span class="username">
-                           <?php echo $ProjectINFO["Period"][$i]->PeriodDetail; ?> 
-                        </span>
-                      </div> 
-                      <small>
+                        <small>
                          วันที่ <?php echo  '<font color="red">'.$ProjectINFO["Period"][$i]->DueDate.'</font>'; ?>
-                      </small> 
-                      <p> 
-                         <?php 
-                          if ($ProjectINFO["Period"][$i]->Comment == "" ) {
-                            echo '<font color="red">ไม่มีบันทึกภายใน</font>';
-                          }else{
-
-                            echo '<font color="green">'.$ProjectINFO["Period"][$i]->Comment.'</font>';
-                          }
-                          ?>
-                      </p> 
-                      <p> 
+                        </small> 
+                        <small> 
                          <?php 
                           if ($ProjectINFO["Period"][$i]->SignStatus == "" ) {
                             echo '<font color="red">รอลงบันทึก</font>';
@@ -76,7 +62,24 @@
                             echo '<font color="green">บันทึกโดย '.$ProjectINFO["Period"][$i]->SignStatus.'</font>';
                           }
                           ?>
-                      </p> 
+                        </small> 
+                        <span class="username">
+                           <?php echo $ProjectINFO["Period"][$i]->PeriodDetail; ?> 
+                        </span>
+                        <p> 
+                         <?php 
+                          if ($ProjectINFO["Period"][$i]->Comment == "" ) {
+                            echo '<font color="red">ไม่มีบันทึกภายใน</font>';
+                          }else{
+
+                            echo '<font color="green">'.$ProjectINFO["Period"][$i]->Comment.'</font>';
+                          }
+                          ?>
+                        </p> 
+                      </div> 
+                      
+                      
+                      
 
                     </div>
  
