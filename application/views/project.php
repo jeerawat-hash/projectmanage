@@ -361,12 +361,10 @@
             <div id="newRow"></div>
             </div>
 
+
             <button id="addRow" type="button" class="btn btn-info">เพิ่มรายการ</button>
 
-
-
-
-
+ 
 
           </div>
  
@@ -414,6 +412,7 @@
           <div class="container">
                         
             <div class="row">
+
               <div class="col-6">
                   <div class="form-group">
                     <label id="textPreiodDetail">รายละเอียด</label>
@@ -421,16 +420,17 @@
               </div>
               <div class="col-6">
                   <div class="form-group">
-                    <label for="textPreiodDate">วันที่</label>
+                    <label for="textPreiodDate datepickerclass">วันที่</label>
                   </div> 
               </div>
+
             </div>
 
             <div class="row">
               <div class="col-12">
                   <div class="form-group">
                     <label for="inputComment">บันทึกข้อความ</label>
-                    <input type="text" id="inputComment" class="form-control">
+                    <input type="text" id="inputComment" class="form-control ">
                   </div> 
               </div> 
             </div>
