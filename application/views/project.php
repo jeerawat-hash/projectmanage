@@ -415,12 +415,25 @@
             <div class="row">
               <div class="col-6">
                   <div class="form-group">
+                    <label >รายละเอียด</label>
+                  </div> 
+              </div>
+              <div class="col-6">
+                  <div class="form-group">
+                    <label >วันที่</label>
+                  </div> 
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                  <div class="form-group">
                     <label id="textPreiodDetail">รายละเอียด</label>
                   </div> 
               </div>
               <div class="col-6">
                   <div class="form-group">
-                    <label for="textPreiodDate datepickerclass">วันที่</label>
+                    <label id="txtPreiodDate">วันที่</label>
                   </div> 
               </div>
             </div>
@@ -718,6 +731,22 @@ $(".custom-file-input").on("change", function() {
       $("#StampProject").find("#Preload").hide();
       $("#StampProject").find("#ProjectID").val(ProjectID);
 
+        $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataAscPreiod",
+          {
+            ProjectID : ProjectID
+          }
+          ,function(data){
+
+            var obj = JSON.parse(data);
+
+            //console.log(obj);
+
+            $("#StampProject").find("#textPreiodDetail").text(obj[0].PeriodDetail);
+            $("#StampProject").find("#txtPreiodDate").text(obj[0].DueDate);
+ 
+
+          });
+
 
     });
 
@@ -765,20 +794,6 @@ $(".custom-file-input").on("change", function() {
     $("#StampProject").find("#Save").on("click",function(){
 
 
-        var projectId = $("#StampProject").find("#ProjectID").val();
- 
-        $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataAscPreiod",
-          {
-            ProjectID : projectId
-          }
-          ,function(data){
-
-            var obj = JSON.parse(data);
-
-            console.log(obj);
-
-
-          });
         
       //swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
       
