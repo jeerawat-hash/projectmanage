@@ -690,7 +690,7 @@ $(".custom-file-input").on("change", function() {
         }); 
 
     }, 1000);
-
+a
 
    
     $("#ProjectsTable").find("#ProjectsTableDetail").on("click",'.ProjectDel',function(){
