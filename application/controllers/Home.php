@@ -11,10 +11,14 @@ class Home extends CI_Controller {
 		$this->load->model("Project_Model"); 
 
 		$this->load->library("session"); 
-	    	/*if ( $this->session->userdata("memberID") == "" ) { 
-				redirect("Auth/index");
-				$this->session->sess_destroy();
-		   } */
+
+
+	    	if (!isset($sess["Name"])) {
+	 			
+	 			redirect("home/index");
+	 			$this->session->sess_destroy();
+
+ 			}
 	}
 	public function index()
 	{
