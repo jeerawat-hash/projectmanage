@@ -715,12 +715,9 @@ $(".custom-file-input").on("change", function() {
     $("#ProjectsTable").find("#ProjectsTableDetail").on("click",'.ProjectStamp',function(){
 
       var ProjectID = $(this).attr("data-projectid");
-
-
+ 
       //alert("Stamp "+ProjectID);
-  
-      $("#StampProject").modal({backdrop: 'static', 
-        keyboard: false});
+   
 
       $("#StampProject").find("#Preload").hide();
       $("#StampProject").find("#ProjectID").val(ProjectID);
@@ -733,7 +730,16 @@ $(".custom-file-input").on("change", function() {
 
             var obj = JSON.parse(data);
 
-            console.log(obj);
+            //console.log(obj);
+
+            if (obj.length == 0) {
+              
+              swal("แจ้งเตือน!", "โครงการอยู่ระหว่างการส่งมอบ", "info");
+              return false;
+
+            }
+            $("#StampProject").modal({backdrop: 'static', 
+                                      keyboard: false});
 
             $("#StampProject").find("#PeriodID").val(obj[0].ID);
             $("#StampProject").find("#textPreiodDetail").text(obj[0].PeriodDetail);
