@@ -1,5 +1,7 @@
  
-
+<?php 
+print_r($ProjectINFO);
+ ?>
     <!-- Main content -->
     <section class="content">
 
@@ -98,10 +100,10 @@
               <br>
               <div class="text-muted">
                 <p class="text-sm">ลูกค้า
-                  <b class="d-block"><?php echo $ProjectINFO["ProjectInfo"][0]->ClientCompany; ?></b>
+                  <b class="d-block">Deveint Inc</b>
                 </p>
                 <p class="text-sm">ผู้ดูแลโครงการ
-                  <b class="d-block"><?php echo $ProjectINFO["ProjectInfo"][0]->CreateMemberName; ?></b>
+                  <b class="d-block">Tony Chicken</b>
                 </p>
               </div>
 
