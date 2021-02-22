@@ -622,85 +622,77 @@ $(".custom-file-input").on("change", function() {
  
 
 
-
-    $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataProjects",function(data){
-
-        var obj = JSON.parse(data);
-  
-
-        console.log(obj);
-
-        var html = '';
-        for (var i = 0; i < obj.length; i++) {
-
-
-              var status = '<span class="badge badge-warning">ดำเนินการ</span>';
-
-              if (obj[i].Progress == 0) {
-
-                 status = '<span class="badge badge-success">เสร็จสิ้น</span>';
-
-              }
-
-              //var Operand = '<button class="btn btn-primary btn-sm ProjectView" data-projectid="'+obj[i].ID+'" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
-              var Operand = '<a href="https://projectmanage.webclient.me/index.php/home/projectinfo/'+obj[i].ID+'" class="btn btn-primary btn-sm">ดูข้อมูล</a>';
-              
-
-              if (obj[i].Policy == "CER") {
-  
-                  Operand += '<button class="btn btn-warning btn-sm ProjectEdit" data-projectid="'+obj[i].ID+'"> <i class="fas fa-pencil-alt"></i>แก้ไข</button>'; 
-
-                  Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
-
-                  Operand += '<button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" > <i class="fas fa-trash"> </i> ยกเลิก </button> ';
-
-
-              }
-
-              if (obj[i].Policy == "SR") {
+    setInterval(function(){ 
  
+        $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataProjects",function(data){
 
-                  Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
+          var obj = JSON.parse(data);
+    
 
-              }
+          console.log(obj);
 
-
-              
-              html += '<tr>';
-              html += '<td>';
-              html += '<a>';
-              html += obj[i].Name;
-              html += '</a><br/><small>สร้างวันที่ '+obj[i].BeginDate+' </small> <br> <small> กำหนดส่ง '+obj[i].EndDate+'</small>';
-              html += '</td>';
-              html += '<td class="project_progress">';
-              html += '<div class="progress progress-sm">';
-              html += '<div class="progress-bar bg-green" role="progressbar" aria-valuenow="'+obj[i].percent+'" aria-valuemin="0" aria-valuemax="100" style="width: '+obj[i].percent+'%">';
-              html += '</div></div><small> ดำเนินการแล้ว '+obj[i].percent+'% </small> </td>';
-              html += '<td class="project-state">';
-              html += status;
-              html += '<td class="project-actions text-right">';
-              html += Operand;
-              html += '</td></tr>';
-
-        }
+          var html = '';
+          for (var i = 0; i < obj.length; i++) {
 
 
+                var status = '<span class="badge badge-warning">ดำเนินการ</span>';
 
-        $("#ProjectsTable").find("#ProjectsTableDetail").html(html);
+                if (obj[i].Progress == 0) {
+
+                   status = '<span class="badge badge-success">เสร็จสิ้น</span>';
+
+                }
+
+                //var Operand = '<button class="btn btn-primary btn-sm ProjectView" data-projectid="'+obj[i].ID+'" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
+                var Operand = '<a href="https://projectmanage.webclient.me/index.php/home/projectinfo/'+obj[i].ID+'" class="btn btn-primary btn-sm">ดูข้อมูล</a>';
+                
+
+                if (obj[i].Policy == "CER") {
+    
+                    Operand += '<button class="btn btn-warning btn-sm ProjectEdit" data-projectid="'+obj[i].ID+'"> <i class="fas fa-pencil-alt"></i>แก้ไข</button>'; 
+
+                    Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
+
+                    Operand += '<button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" > <i class="fas fa-trash"> </i> ยกเลิก </button> ';
 
 
+                }
+
+                if (obj[i].Policy == "SR") {
+   
+
+                    Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
+
+                }
 
 
+                
+                html += '<tr>';
+                html += '<td>';
+                html += '<a>';
+                html += obj[i].Name;
+                html += '</a><br/><small>สร้างวันที่ '+obj[i].BeginDate+' </small> <br> <small> กำหนดส่ง '+obj[i].EndDate+'</small>';
+                html += '</td>';
+                html += '<td class="project_progress">';
+                html += '<div class="progress progress-sm">';
+                html += '<div class="progress-bar bg-green" role="progressbar" aria-valuenow="'+obj[i].percent+'" aria-valuemin="0" aria-valuemax="100" style="width: '+obj[i].percent+'%">';
+                html += '</div></div><small> ดำเนินการแล้ว '+obj[i].percent+'% </small> </td>';
+                html += '<td class="project-state">';
+                html += status;
+                html += '<td class="project-actions text-right">';
+                html += Operand;
+                html += '</td></tr>';
+
+          } 
+
+          $("#ProjectsTable").find("#ProjectsTableDetail").html(html);
+ 
+        }); 
+
+    }, 2000);
 
 
-    });
-
-
-
-
-
-
-
+   
     $("#ProjectsTable").find("#ProjectsTableDetail").on("click",'.ProjectDel',function(){
 
 
