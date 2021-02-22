@@ -50,8 +50,8 @@
                     print_r($APeriod);
 
 
-                   echo $APeriod->PeriodDetail;
-                   
+                   //echo $APeriod[0]->PeriodDetail;
+
                     ?>
 
                     <!--
