@@ -6,18 +6,7 @@
           <div class="col-12">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
             <div class="card card-success">
               <div class="card-header">

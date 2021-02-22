@@ -17,10 +17,9 @@
          <!-- <h3 class="card-title">Projects</h3> -->
 
          <button class="btn btn-primary btn-sm" id="CreateProject">
-                              <i class="fas fa-pencil-alt">
-                              </i>
+          <i class="fas fa-pencil-alt"> </i>
                               เพิ่มโครงการ
-                          </button>
+                </button>
 
           <div class="card-tools">
            <!-- <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -145,7 +144,7 @@
 
                   <div class="form-group">
                     <label for="inputEndDate">วันส่งมอบงาน</label>
-                    <input type="text" id="inputEndDate" class="form-control">
+                    <input type="text" id="inputEndDate" class="form-control datepickerclass">
                   </div>
 
                   <div class="form-group">
@@ -361,10 +360,12 @@
             <div id="newRow"></div>
             </div>
 
-
             <button id="addRow" type="button" class="btn btn-info">เพิ่มรายการ</button>
 
- 
+
+
+
+
 
           </div>
  
@@ -412,7 +413,6 @@
           <div class="container">
                         
             <div class="row">
-
               <div class="col-6">
                   <div class="form-group">
                     <label id="textPreiodDetail">รายละเอียด</label>
@@ -423,7 +423,6 @@
                     <label for="textPreiodDate datepickerclass">วันที่</label>
                   </div> 
               </div>
-
             </div>
 
             <div class="row">
@@ -1156,7 +1155,7 @@ $(".custom-file-input").on("change", function() {
         html += '<div class="col-3">';
         html += '<div class="form-group">';
         html += '<label for="inputDetailPeriodDate">วันที่</label>';
-        html += '<input type="text" id="inputDetailPeriodDate" class="form-control inputDetailPeriodDate">';
+        html += '<input type="text" id="inputDetailPeriodDate" class="form-control inputDetailPeriodDate datepickerclass">';
         html += '</div>';
         html += '</div>';
         html += '<div class="col-2">';
