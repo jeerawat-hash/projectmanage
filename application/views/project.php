@@ -382,7 +382,7 @@
 
 
 <!---- Modal StampProject  ------>
-  <div id="StampProject" class="modal" tabindex="-1" role="dialog">
+  <div id="StampProject" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -420,7 +420,7 @@
 
 
 <!---- Modal DelProject  ------>
-  <div id="DelProject" class="modal" tabindex="-1" role="dialog">
+  <div id="DelProject" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -458,7 +458,7 @@
 
 
 <!---- Modal EditProject  ------>
-  <div id="EditProject" class="modal" tabindex="-1" role="dialog">
+  <div id="EditProject" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
