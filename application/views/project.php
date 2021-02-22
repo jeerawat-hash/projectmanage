@@ -689,8 +689,8 @@ $(".custom-file-input").on("change", function() {
  
         }); 
 
-    }, 1000);
-a
+    }, 2000);
+
 
    
     $("#ProjectsTable").find("#ProjectsTableDetail").on("click",'.ProjectDel',function(){
