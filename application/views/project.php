@@ -447,7 +447,7 @@
           <span class="sr-only">Loading...</span>
           </div>
 
-        <button type="button" class="btn btn-success" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-danger" id="Save" >ยกเลิก</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
         </div>
       </div>
@@ -485,7 +485,7 @@
           <span class="sr-only">Loading...</span>
           </div>
 
-        <button type="button" class="btn btn-success" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-warning" id="Save" >บันทึก</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
         </div>
       </div>
@@ -660,8 +660,11 @@ $(".custom-file-input").on("change", function() {
       var ProjectID = $(this).attr("data-projectid");
 
 
-      alert("ProjectEdit "+ProjectID);
+      //alert("ProjectEdit "+ProjectID);
  
+      $("#EditProject").modal({backdrop: 'static',
+        keyboard: false});
+
 
     });
 
@@ -1026,7 +1029,7 @@ $(".custom-file-input").on("change", function() {
         html += '</div>';
         html += '<div class="col-2">';
         html += '<div class="form-group">';
-        html += '<label for="removeRow">ลบ</label>';
+        html += '<label for="removeRow">ยกเลิก</label>';
         html += '<button id="removeRow" type="button" class="btn btn-danger form-control">X</button>';
         html += '</div>';
         html += '</div>';
