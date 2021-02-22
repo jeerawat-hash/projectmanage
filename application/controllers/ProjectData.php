@@ -21,7 +21,7 @@ class ProjectData extends CI_Controller {
 	{
 
 
-		echo json_encode($this->Project_Model->GetDataAscPreiod('5'));
+		echo json_encode($this->Project_Model->GetDataAscPreiod($_POST["ProjectID"]));
 
 
 	}
