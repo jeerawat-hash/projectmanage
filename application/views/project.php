@@ -1201,7 +1201,7 @@ $(".custom-file-input").on("change", function() {
         $("#inputDetailPeriodDate"+htmladd).datepicker({
             uiLibrary: 'bootstrap4',
             minDate: 0,
-            dateFormat: 'dd-mm-yy'
+            dateFormat: 'yy-mm-dd'
         });
 
 
@@ -1229,7 +1229,7 @@ $(".custom-file-input").on("change", function() {
     $(".datepickerclass").datepicker({
             uiLibrary: 'bootstrap4',
             minDate: 0,
-            dateFormat: 'dd-mm-yy'
+            dateFormat: 'yy-mm-dd'
     });
 
     //////// Date picker init ///////
