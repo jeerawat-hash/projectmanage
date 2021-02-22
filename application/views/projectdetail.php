@@ -1,19 +1,4 @@
-
-<?php 
-
-  
-  print_r($ProjectINFO);
-  echo $ProjectINFO["ProjectInfo"][0]->Name;
-  echo $ProjectINFO["ProjectInfo"][0]->Detail;
-  echo $ProjectINFO["ProjectInfo"][0]->Budget;
-  echo $ProjectINFO["ProjectInfo"][0]->DocFile;
-  echo $ProjectINFO["ProjectInfo"][0]->CoutPreiod;
-
-
-  //echo $ProjectINFO["Period"];
-
-
- ?>
+ 
 
     <!-- Main content -->
     <section class="content">
