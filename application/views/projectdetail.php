@@ -1,4 +1,4 @@
- 
+
     <!-- Main content -->
     <section class="content">
 
@@ -101,6 +101,14 @@
                 </p>
                 <p class="text-sm">ผู้ดูแลโครงการ
                   <b class="d-block"><?php echo $ProjectINFO["ProjectInfo"][0]->CreateMemberName; ?></b>
+                </p>
+
+                <p class="text-sm">วันส่งมอบ
+                  <b class="d-block"><?php echo $ProjectINFO["ProjectInfo"][0]->EndDate; ?></b>
+                </p>
+
+                <p class="text-sm">บันทึกข้อความการแก้ไข
+                  <b class="d-block"><?php echo $ProjectINFO["ProjectInfo"][0]->Remark; ?></b>
                 </p>
               </div>
 
