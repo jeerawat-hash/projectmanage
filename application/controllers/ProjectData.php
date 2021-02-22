@@ -36,7 +36,10 @@ class ProjectData extends CI_Controller {
 	}
 	public function CreateProjectData()
 	{
- 
+ 		
+
+ 		$sess = $this->session->userdata();
+
 		#print_r($_POST);  
 		#print_r( json_decode($_POST["Employee"],true));  
 		#print_r( json_decode($_POST["PeriodInfo"],true));   
@@ -52,8 +55,10 @@ class ProjectData extends CI_Controller {
 		$ProjectName = $_POST["ProjectName"];
 		$Description = $_POST["Description"];
 		$ClientCompany = $_POST["ClientCompany"];
+		$EndDate = $_POST["EndDate"];
 		$Budget = $_POST["Budget"];
 		$PeriodDate = $_POST["PeriodDate"];
+		$PeriodEndDate = $_POST["PeriodEndDate"];
 
 
 		$CreatorID = $Employee[0]["Creator"]["MemberID"];
@@ -68,7 +73,8 @@ class ProjectData extends CI_Controller {
 		$Member["Role"][] = $Employee[3]["MemberRole"];
 
 
- 		echo  $this->Project_Model->CreateProject(date("Y-m-d"),date("Y-m-d"),$ProjectName,$Description,$ClientCompany,$Budget,$PeriodDate,$CreatorID,$CreatorRole,$Member,$PeriodInfo,$URL);
+ 		echo  $this->Project_Model->CreateProject(date("Y-m-d"),$EndDate,$ProjectName,$Description,$ClientCompany,$Budget,$PeriodDate,$CreatorID,$CreatorRole,$Member,$PeriodInfo,$URL,$PeriodEndDate);
+
 
 
 

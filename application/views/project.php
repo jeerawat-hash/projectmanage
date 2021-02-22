@@ -885,9 +885,16 @@ $(".custom-file-input").on("change", function() {
       var ProjectName = $("#ModalPeriod").find("#inputProjectName").val(); 
       var Description = $("#ModalPeriod").find("#inputDescription").val(); 
       var ClientCompany = $("#ModalPeriod").find("#inputClientCompany").val(); 
+      var EndDate = $("#ModalPeriod").find("#inputEndDate").val(); 
       var Budget = $("#ModalPeriod").find("#inputBudget").val(); 
       var PeriodDate = $("#ModalPeriod").find("#inputPeriodDate").val(); 
+      var PeriodEndDate = $("#ModalPeriod").find("#inputPeriodEndDate").val(); 
       var DocFile = $('#DocFile').prop('files')[0]; 
+
+
+
+
+
 
 
       if (ProjectName == "") {
@@ -1047,13 +1054,18 @@ $(".custom-file-input").on("change", function() {
         data.append('ProjectName', ProjectName); 
         data.append('Description', Description); 
         data.append('ClientCompany', ClientCompany); 
+        data.append('EndDate', EndDate); 
         data.append('Budget', Budget); 
         data.append('PeriodDate', PeriodDate); 
+        data.append('PeriodEndDate', PeriodEndDate); 
         data.append('DocFile', DocFile); 
         data.append('Employee', JSON.stringify(Employee) );
         data.append('PeriodInfo', JSON.stringify(PeriodInfo) );
         ////// เพิ่มข้อมูลเข้า array    
          
+ 
+
+
 
 
         $("#ModalPeriod").find("#Save").hide();

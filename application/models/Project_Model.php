@@ -67,7 +67,7 @@ class Project_Model extends CI_Model
 
         }
  
-	public function CreateProject($StartDate,$StopDate,$ProjectName,$Description,$ClientCompany,$Budget,$PeriodDate,$CreatorID,$CreatorRole,$Member,$PeriodInfo,$URL)
+	public function CreateProject($StartDate,$StopDate,$ProjectName,$Description,$ClientCompany,$Budget,$PeriodDate,$CreatorID,$CreatorRole,$Member,$PeriodInfo,$URL,$PeriodEndDate)
 	{ 
 
 		$isSuccess = 0;
@@ -96,7 +96,7 @@ class Project_Model extends CI_Model
         ////// While Member /////
 
 
-        $this->pmdb->query("INSERT INTO Project (ID, SignGroupID, Name, Detail, Budget, DocFile, BeginDate, EndDate, CheckDate, Remark, IsSuccess) VALUES (NULL, '".$GroupID."', '".$ProjectName."', '".$Description."', '".$Budget."', '".$URL."', '".$StartDate."', '".$StopDate."', '".$PeriodDate."', '', '0') ");
+        $this->pmdb->query("INSERT INTO Project (ID, SignGroupID, Name, Detail, Budget, DocFile, BeginDate, EndDate, CheckDate, Remark, IsSuccess, ClientCompany, PeriodEndDate,CreateMemberID) VALUES (NULL, '".$GroupID."', '".$ProjectName."', '".$Description."', '".$Budget."', '".$URL."', '".$StartDate."', '".$StopDate."', '".$PeriodDate."', '', '0','".$ClientCompany."','".$PeriodEndDate."','".$CreatorID."') ");
 
 
         $GetCreateRowID = $this->pmdb->query("
