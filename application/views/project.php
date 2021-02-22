@@ -639,33 +639,40 @@ $(".custom-file-input").on("change", function() {
 
                 var status = '<span class="badge badge-warning">ดำเนินการ</span>';
 
+                var Operand = '';
+
                 if (obj[i].Progress == 0) {
 
                    status = '<span class="badge badge-success">เสร็จสิ้นรอการส่งมอบ</span>';
 
+                   Operand += '<button class="btn btn-warning btn-sm ProjectSuccess" data-projectid="'+obj[i].ID+'"> <i class="fas fa-pencil-alt"></i>ส่งบอบสำเร็จ</button>'; 
+
+                }else{
+
+                    Operand = '<a href="https://projectmanage.webclient.me/index.php/home/projectinfo/'+obj[i].ID+'" class="btn btn-primary btn-sm">ดูข้อมูล</a>';
+                    
+
+                    if (obj[i].Policy == "CER") {
+        
+                        Operand += '<button class="btn btn-warning btn-sm ProjectEdit" data-projectid="'+obj[i].ID+'"> <i class="fas fa-pencil-alt"></i>แก้ไข</button>'; 
+
+                        Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
+
+                        Operand += '<button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" > <i class="fas fa-trash"> </i> ยกเลิก </button> ';
+
+
+                    }
+
+                    if (obj[i].Policy == "SR") {
+       
+
+                        Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
+
+                    }
+
+
                 }
 
-                //var Operand = '<button class="btn btn-primary btn-sm ProjectView" data-projectid="'+obj[i].ID+'" ><i class="fas fa-folder"></i>ดูข้อมูล</button>';
-                var Operand = '<a href="https://projectmanage.webclient.me/index.php/home/projectinfo/'+obj[i].ID+'" class="btn btn-primary btn-sm">ดูข้อมูล</a>';
-                
-
-                if (obj[i].Policy == "CER") {
-    
-                    Operand += '<button class="btn btn-warning btn-sm ProjectEdit" data-projectid="'+obj[i].ID+'"> <i class="fas fa-pencil-alt"></i>แก้ไข</button>'; 
-
-                    Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
-
-                    Operand += '<button class="btn btn-danger btn-sm ProjectDel" data-groupid="'+obj[i].SignGroupID+'" data-projectid="'+obj[i].ID+'" > <i class="fas fa-trash"> </i> ยกเลิก </button> ';
-
-
-                }
-
-                if (obj[i].Policy == "SR") {
-   
-
-                    Operand += '<button class="btn btn-success btn-sm ProjectStamp" data-projectid="'+obj[i].ID+'" > <i class="fas fa-pencil-alt"></i>บันทึกผล</button>'; 
-
-                }
 
 
                 
