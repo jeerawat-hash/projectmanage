@@ -520,7 +520,7 @@
               <div class="col-6">
                   <div class="form-group">
                     <label for="inputEditDate">เลือกวันที่</label>
-                    <input type="text" id="inputEditDate" class="form-control">
+                    <input type="text" id="inputEditDate" class="form-control datepickerclass">
                   </div> 
               </div>
               <div class="col-6">
@@ -602,6 +602,24 @@ $(".custom-file-input").on("change", function() {
 
     <script type="text/javascript">
   $(function () {
+
+
+
+    //////// Date picker init ///////
+
+    $(".datepickerclass").datepicker({
+            minDate: 0
+    });
+
+    //////// Date picker init ///////
+
+
+
+
+
+
+
+
 
 
 
