@@ -3,7 +3,18 @@ class Project_Model extends CI_Model
 { 
 
 
+        public function GetDataAscPreiod($ProjectID)
+        {
 
+                $this->pmdb = $this->load->database("pmdb",true); 
+
+
+                $Period =  $this->pmdb->query(" SELECT ID,PeriodDetail,DueDate,SignStatus,Comment FROM ProjectPeriod WHERE ProjectID = ".$ProjectID." and DueStatus = 0 order by DueDate asc limit 1 ")->result();
+
+
+                return $Period;
+
+        }
         public function GetDataProjectsInfo($ProjectID)
         {
 

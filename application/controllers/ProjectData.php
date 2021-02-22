@@ -16,6 +16,15 @@ class ProjectData extends CI_Controller {
 
  
 	}
+
+	public function GetDataAscPreiod()
+	{
+
+
+		echo json_encode($this->Project_Model->GetDataAscPreiod('5'));
+
+
+	}
 	public function GetDataProjects()
 	{
 
