@@ -44,13 +44,14 @@
                   <?php 
 
 
-                  foreach ($ProjectINFO["Period"] as $Period) {
+                  foreach ($ProjectINFO["Period"] as $APeriod) {
 
 
-                    print_r($Period);
+                    print_r($APeriod);
 
 
-                   echo $Period["PeriodDetail"];
+                   echo $APeriod->PeriodDetail;
+                   
                     ?>
 
                     <!--
