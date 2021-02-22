@@ -766,17 +766,20 @@ $(".custom-file-input").on("change", function() {
 
 
         var projectId = $("#StampProject").find("#ProjectID").val();
-
-        alert(projectId);
-        /*
+ 
         $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataAscPreiod",
-          {}
-          ,function(){
+          {
+            ProjectID : projectId
+          }
+          ,function(data){
 
+            var obj = JSON.parse(data);
+
+            console.log(obj);
 
 
           });
-        */
+        
       //swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
       
 
