@@ -214,7 +214,7 @@
             <h4>กลุ่มผู้รับผิดชอบโครงการ</h4>
            
             <div class="card-body">
-            <div  class="row">
+            <div  hidden class="row">
               <div class="col-8">
                 <div class="form-group">
                   <label for="inputEmployeeGroup0">ชื่อ</label>
