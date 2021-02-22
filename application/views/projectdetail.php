@@ -55,79 +55,40 @@
 
 
 
+                  <?php 
 
 
+                  foreach ($ProjectINFO["Period"] as $Period) {
+                    ?>
 
 
                     <div class="post clearfix">
                       <div class="user-block"> 
                         <span class="username">
-                          รายการ 
+                          <?php echo $Period->PeriodDetail; ?> 
                         </span>
                       </div> 
                       <p>
-                        บันทึกข้อความ
-                      </p> 
-                    </div>
-
-                    <div class="post clearfix">
-                      <div class="user-block"> 
-                        <span class="username">
-                          รายการ 
-                        </span>
-                      </div> 
-                      <p>
-                        บันทึกข้อความ
-                      </p> 
-                    </div>
-
-                    <div class="post clearfix">
-                      <div class="user-block"> 
-                        <span class="username">
-                          รายการ 
-                        </span>
-                      </div> 
-                      <p>
-                        บันทึกข้อความ
-                      </p> 
-                    </div>
-
-                    <div class="post clearfix">
-                      <div class="user-block"> 
-                        <span class="username">
-                          รายการ 
-                        </span>
-                      </div> 
-                      <p>
-                        บันทึกข้อความ
-                      </p> 
-                    </div>
-
-                    <div class="post clearfix">
-                      <div class="user-block"> 
-                        <span class="username">
-                          รายการ 
-                        </span>
-                      </div> 
-                      <p>
-                        บันทึกข้อความ
+                        <?php echo $Period->SignStatus; ?> 
+                        <br>
+                        <?php echo $Period->Comment; ?> 
                       </p> 
                     </div>
  
+                    ?>
+                  }
 
 
+                   ?>
  
-
-
-
 
 
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-              <h3 class="text-primary">ชื่อโครงการ</h3>
-              <p class="text-muted">รายละเอียดโครงการ</p>
+              <h3 class="text-primary"><?php echo $ProjectINFO["ProjectInfo"][0]->Name; ?></h3>
+              <p class="text-muted"><?php echo $ProjectINFO["ProjectInfo"][0]->Detail; ?></p>
               <br>
               <div class="text-muted">
                 <p class="text-sm">ลูกค้า
@@ -141,7 +102,7 @@
               <h5 class="mt-5 text-muted">เอกสารโครงการ</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> Functional-requirements.docx</a>
+                  <a href="<?php echo $ProjectINFO["ProjectInfo"][0]->DocFile; ?>" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> <?php echo basename($ProjectINFO["ProjectInfo"][0]->DocFile); ?></a>
                 </li>   
               </ul>
               <div class="text-center mt-5 mb-3"> 
