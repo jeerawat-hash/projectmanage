@@ -152,21 +152,18 @@
                     <label for="inputPeriodEndDate">แจ้งเตือนก่อนส่งมอบงาน(<font color="red">จำนวนวัน</font>)</label>
                     <input type="number" id="inputPeriodEndDate" value="0" class="form-control">
                   </div>
-
-                  <div class="form-group">
-                    <label for="inputBudget">งบประมาณโครงการ</label>
-                    <input type="number" id="inputBudget" value="0" class="form-control">
-                  </div> 
-
+ 
 
                   <div class="form-group">
                     <label for="inputPeriodDate">ช่วงเวลาก่อนตรวจความคืบหน้า(<font color="red">จำนวนวัน</font>)</label>
                     <input type="number" id="inputPeriodDate" value="0" class="form-control">
                   </div>
 
-
-                  
-
+                   <div class="form-group">
+                    <label for="inputBudget">งบประมาณโครงการ</label>
+                    <input type="number" id="inputBudget" value="0" class="form-control">
+                  </div> 
+ 
 
 
                 </div> 
