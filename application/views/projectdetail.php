@@ -52,8 +52,22 @@
                   <h4>บันทึกผลช่วงการดำเนินโครงการ</h4>
                      
 
+
+
+                  <?php 
+
+                  for ($i=0; $i < count($ProjectINFO["Period"]); $i++) {  
+                    ?>
+
+
+                    <?php echo $ProjectINFO["Period"][$i]->PeriodDetail; ?>
+
  
 
+                  <?php
+                  }
+
+                   ?>
 
                     <div class="post clearfix">
                       <div class="user-block"> 
