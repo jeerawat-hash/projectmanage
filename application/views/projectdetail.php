@@ -49,7 +49,25 @@
 
                     print_r($Period);
 
- 
+
+                   echo $Period["PeriodDetail"];
+                    ?>
+
+                    <!--
+                    <div class="post clearfix">
+                      <div class="user-block"> 
+                        <span class="username">
+                          <?php echo $Period->PeriodDetail; ?> 
+                        </span>
+                      </div> 
+                      <p>
+                        <?php echo $Period->SignStatus; ?> 
+                        <br>
+                        <?php echo $Period->Comment; ?> 
+                      </p> 
+                    </div>
+  -->
+                    ?>
                   }
 
 
