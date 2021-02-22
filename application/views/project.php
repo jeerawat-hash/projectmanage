@@ -602,27 +602,7 @@ $(".custom-file-input").on("change", function() {
     <script type="text/javascript">
   $(function () {
 
-
-
-    //////// Date picker init ///////
-
-    $(".datepickerclass").datepicker({
-            uiLibrary: 'bootstrap4',
-            minDate: 0,
-            dateFormat: 'dd-mm-yy'
-    });
-
-    //////// Date picker init ///////
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -1175,6 +1155,17 @@ $(".custom-file-input").on("change", function() {
 
 
 
+
+
+    //////// Date picker init ///////
+
+    $(".datepickerclass").datepicker({
+            uiLibrary: 'bootstrap4',
+            minDate: 0,
+            dateFormat: 'dd-mm-yy'
+    });
+
+    //////// Date picker init ///////
 
 
 
