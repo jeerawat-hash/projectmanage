@@ -789,25 +789,32 @@ $(".custom-file-input").on("change", function() {
  
 
       var ProjectID = $("#EditProject").find("#ProjectID").val();
+      var EditDate = $("#EditProject").find("inputEditDate").val();
+      var Comment = $("#EditProject").find("inputComment").val();
+
+      if (Comment == "") {
+          swal("แจ้งเตือน!", "กรุณาระบุรายละเอียดการแก้ไขโครงการ", "error");
+          return false;
+      }
+      if (EditDate == "") {
+          swal("แจ้งเตือน!", "กรุณาระบุวันที่สิ้นสุดโครงการ", "error");
+          return false;
+      }
 
 
-      alert(ProjectID);
-
-      //alert("Project Edit");
-      //swal("แจ้งเตือน!", "แก้ไขโครงการ", "info");
-
-
-
-
+        $.post("https://projectmanage.webclient.me/index.php/ProjectData/EditProject",
+          {
+            ProjectID : ProjectID,
+            EditDate : EditDate,
+            Comment : Comment
+          },function(data){
 
 
+            console.log(data);
 
 
-
-
-
-
-
+        });
+ 
 
     });
 
