@@ -70,8 +70,11 @@
   <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/summernote/summernote-bs4.min.css">
 
 
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet">
+    
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
 
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
