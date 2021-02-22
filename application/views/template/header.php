@@ -70,9 +70,9 @@
   <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/summernote/summernote-bs4.min.css">
 
 
-    <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet">
-    
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet">
+
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 
 
