@@ -487,6 +487,7 @@
         <div class="modal-body">
 
 
+        <input type="text" id="ProjectID" hidden>
 
           <div class="container">
                         
@@ -715,6 +716,7 @@ $(".custom-file-input").on("change", function() {
           keyboard: false});
 
       $("#DelProject").find("#Preload").hide();
+      $("#DelProject").find("#ProjectID").val(ProjectID);
 
 
     });
@@ -793,8 +795,15 @@ $(".custom-file-input").on("change", function() {
 
     $("#DelProject").find("#Save").on("click",function(){
 
- 
-      swal("แจ้งเตือน!", "ยกเลิกโครงการ", "info");
+      
+        var projectid = $("#DelProject").find("#ProjectID").val();
+        var Comment = $("#DelProject").find("#inputComment").val();
+
+
+        alert(projectid + Comment);
+
+
+      //swal("แจ้งเตือน!", "ยกเลิกโครงการ", "info");
        
 
 
