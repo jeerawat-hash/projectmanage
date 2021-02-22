@@ -13,7 +13,7 @@ class Project_Model extends CI_Model
                 $Project =  $this->pmdb->query(" SELECT *,(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = ".$ProjectID.") as CoutPreiod FROM Project WHERE ID = ".$ProjectID." ")->result();
 
 
-                $ProjectPeriod = $this->pmdb->query(" SELECT PeriodDetail,DueDate,SignStatus,Comment FROM ProjectPeriod WHERE ID = ".$ProjectID." ")->result();
+                $ProjectPeriod = $this->pmdb->query(" SELECT PeriodDetail,DueDate,SignStatus,Comment FROM ProjectPeriod WHERE ProjectID = ".$ProjectID." ")->result();
 
 
                 return array('ProjectInfo' => $Project, 'Period' => $ProjectPeriod );
