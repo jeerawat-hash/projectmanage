@@ -12,10 +12,11 @@ class Home extends CI_Controller {
 
 		$this->load->library("session"); 
 
+		$sess = $this->session->userdata();
 
 	    	if (!isset($sess["Name"])) {
 	 			
-	 			redirect("home/index");
+	 			//redirect("home/index");
 	 			$this->session->sess_destroy();
 
  			}
