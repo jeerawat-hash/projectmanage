@@ -1136,7 +1136,7 @@ $(".custom-file-input").on("change", function() {
         html += '<div class="col-3">';
         html += '<div class="form-group">';
         html += '<label for="inputDetailPeriodDate">วันที่</label>';
-        html += '<input type="text" id="inputDetailPeriodDate" class="form-control inputDetailPeriodDate datepickerclass'+htmladd+'">';
+        html += '<input type="text" id="inputDetailPeriodDate" class="form-control inputDetailPeriodDate datepickerclass ">';
         html += '</div>';
         html += '</div>';
         html += '<div class="col-2">';
@@ -1148,15 +1148,8 @@ $(".custom-file-input").on("change", function() {
         html += '</div>';
  
         $('#newRow').append(html);
-
-
-            $(".datepickerclass"+htmladd).datepicker({
-            uiLibrary: 'bootstrap4',
-            minDate: 0,
-            dateFormat: 'dd-mm-yy'
-            });
-            
-
+ 
+ 
     });
 
     $(document).on('click', '#removeRow', function () {
