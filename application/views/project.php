@@ -799,9 +799,26 @@ $(".custom-file-input").on("change", function() {
         var projectid = $("#DelProject").find("#ProjectID").val();
         var Comment = $("#DelProject").find("#inputComment").val();
 
+        
+        if (Comment == "") {
+          swal("แจ้งเตือน!", "กรุณาระบุรายละเอียดการยกเลิกโครงการ", "error");
+          return false;
+        }
 
-        alert(projectid + Comment);
+        $("#DelProject").find("#Preload").show();
+        $("#DelProject").find("#Save").hide();
 
+
+        $.post("https://projectmanage.webclient.me/index.php/ProjectData/DelProject",
+          {
+            ProjectID : projectid,
+            Comment : Comment
+          }
+          ,function(data){
+
+            console.log(data);
+
+        });
 
       //swal("แจ้งเตือน!", "ยกเลิกโครงการ", "info");
        

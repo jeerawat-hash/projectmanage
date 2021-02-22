@@ -17,6 +17,15 @@ class ProjectData extends CI_Controller {
  
 	}
 
+	public function DelProject()
+	{
+		$sess = $this->session->userdata();
+		#$ProjectID = $_POST["ProjectID"];
+		#$Comment = $_POST["Comment"]; 
+		print_r($_POST);
+
+	}
+
 	public function StampPeriodProject()
 	{
 		$sess = $this->session->userdata();
