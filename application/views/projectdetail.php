@@ -47,9 +47,9 @@
                   foreach ($ProjectINFO["Period"] as $Period) {
 
 
-                    print_r($Period);
+                    ##print_r($Period);
 
-                    
+
                     ?>
 
                     <!--
