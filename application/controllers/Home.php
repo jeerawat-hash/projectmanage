@@ -86,11 +86,11 @@ class Home extends CI_Controller {
 
 
 	}
-	public function info($ProjectID)
+	public function infocode()
 	{
 
 
-		print_r( $this->Project_Model->GetDataProjectsInfo($ProjectID) );
+		print_r( $this->Project_Model->GetDataProjectsInfo(5));
 		
 
 
