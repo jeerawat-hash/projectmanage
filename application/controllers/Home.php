@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 
 	function __construct()
 	{
+		
 		parent::__construct();
 		$this->load->model("Member_Model");
 		$this->load->model("Project_Model"); 
@@ -14,12 +15,7 @@ class Home extends CI_Controller {
 
 		$sess = $this->session->userdata();
 
-	    	if (!isset($sess["Name"])) {
-	 			
-	 			//redirect("home/index");
-	 			$this->session->sess_destroy();
-
- 			}
+	    	 
 	}
 	public function index()
 	{
