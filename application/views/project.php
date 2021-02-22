@@ -493,10 +493,11 @@
             <div class="row">
               <div class="col-12">
                   <div class="form-group">
-                    <label id="textPreiodDetail">รายละเอียดของงาน</label>
+                    <label for="inputComment">บันทึกข้อความ</label>
+                    <input type="text" id="inputComment" class="form-control ">
                   </div> 
               </div> 
-            </div> 
+            </div>
 
           </div>
 
