@@ -470,11 +470,17 @@
 
 
 
+          <div class="container">
+                        
+            <div class="row">
+              <div class="col-12">
+                  <div class="form-group">
+                    <label id="textPreiodDetail">รายละเอียดของงาน</label>
+                  </div> 
+              </div> 
+            </div> 
 
-          <p>Modal body text goes here.</p>
-
-
-
+          </div>
 
 
         </div>
@@ -508,12 +514,27 @@
 
 
 
+           <div class="container">
+                        
+            <div class="row">
+              <div class="col-6">
+                  <div class="form-group">
+                    <label for="inputEditDate">เลือกวันที่</label>
+                    <input type="text" id="inputEditDate" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-6">
+                  <div class="form-group">
+                    <label for="inputComment">บันทึกข้อความ</label>
+                    <input type="text" id="inputComment" class="form-control">
+                  </div> 
+              </div>
+            </div> 
 
-          <p>Modal body text goes here.</p>
 
+          </div>
 
-
-
+ 
 
         </div>
         <div class="modal-footer">
