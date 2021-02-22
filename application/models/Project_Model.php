@@ -21,7 +21,7 @@ class Project_Model extends CI_Model
                 $this->pmdb = $this->load->database("pmdb",true); 
 
 
-                $Project =  $this->pmdb->query(" SELECT *,(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = 8) as CoutPreiod,b.Name as CreateMemberName FROM Project a join Member b on a.CreateMemberID = b.ID WHERE a.ID = 8 ")->result();
+                $Project =  $this->pmdb->query(" SELECT a.*,(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = 8) as CoutPreiod,b.Name as CreateMemberName FROM Project a join Member b on a.CreateMemberID = b.ID WHERE a.ID = 8 ")->result();
 
 
                 $ProjectPeriod = $this->pmdb->query(" SELECT PeriodDetail,DueDate,SignStatus,Comment FROM ProjectPeriod WHERE ProjectID = ".$ProjectID." ")->result();
