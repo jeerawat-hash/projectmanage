@@ -35,7 +35,7 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">งบประมาณโครงการ</span>
-                      <span class="info-box-number text-center text-muted mb-0"><?php echo 1; ?> บาท</span>
+                      <span class="info-box-number text-center text-muted mb-0"><?php echo number_format($ProjectINFO["ProjectInfo"][0]->Budget,2); ?> บาท</span>
                     </div>
                   </div>
                 </div>
@@ -43,7 +43,7 @@
                   <div class="info-box bg-light">
                     <div class="info-box-content">
                       <span class="info-box-text text-center text-muted">รายการดำเนินโครงการ</span>
-                      <span class="info-box-number text-center text-muted mb-0"><?php echo echo $ProjectINFO["ProjectInfo"][0]->CoutPreiod; ?></span>
+                      <span class="info-box-number text-center text-muted mb-0"><?php echo $ProjectINFO["ProjectInfo"][0]->CoutPreiod; ?></span>
                     </div>
                   </div>
                 </div>
@@ -80,15 +80,7 @@
 
                    ?>
 
-                    
- 
-
-
- 
-
-
-
-
+                     
 
                 </div>
               </div>
