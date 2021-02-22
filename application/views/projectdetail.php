@@ -52,36 +52,26 @@
                   <h4>บันทึกผลช่วงการดำเนินโครงการ</h4>
                      
 
-
-
-
-                  <?php 
-
-
-                  foreach ($ProjectINFO["Period"] as $Period) {
-                    ?>
+ 
 
 
                     <div class="post clearfix">
                       <div class="user-block"> 
                         <span class="username">
-                          <?php echo $Period->PeriodDetail; ?> 
+                          รายการ 
                         </span>
                       </div> 
                       <p>
-                        <?php echo $Period->SignStatus; ?> 
-                        <br>
-                        <?php echo $Period->Comment; ?> 
+                        บันทึกข้อความ
                       </p> 
                     </div>
  
-                    ?>
-                    
-                  }
 
 
-                   ?>
  
+
+
+
 
 
                 </div>
