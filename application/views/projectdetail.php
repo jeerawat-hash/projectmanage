@@ -65,22 +65,20 @@
                         </small> 
                         <span class="username">
                            <?php echo $ProjectINFO["Period"][$i]->PeriodDetail; ?> 
-                        </span>
-                        <p> 
-                         <?php 
-                          if ($ProjectINFO["Period"][$i]->Comment == "" ) {
-                            echo '<font color="red">ไม่มีบันทึกภายใน</font>';
-                          }else{
+                        
+                           <p> 
+                           <?php 
+                            if ($ProjectINFO["Period"][$i]->Comment == "" ) {
+                              echo '<font color="red">ไม่มีบันทึกภายใน</font>';
+                            }else{
 
-                            echo '<font color="green">'.$ProjectINFO["Period"][$i]->Comment.'</font>';
-                          }
-                          ?>
-                        </p> 
-                      </div> 
-                      
-                      
-                      
+                              echo '<font color="green">'.$ProjectINFO["Period"][$i]->Comment.'</font>';
+                            }
+                            ?>
+                          </p> 
 
+                        </span> 
+                      </div>   
                     </div>
  
 
