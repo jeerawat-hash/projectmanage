@@ -1090,7 +1090,7 @@ $(".custom-file-input").on("change", function() {
                       $("#ModalPeriod").find("#Preload").hide();
                       //alert("success");
                       swal("สำเร็จ!", "ดำเนินการเพิ่มข้อมูลสำเร็จ", "success"); 
-                      $("#ModalPeriod").hide();
+                      $("#ModalPeriod").modal("hide");
                       
                     }else{
                       swal("ผิดพลาด!", "ดำเนินการเพิ่มข้อมูลล้มเหลวกรุณาลองใหม่ภายหลัง", "error"); 
