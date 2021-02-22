@@ -797,6 +797,8 @@ $(".custom-file-input").on("change", function() {
           return false;
         }
           
+        $("#StampProject").find("#Preload").show();
+        $("#StampProject").find("#Save").hide();
         
         $.post("https://projectmanage.webclient.me/index.php/ProjectData/StampPeriodProject",
           {
@@ -807,9 +809,13 @@ $(".custom-file-input").on("change", function() {
               if (data == 1) {
                  $("#StampProject").modal("hide");
                  swal("สำเร็จ!", "บันทึกรายการปฏิบัติงานสำเร็จ", "success");
+                 $("#StampProject").find("#Preload").hide();
+                 $("#StampProject").find("#Save").show();
               }else{
                  $("#StampProject").modal("hide");
                  swal("ล้มเหลว!", "กรุณาลองใหม่ภายหลัง", "error");
+                 $("#StampProject").find("#Preload").hide();
+                 $("#StampProject").find("#Save").show();
               }
 
           });
