@@ -49,14 +49,14 @@
                     
 
                     <div class="post clearfix">
-                      <div class="user-block"> 
+                      <div class="user-block">  
                         <span class="username">
                            <?php echo $ProjectINFO["Period"][$i]->PeriodDetail; ?> 
                         </span>
                       </div> 
-                      <p>
+                      <small>
                          วันที่ <?php echo  '<font color="red">'.$ProjectINFO["Period"][$i]->DueDate.'</font>'; ?>
-                      </p> 
+                      </small> 
                       <p> 
                          <?php 
                           if ($ProjectINFO["Period"][$i]->Comment == "" ) {
