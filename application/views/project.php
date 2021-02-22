@@ -693,8 +693,11 @@ $(".custom-file-input").on("change", function() {
 
 
       //alert(GroupID + ' ' + ProjectID);
-    $("#DelProject").modal({backdrop: 'static', 
-        keyboard: false});
+      $("#DelProject").modal({backdrop: 'static', 
+          keyboard: false});
+
+      $("#DelProject").find("#Preload").hide();
+
 
     });
 
@@ -708,6 +711,8 @@ $(".custom-file-input").on("change", function() {
   
       $("#StampProject").modal({backdrop: 'static', 
         keyboard: false});
+
+      $("#StampProject").find("#Preload").hide();
 
 
     });
@@ -723,8 +728,57 @@ $(".custom-file-input").on("change", function() {
       $("#EditProject").modal({backdrop: 'static',
         keyboard: false});
 
+      $("#EditProject").find("#Preload").hide();
+
+
 
     });
+
+
+
+
+    ///////// Activity Method ////////
+    
+    $("#EditProject").find("#Save").on("click",function(){
+
+ 
+      //alert("Project Edit");
+      swal("แจ้งเตือน!", "แก้ไขโครงการ", "info");
+
+
+    });
+
+
+    $("#DelProject").find("#Save").on("click",function(){
+
+ 
+      swal("แจ้งเตือน!", "ยกเลิกโครงการ", "info");
+       
+
+
+    });
+
+    $("#StampProject").find("#Save").on("click",function(){
+
+ 
+      swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
+      
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+    ///////// Activity Method ////////
+
 
 
 
