@@ -8,6 +8,8 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model("Member_Model");
+		$this->load->model("Project_Model"); 
+
 		$this->load->library("session"); 
 	    	/*if ( $this->session->userdata("memberID") == "" ) { 
 				redirect("Auth/index");
@@ -73,10 +75,23 @@ class Home extends CI_Controller {
 		$header['Name'] = $sess["Name"];
 
 
+
+
+
+
 		$this->load->view('template/header',$header);
 		$this->load->view('projectdetail');
 		$this->load->view('template/footer');
 
+
+
+	}
+	public function info($ProjectID)
+	{
+
+
+		print_r( $this->Project_Model->GetDataProjectsInfo($ProjectID) );
+		
 
 
 	}
