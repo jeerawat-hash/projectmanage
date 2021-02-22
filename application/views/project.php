@@ -789,8 +789,8 @@ $(".custom-file-input").on("change", function() {
     $("#StampProject").find("#Save").on("click",function(){
 
         var periodid = $("#StampProject").find("#PeriodID").val();
-
-        alert(periodid);
+        var Comment = $("#StampProject").find("#inputComment").val();
+        alert(periodid + Comment);
           
       //swal("แจ้งเตือน!", "บันทึกผลโครงการ", "info");
       
