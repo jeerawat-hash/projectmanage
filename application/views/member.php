@@ -130,6 +130,18 @@
                   </div> 
               </div>
               <div class="col-12">
+                <div class="form-group">
+                  <label for="inputPosition">ตำแหน่ง</label>
+                  <select id="inputPosition" class="form-control custom-select">
+                    <option value="0" selected disabled>กรุณาเลือก</option>
+                    <option value="1" >ผู้อำนวยการ</option>
+                    <option value="2" >ผู้จัดการ</option>
+                    <option value="3" >ที่ปรึกษา</option>
+                    <option value="4" >พนักงาน</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
                   <div class="form-group">
                     <label for="inputDOB">วันเกิด</label>
                     <input type="text" id="inputDOB" class="form-control datepickerclass">
@@ -201,13 +213,15 @@
     $("#RegisterModal").find("#Save").on("click",function(){
 
 
-      var Name = $("#inputEmployeeName").val();
-      var Username = $("#inputUsername");
-      var Password = $("#inputPassword");
-      var DOB = $("#inputDOB");
-      var Telephone = $("#inputTelephone");
-      var Email = $("#inputEmail");
-      var LineToken = $("#inputLineToken");
+      var Name = $("#RegisterModal").find("#inputEmployeeName").val();
+      var Username = $("#RegisterModal").find("#inputUsername").val();
+      var Password = $("#RegisterModal").find("#inputPassword").val();
+      var DOB = $("#RegisterModal").find("#inputDOB").val();
+      var Telephone = $("#RegisterModal").find("#inputTelephone").val();
+      var Email = $("#RegisterModal").find("#inputEmail").val();
+      var LineToken = $("#RegisterModal").find("#inputLineToken").val();
+      var Position = $("#RegisterModal").find("#inputPosition").val();
+
 
       if (Name == "") {
  
@@ -239,11 +253,32 @@
               swal("ผิดพลาด!", "กรุณาระบุ Email", "error"); 
               return false;
       }
+      if (Position == null) {
+ 
+              swal("ผิดพลาด!", "กรุณาระบุเลือกตำแหน่ง", "error"); 
+              return false;
+      }
+ 
+
+      $.post("https://projectmanage.webclient.me/index.php/home/Register",
+        {
+          PositionID : Position,
+          Username : Username,
+          Password : Password,
+          Name : Name,
+          DOB : DOB,
+          Telephone : Telephone,
+          Email : Email,
+          LineToken : LineToken
+        }
+        ,function(data){
+
+
+          console.log(data);
 
 
 
-
-
+      });
 
 
 
