@@ -1,4 +1,4 @@
-
+<?php print_r($GroupSign); ?>
     <!-- Main content -->
     <section class="content">
 

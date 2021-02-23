@@ -97,6 +97,8 @@ class Home extends CI_Controller {
 
 		
 		$data["ProjectINFO"] =  $this->Project_Model->GetDataProjectsInfo($ProjectID);
+		$data["GroupSign"] = $this->Project_Model->GetDataSignEmpInGroup($ProjectID);
+
 
 		$this->load->view('template/header',$header);
 		$this->load->view('projectdetail',$data);

@@ -111,7 +111,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
                 where a.ID = (select SignGroupID from(
                 SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1)/(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) * 100) ) as percent,
                                 ( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) - (SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1 )) ) as Progress
-                                FROM Project a where IsSuccess = 0  and IsCancel = 0
+                                FROM Project a where IsSuccess = 0  
                 )a where ID = ".$ProjectID.") and a.MemberID != 0 ")->result();
  
                 return $Member;
