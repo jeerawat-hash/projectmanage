@@ -120,7 +120,7 @@
                   for ($i=0; $i < count($GroupSign); $i++) { 
                     ?>
 
-                      <b class="d-block"><?php echo $GroupSign[$i]->name; ?></b> <br>
+                      <b class="d-block"><?php print_r($GroupSign); ?></b> <br>
 
 
                     ?>  
