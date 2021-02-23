@@ -7,11 +7,20 @@
 
 
 
-            <div class="card card-success">
+            <div class="card ">
               <div class="card-header">
-                <h3 class="card-title">ข้อมูลผู้ใช้งาน</h3>
 
-                
+                <?php  
+
+                  if ($PositionID < 3) {
+                    ?> 
+                    <button class="btn btn-primary btn-sm" id="Register">
+                    <i class="fas fa-pencil-alt"> </i> เพิ่มผู้ใช้งาน </button>
+                    <?php 
+                  } 
+
+                ?>
+
               </div>
               
               <!-- /.card-header -->
