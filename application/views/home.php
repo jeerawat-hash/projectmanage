@@ -18,6 +18,16 @@
                 
                 <div class="row">
 
+
+
+
+
+
+                  <div id="ProgressProject"></div>
+
+
+
+<!--
                   <div class="col-sm-4 mt-4">
                     <div class="position-relative p-3 bg-gray" style="height: 220px">
                       <div class="ribbon-wrapper ribbon-lg">
@@ -128,6 +138,12 @@
 
                     </div>
                   </div>
+
+
+
+
+
+
                   <div class="col-sm-4 mt-4">
                     <div class="position-relative p-3 bg-gray" style="height: 220px">
                       <div class="ribbon-wrapper ribbon-xl">
@@ -181,7 +197,7 @@
 
                     </div>
                   </div>
-
+-->
 
                    
                   
@@ -214,255 +230,18 @@
                 
                 <div class="row">
  
- 
+                  
 
-                  <div class="col-sm-4 mt-4">
-                    <div class="position-relative p-3 bg-gray" style="height: 220px">
-                      <div class="ribbon-wrapper ribbon-xl">
-                        <div class="ribbon bg-warning text-lg">
-                          ใกล้ครบกำหนด
-                        </div>
-                      </div>
-                      <div class="row">
-
-                        <div class="col-12"> 
-                                 [ชื่อโครงการ]
-                        </div> 
-                        <div class="col-12"> 
-                                 [รายละเอียดย่อ]
-                        </div> 
-
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar2.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar3.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png"> 
-                        </div>
-                      </div>
-
-                      <br>
-
-                      <div class="row">
-                        <div class="col-12">
-                          
-
-                          <small> ดำเนินการแล้วเสร็จ </small>
-                          <div class="progress">
-                            <div class="progress-bar bg-warning progress-bar-striped" role="progressbar"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                              <span class="sr-only">100% Complete </span>
-                            </div>
-                          </div>
-                          
-  
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                  <div class="col-sm-4 mt-4">
-                    <div class="position-relative p-3 bg-gray" style="height: 220px">
-                      <div class="ribbon-wrapper ribbon-xl">
-                        <div class="ribbon bg-danger text-lg">
-                          เกินกำหนด
-                        </div>
-                      </div>
-                      <div class="row">
-
-                        <div class="col-12"> 
-                                 [ชื่อโครงการ]
-                        </div> 
-                        <div class="col-12"> 
-                                 [รายละเอียดย่อ]
-                        </div> 
-
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar2.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar3.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png"> 
-                        </div>
-                      </div>
-
-                      <br>
-
-                      <div class="row">
-                        <div class="col-12">
-                          
-
-                          <small> ดำเนินการแล้วเสร็จ </small>
-                          <div class="progress">
-                            <div class="progress-bar bg-danger progress-bar-striped" role="progressbar"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                              <span class="sr-only">40% Complete </span>
-                            </div>
-                          </div>
-                          
-  
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
+                  <div id="NonProgressProject"></div>
 
  
-                  <div class="col-sm-4 mt-4">
-                    <div class="position-relative p-3 bg-gray" style="height: 220px">
-                      <div class="ribbon-wrapper ribbon-xl">
-                        <div class="ribbon bg-warning text-lg">
-                          ใกล้ครบกำหนด
-                        </div>
-                      </div>
-                      <div class="row">
-
-                        <div class="col-12"> 
-                                 [ชื่อโครงการ]
-                        </div> 
-                        <div class="col-12"> 
-                                 [รายละเอียดย่อ]
-                        </div> 
-
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar2.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar3.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png"> 
-                        </div>
-                      </div>
-
-                      <br>
-
-                      <div class="row">
-                        <div class="col-12">
-                          
-
-                          <small> ดำเนินการแล้วเสร็จ </small>
-                          <div class="progress">
-                            <div class="progress-bar bg-warning progress-bar-striped" role="progressbar"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                              <span class="sr-only">40% Complete </span>
-                            </div>
-                          </div>
-                          
-  
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                  <div class="col-sm-4 mt-4">
-                    <div class="position-relative p-3 bg-gray" style="height: 220px">
-                      <div class="ribbon-wrapper ribbon-xl">
-                        <div class="ribbon bg-danger text-lg">
-                          เกินกำหนด
-                        </div>
-                      </div>
-                      <div class="row">
-
-                        <div class="col-12"> 
-                                 [ชื่อโครงการ]
-                        </div> 
-                        <div class="col-12"> 
-                                 [รายละเอียดย่อ]
-                        </div> 
-
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar2.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar3.png"> 
-                        </div>
-                        <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png"> 
-                        </div>
-                      </div>
-
-                      <br>
-
-                      <div class="row">
-                        <div class="col-12">
-                          
-
-                          <small> ดำเนินการแล้วเสร็จ </small>
-                          <div class="progress">
-                            <div class="progress-bar bg-danger progress-bar-striped" role="progressbar"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                              <span class="sr-only">40% Complete </span>
-                            </div>
-                          </div>
-                          
-  
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-
 
                 </div>
               </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
           </div>
@@ -473,3 +252,97 @@
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  $(function(){
+
+
+
+    var html = "";
+
+    html += '<div class="col-sm-4 mt-4">';
+    html += '<div class="position-relative p-3 bg-gray" style="height: 220px">';
+    html += '<div class="ribbon-wrapper ribbon-lg">';
+    html += '<div class="ribbon bg-success text-lg">';
+    html += 'ปกติ';
+    html += '</div>';
+    html += '</div>';
+    html += '<div class="row">';
+    html += '<div class="col-12">';
+    html += '[ชื่อโครงการ]';
+    html += '</div> ';
+    html += '<div class="col-12"> ';
+    html += '[รายละเอียดย่อ]';
+    html += '</div> ';
+    html += '</div>';
+    html += '<hr>';
+    html += '<div class="row">';
+    html += '<div class="col-3 text-center"> ';
+    html += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> ';
+    html += '</div>';
+    html += '<div class="col-3 text-center"> ';
+    html += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar2.png"> ';
+    html += '</div>';
+    html += '<div class="col-3 text-center"> ';
+    html += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar3.png"> ';
+    html += '</div>';
+    html += '<div class="col-3 text-center"> ';
+    html += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png"> ';
+    html += '</div>';
+    html += '</div>';
+    html += '<br>';
+    html += '<div class="row">';
+    html += '<div class="col-12">';
+    html += '<small> ดำเนินการแล้วเสร็จ </small>';
+    html += '<div class="progress">';
+    html += '<div class="progress-bar bg-success progress-bar-striped" role="progressbar"aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">';
+    html += '<span class="sr-only">40% Complete </span>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+
+
+    $("#ProgressProject").html(html);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  });
+
+</script>
+
+
+
+
+
+

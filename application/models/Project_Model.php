@@ -106,7 +106,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
 
                 $this->pmdb = $this->load->database("pmdb",true); 
 
-                $Member =  $this->pmdb->query(" SELECT b.Username,'IMG' FROM SignGroup a 
+                $Member =  $this->pmdb->query(" SELECT b.Username,'https://projectmanage.webclient.me/assets/dist/img/avatar.png' FROM SignGroup a 
                 join Member b on a.MemberID = b.ID
                 where a.ID = (select SignGroupID from(
                 SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1)/(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) * 100) ) as percent,
