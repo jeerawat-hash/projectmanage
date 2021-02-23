@@ -86,7 +86,7 @@
   <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
 
   <!-- jQuery -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/jquery/jquery.min.js"></script>
+  <script src="https://projectmanage.webclient.me/assets/plugins/jquery/jquery.js"></script>
   <!-- jQuery UI 1.11.4 -->
   <script src="https://projectmanage.webclient.me/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
