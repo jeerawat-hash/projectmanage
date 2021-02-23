@@ -339,28 +339,21 @@
             html += '</div> ';
             html += '</div>';
             html += '<hr>';
-
-
-
             html += '<div class="row">';
-            html += '<div class="col-3 text-center"> ';
-            html += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> ';
-            html += '</div>';
-            html += '<div class="col-3 text-center"> ';
-            html += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar2.png"> ';
-            html += '</div>';
-            html += '<div class="col-3 text-center"> ';
-            html += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar3.png"> ';
-            html += '</div>';
-            html += '<div class="col-3 text-center"> ';
-            html += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png"> ';
-            html += '</div>';
-            html += '</div>';
 
+            var Content = "";
 
+            for (var j = 0; j < obj[i].Group.length; j++) {
 
+                Content += '<div class="col-3 text-center"> ';
+                Content += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> ';
+                Content += '</div>';
 
+            }
+             
+            html += Content;
 
+            html += '</div>'; 
             html += '<br>';
             html += '<div class="row">';
             html += '<div class="col-12">';
