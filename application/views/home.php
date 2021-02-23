@@ -380,14 +380,14 @@
  
       });
     
-    }, 1000);
+    }, 500);
 
 
 /////////////////////////////////////////////////////////////////////////
 
 
   setInterval(function(){ 
-    
+
     $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataNonProgress",function(data){
 
       var obj = JSON.parse(data);
@@ -507,7 +507,7 @@
 
       });
 
-    }, 1000);
+    }, 500);
 
 
 
