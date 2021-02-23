@@ -134,14 +134,15 @@ class Home extends CI_Controller {
 			$this->session->sess_destroy();
 			redirect("Home/index");
 		} 
-		$header['page_name'] = 'จัดการข้อมูลพนักงาน';
+		$header['page_name'] = 'ผู้ใช้งาน';
 		$header['page_focus'] = 'employee'; 
 		$header['page_menu'] = 0;
 		$header['Name'] = $sess["Name"];
 
+		$data["ProjectINFO"] = $this->Project_Model->GetDataProjectSearch();
 
 		$this->load->view('template/header',$header);
-		#$this->load->view('home');
+		$this->load->view('member',$data);
 		$this->load->view('template/footer');
 
 	
