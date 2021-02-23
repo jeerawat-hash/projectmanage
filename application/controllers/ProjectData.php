@@ -28,8 +28,8 @@ class ProjectData extends CI_Controller {
 
  		}
 		
-		
- 		print_r($Project);
+		echo json_encode($Project);
+ 		///print_r($Project);
 
 		
 
