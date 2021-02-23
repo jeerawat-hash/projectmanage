@@ -31,6 +31,13 @@ class Member_Model extends CI_Model
         $this->pmdb = $this->load->database("pmdb",true); 
         return $this->pmdb->query("SELECT * FROM Member where  Username =  '".$username."'  and  Password  = '".$password."'  ")->result(); 
 	}
+        public function GetDataMember()
+        {
+                $this->pmdb = $this->load->database("pmdb",true); 
+                return $this->pmdb->query(" SELECT a.ID,Name,b.Detail,Telephone,a.Email FROM Member a
+join Position b on a.PositionID = b.ID ")->result();
+
+        }
 
 
 

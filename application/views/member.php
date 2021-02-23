@@ -1,4 +1,4 @@
- 
+ <?php print_r($MemberINFO); ?>
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -28,13 +28,13 @@
 
                 <div class="container">
                   
-                  <table id="ProjectTable" class="table table-striped table-bordered" style="width:100%">
+                  <table id="MemberTable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                           <tr>
                               <th>ชื่อ</th>
-                              <th>วันส่งมอบ</th>
-                              <th>สถานะส่งมอบ</th>
-                              <th>สถานะโครงการ</th>
+                              <th>ตำแหน่ง</th>
+                              <th>หมายเลขโทรศัพท์</th>
+                              <th>Email</th>
                               <th></th> 
                           </tr>
                       </thead>
@@ -104,7 +104,7 @@
 <script type="text/javascript">
   $(document).ready(function() {
   
-    $('#ProjectTable').DataTable();
+    $('#MemberTable').DataTable();
   
   } );
 </script>

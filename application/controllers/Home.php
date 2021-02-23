@@ -140,8 +140,11 @@ class Home extends CI_Controller {
 		$header['Name'] = $sess["Name"];
 
 		$data["PositionID"] = $sess["PositionID"];
-		
+
 		$data["ProjectINFO"] = $this->Project_Model->GetDataProjectSearch();
+
+		$data["MemberINFO"] = $this->Member_Model->GetDataMember();
+
 
 		$this->load->view('template/header',$header);
 		$this->load->view('member',$data);
