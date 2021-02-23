@@ -1,4 +1,4 @@
-<?php print_r($ProjectINFO); ?>
+ 
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -52,7 +52,7 @@
                               <td><?php echo $value->EndDate; ?></td>
                               <td><?php echo $value->IsSuccess; ?></td>
                               <td><?php echo $value->IsCancel; ?></td>
-                              <td><a href="https://projectmanage.webclient.me/index.php/home/projectinfo/" class="btn btn-primary btn-sm">ดูข้อมูล</a></td> 
+                              <td><a href="https://projectmanage.webclient.me/index.php/home/projectinfo/<?php echo $value->ID; ?>" class="btn btn-primary btn-sm">ดูข้อมูล</a></td> 
                           
                           </tr>
 
