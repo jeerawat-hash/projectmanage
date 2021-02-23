@@ -16,6 +16,7 @@ class ProjectData extends CI_Controller {
 
  
 	}
+
 	public function GetDataProgress()
 	{
 
@@ -32,6 +33,21 @@ class ProjectData extends CI_Controller {
  		///print_r($Project);
 
 		
+
+	}
+	public function GetDataNonProgress()
+	{
+ 
+		$Project = $this->Project_Model->GetDataNonProgress();
+
+ 		for ($i=0; $i < count($Project); $i++) { 
+
+ 			$Project[$i]->Group = $this->Project_Model->GetDataSignEmpInGroup($Project[$i]->ID);
+
+ 		}
+		
+		echo json_encode($Project);
+ 
 
 	}
 
