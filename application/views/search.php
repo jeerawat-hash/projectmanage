@@ -29,15 +29,40 @@
                       </thead>
                       <tbody>
 
+                        <?php 
+
+                        foreach ($ProjectINFO as $value) {
+
+                          if ($value->IsSuccess == 1) {
+                              $value->IsSuccess = '<font color="green">สำเร็จ</font>';
+                          }else{
+                              $value->IsSuccess = '<font color="red">อยู่ระหว่างดำเนินการ</font>';
+                          }
+
+                          if ($value->IsCancel == 0) {
+                              $value->IsCancel = '<font color="green">ปกติ</font>';
+                          }else{
+                              $value->IsCancel = '<font color="red">ยกเลิกโครงการ</font>';
+                          }
+
+                        ?> 
 
                           <tr>
-                              <td>1</td>
-                              <td>2</td>
-                              <td>3</td>
-                              <td>4</td>
+                              <td><?php echo $value->Name; ?></td>
+                              <td><?php echo $value->EndDate; ?></td>
+                              <td><?php echo $value->IsSuccess; ?></td>
+                              <td><?php echo $value->IsCancel; ?></td>
                               <td><a href="https://projectmanage.webclient.me/index.php/home/projectinfo/" class="btn btn-primary btn-sm">ดูข้อมูล</a></td> 
                           
                           </tr>
+
+
+
+
+                        <?php
+                        }
+                         ?>
+                          
 
 
 
