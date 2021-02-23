@@ -22,8 +22,12 @@ class ProjectData extends CI_Controller {
 
 		$Project = $this->Project_Model->GetDataProgress();
  		
- 		$Project[0][] = ['name' => 'My name'];
- 
+		array_push($Project[0], (object)[
+		        'key1' => 'someValue',
+		        'key2' => 'someValue2',
+		        'key3' => 'someValue3',
+		]);
+
 
  		print_r($Project);
 
