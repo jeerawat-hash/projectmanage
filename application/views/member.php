@@ -1,4 +1,3 @@
- <?php print_r($MemberINFO); ?>
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -90,10 +89,130 @@
 
 
 
+
+
+
+
+
+
+
+<!---- Modal Register  ------>
+  <div id="RegisterModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">ลงทะเบียนผู้ใช้งานใหม่</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+ 
+           <div class="container">
+                        
+            <div class="row">
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputEditDate">ชื่อ - สกุล</label>
+                    <input type="text" id="inputEditDate" class="form-control datepickerclass">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputComment">Username</label>
+                    <input type="text" id="inputComment" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputComment">Password</label>
+                    <input type="text" id="inputComment" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputComment">วันเกิด</label>
+                    <input type="text" id="inputComment" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputComment">เบอร์โทรศัพท์</label>
+                    <input type="text" id="inputComment" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputComment">Email</label>
+                    <input type="text" id="inputComment" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputComment">LineToken</label>
+                    <input type="text" id="inputComment" class="form-control">
+                  </div> 
+              </div>
+            </div> 
+
+
+          </div>
+
+ 
+
+        </div>
+        <div class="modal-footer">
+          
+          <div class="spinner-border text-warning" id="Preload" role="status">
+          <span class="sr-only">Loading...</span>
+          </div>
+
+        <button type="button" class="btn btn-warning" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---- Modal EditProject  ------>
+
+
+
+
+
+
+
 <script type="text/javascript">
   $(document).ready(function() {
   
     $('#MemberTable').DataTable();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   } );
 </script>
