@@ -46,10 +46,7 @@
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                จดจำ
-              </label>
+               
             </div>
           </div>
           <!-- /.col -->
@@ -71,12 +68,8 @@
       </div> -->
       <!-- /.social-auth-links -->
 
-      <p class="mb-1">
-        <a href="#">ลืมรหัสผ่าน</a>
-      </p>
-      <p class="mb-0">
-        <a href="#" class="text-center">ลงทะเบียนผู้ใช้ใหม่</a>
-      </p>
+      
+       
     </div>
     <!-- /.login-card-body -->
   </div>
