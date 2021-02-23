@@ -287,7 +287,7 @@
  
 
 
-            html += '<div class="col-sm-4 mt-4">';
+            html += '<div class="col-sm-4">';
             html += '<div class="position-relative p-3 bg-gray" style="height: 220px">';
             html += '<div class="ribbon-wrapper ribbon-lg">';
 
