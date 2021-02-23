@@ -63,6 +63,7 @@ class Home extends CI_Controller {
 		$header['page_menu'] = 1;
 		$header['Name'] = $sess["Name"];
 
+		$data["PositionID"] = $sess["PositionID"];
 		$data["MemberID"] = $sess["ID"];
 		$data["MemberName"] = $sess["Name"];
 		$data["SignMember"] = $this->Member_Model->QueryMemberNotIn($sess["ID"]);
@@ -87,7 +88,7 @@ class Home extends CI_Controller {
 			$this->session->sess_destroy();
 			redirect("Home/index");
 		} 
-		
+
 		$header['page_name'] = 'ข้อมูลโครงการ';
 		$header['page_focus'] = 'projectmanage'; 
 		$header['page_menu'] = 1;
