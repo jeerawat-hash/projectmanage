@@ -296,7 +296,7 @@
 
             }
 
-
+ 
             var TXTstatus = "";
             var BarStatus = "";
             if (obj[i].IsOverDue == 1) {
