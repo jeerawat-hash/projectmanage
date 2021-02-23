@@ -22,9 +22,11 @@ class ProjectData extends CI_Controller {
 
 		$Project = $this->Project_Model->GetDataProgress();
  		
- 		$Project[0]["A"] = array("SSS" => 5,"ss" => 1);
+ 		$Project[0][] = ['name' => 'My name'];
+ 
 
  		print_r($Project);
+
 		//GetDataSignEmpInGroup($ProjectID)
 
 	}
