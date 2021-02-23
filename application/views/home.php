@@ -283,8 +283,8 @@
           //obj[i].StatusProject //0 = ปกติ 1 = ใกล้ครบกำหนด
           //obj[i].IsOverDue      // 0 = ปกติ 1 = เกินกำหนด
  
-            obj[i].Name = obj[i].Name.substring(1, 4);
-            obj[i].Detail = obj[i].Detail.substring(0, 4);
+            obj[i].Name = obj[i].Name.substring(1, 50);
+            obj[i].Detail = obj[i].Detail.substring(0, 50);
 
             html += '<div class="col-sm-4 mt-4">';
             html += '<div class="position-relative p-3 bg-gray" style="height: 220px">';
