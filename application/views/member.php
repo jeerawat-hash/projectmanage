@@ -35,35 +35,24 @@
                               <th>ตำแหน่ง</th>
                               <th>หมายเลขโทรศัพท์</th>
                               <th>Email</th>
-                              <th></th> 
+                              <th hidden></th> 
                           </tr>
                       </thead>
                       <tbody>
 
                         <?php 
 
-                        foreach ($ProjectINFO as $value) {
-
-                          if ($value->IsSuccess == 1) {
-                              $value->IsSuccess = '<font color="green">สำเร็จ</font>';
-                          }else{
-                              $value->IsSuccess = '<font color="red">อยู่ระหว่างดำเนินการ</font>';
-                          }
-
-                          if ($value->IsCancel == 0) {
-                              $value->IsCancel = '<font color="green">ปกติ</font>';
-                          }else{
-                              $value->IsCancel = '<font color="red">ยกเลิกโครงการ</font>';
-                          }
+                        foreach ($MemberINFO as $value) {
+ 
 
                         ?> 
 
                           <tr>
                               <td><?php echo $value->Name; ?></td>
-                              <td><?php echo $value->EndDate; ?></td>
-                              <td><?php echo $value->IsSuccess; ?></td>
-                              <td><?php echo $value->IsCancel; ?></td>
-                              <td><a href="https://projectmanage.webclient.me/index.php/home/projectinfo/<?php echo $value->ID; ?>" class="btn btn-primary btn-sm">ดูข้อมูล</a></td> 
+                              <td><?php echo $value->Detail; ?></td>
+                              <td><?php echo $value->Telephone; ?></td>
+                              <td><?php echo $value->Email; ?></td>
+                              <td hidden>-</td> 
                           
                           </tr>
 
