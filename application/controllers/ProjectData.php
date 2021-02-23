@@ -21,11 +21,14 @@ class ProjectData extends CI_Controller {
 
 
 		$Project = $this->Project_Model->GetDataProgress();
- 		
+
+ 		for ($i=0; $i < count($Project); $i++) { 
+
+ 			$Project[$i]->Group = $this->Project_Model->GetDataSignEmpInGroup($Project[$i]->ID);
+
+ 		}
 		
-		$Project[0]->Group = $this->Project_Model->GetDataSignEmpInGroup($Project[0]->ID);
-
-
+		
  		print_r($Project);
 
 		
