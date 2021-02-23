@@ -15,11 +15,12 @@ class Home extends CI_Controller {
 
 		$sess = $this->session->userdata();
 
-	    	 
+	   	if (!isset($sess["ID"])) {
+			$this->session->sess_destroy();
+			redirect("Home/index");
+		} 
 
 
-
-	    	 
 	}
 	public function index()
 	{
