@@ -41,7 +41,7 @@ join Position b on a.PositionID = b.ID ")->result();
         public function Register($PositionID,$Username,$Password,$Name,$DOB,$Telephone,$Email,$LineToken = "")
         {
                 $this->pmdb = $this->load->database("pmdb",true); 
-                $this->pmdb->query("  INSERT INTO Member (ID, PositionID, Username, Password, Name, DOB, Telephone, Email, LineToken) VALUES (NULL, '1', 'jeerawatD', '1234', 'จีระวัฒน์Z', '1996-09-20', '0616619956', 'p.jeerawat.th@live.com', '') ");
+                $this->pmdb->query("  INSERT INTO Member (ID, PositionID, Username, Password, Name, DOB, Telephone, Email, LineToken) VALUES (NULL, '".$PositionID."', '".$Username."', '".$Password."', '".$Name."', '".$DOB."', '".$Telephone."', '".$Email."', '".$LineToken."') ");
 
 
                 return 1;
