@@ -281,8 +281,20 @@
           //obj[i].StatusProject //0 = ปกติ 1 = ใกล้ครบกำหนด
           //obj[i].IsOverDue      // 0 = ปกติ 1 = เกินกำหนด
  
-            obj[i].Name = obj[i].Name.substring(0, 40)+"....";
-            obj[i].Detail = obj[i].Detail.substring(0, 30)+"....";
+            obj[i].Name = obj[i].Name.substring(0, 40);
+            obj[i].Detail = obj[i].Detail.substring(0, 30);
+
+
+            if (obj[i].Name.length > 40) {
+
+              obj[i].Name = obj[i].Name.substring(0, 40)+"...";
+
+            }
+            if (obj[i].Detail.length > 30) {
+
+              obj[i].Detail = obj[i].Detail.substring(0, 30)+"...";
+
+            }
 
 
             var TXTstatus = "";
