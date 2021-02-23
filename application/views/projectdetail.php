@@ -118,7 +118,12 @@
                   <?php
 
                     foreach ($GroupSign as $value) {
-                        print_r($value);
+                     ?>
+                         
+                    <b class="d-block"><?php echo $value->name; ?></b><br>
+
+                     
+                    <?php
                     }
 
                    ?>
