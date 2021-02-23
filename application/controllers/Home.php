@@ -15,10 +15,7 @@ class Home extends CI_Controller {
 
 		$sess = $this->session->userdata();
 
-	   	if (!isset($sess["ID"])) {
-			$this->session->sess_destroy();
-			redirect("Home/index");
-		} 
+	   	
 
 
 	}
@@ -31,9 +28,12 @@ class Home extends CI_Controller {
 
 	}
 	public function summary()
-	{
+	{	
 		$sess = $this->session->userdata();
-
+		if (!isset($sess["ID"])) {
+			$this->session->sess_destroy();
+			redirect("Home/index");
+		} 
 		#echo $sess["ID"];
 		#echo $sess["Username"];
 		#echo $sess["PositionID"];
@@ -54,7 +54,10 @@ class Home extends CI_Controller {
 	public function project()
 	{
 		$sess = $this->session->userdata();
-
+		if (!isset($sess["ID"])) {
+			$this->session->sess_destroy();
+			redirect("Home/index");
+		} 
 		$header['page_name'] = 'จัดการโครงการ';
 		$header['page_focus'] = 'projectmanage'; 
 		$header['page_menu'] = 1;
@@ -80,6 +83,11 @@ class Home extends CI_Controller {
 		}
 
 		$sess = $this->session->userdata();
+		if (!isset($sess["ID"])) {
+			$this->session->sess_destroy();
+			redirect("Home/index");
+		} 
+		
 		$header['page_name'] = 'ข้อมูลโครงการ';
 		$header['page_focus'] = 'projectmanage'; 
 		$header['page_menu'] = 1;
@@ -99,7 +107,10 @@ class Home extends CI_Controller {
 	public function search()
 	{
 		$sess = $this->session->userdata();
-
+		if (!isset($sess["ID"])) {
+			$this->session->sess_destroy();
+			redirect("Home/index");
+		} 
 		$header['page_name'] = 'สืบค้นข้อมูล';
 		$header['page_focus'] = 'search'; 
 		$header['page_menu'] = 2;
@@ -115,7 +126,10 @@ class Home extends CI_Controller {
 	public function employee()
 	{	
 		$sess = $this->session->userdata();
-
+		if (!isset($sess["ID"])) {
+			$this->session->sess_destroy();
+			redirect("Home/index");
+		} 
 		$header['page_name'] = 'จัดการข้อมูลพนักงาน';
 		$header['page_focus'] = 'employee'; 
 		$header['page_menu'] = 0;
