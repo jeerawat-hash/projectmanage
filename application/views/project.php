@@ -18,10 +18,19 @@
         <div class="card-header">
          <!-- <h3 class="card-title">Projects</h3> -->
 
-         <button class="btn btn-primary btn-sm" id="CreateProject">
-          <i class="fas fa-pencil-alt"> </i>
-                              เพิ่มโครงการ
-                </button>
+         <?php  
+
+            if ($PositionID < 3) {
+              ?> 
+              <button class="btn btn-primary btn-sm" id="CreateProject">
+              <i class="fas fa-pencil-alt"> </i> เพิ่มโครงการ </button>
+              <?php 
+            } 
+
+          ?>
+
+
+         
 
           <div class="card-tools">
            <!-- <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
