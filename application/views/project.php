@@ -682,7 +682,7 @@ $(".custom-file-input").on("change", function() {
                 html += '<td>';
                 html += '<a>';
                 html += obj[i].Name;
-                html += '</a><br/><small>สร้างวันที่ '+obj[i].BeginDate+' </small> <br> <small> กำหนดส่ง '+obj[i].EndDate+'</small>';
+                html += '</a><br/><small>สร้างวันที่ '+obj[i].BeginDate+' </small> <br> <small> กำหนดส่ง <font color="red">'+obj[i].EndDate+'</font></small>';
                 html += '</td>';
                 html += '<td class="project_progress">';
                 html += '<div class="progress progress-sm">';
