@@ -113,44 +113,44 @@
             <div class="row">
               <div class="col-12">
                   <div class="form-group">
-                    <label for="inputEditDate">ชื่อ - สกุล</label>
-                    <input type="text" id="inputEditDate" class="form-control datepickerclass">
+                    <label for="inputEmployeeName">ชื่อ - สกุล</label>
+                    <input type="text" id="inputEmployeeName" class="form-control ">
                   </div> 
               </div>
               <div class="col-12">
                   <div class="form-group">
-                    <label for="inputComment">Username</label>
-                    <input type="text" id="inputComment" class="form-control">
+                    <label for="inputUsername">Username</label>
+                    <input type="text" id="inputUsername" class="form-control">
                   </div> 
               </div>
               <div class="col-12">
                   <div class="form-group">
-                    <label for="inputComment">Password</label>
-                    <input type="text" id="inputComment" class="form-control">
+                    <label for="inputPassword">Password</label>
+                    <input type="text" id="inputPassword" class="form-control">
                   </div> 
               </div>
               <div class="col-12">
                   <div class="form-group">
-                    <label for="inputComment">วันเกิด</label>
-                    <input type="text" id="inputComment" class="form-control">
+                    <label for="inputDOB">วันเกิด</label>
+                    <input type="text" id="inputDOB" class="form-control datepickerclass">
                   </div> 
               </div>
               <div class="col-12">
                   <div class="form-group">
-                    <label for="inputComment">เบอร์โทรศัพท์</label>
-                    <input type="text" id="inputComment" class="form-control">
+                    <label for="inputTelephone">เบอร์โทรศัพท์</label>
+                    <input type="text" id="inputTelephone" class="form-control">
                   </div> 
               </div>
               <div class="col-12">
                   <div class="form-group">
-                    <label for="inputComment">Email</label>
-                    <input type="text" id="inputComment" class="form-control">
+                    <label for="inputEmail">Email</label>
+                    <input type="text" id="inputEmail" class="form-control">
                   </div> 
               </div>
               <div class="col-12">
                   <div class="form-group">
-                    <label for="inputComment">LineToken</label>
-                    <input type="text" id="inputComment" class="form-control">
+                    <label for="inputLineToken">LineToken</label>
+                    <input type="text" id="inputLineToken" class="form-control">
                   </div> 
               </div>
             </div> 
@@ -217,7 +217,15 @@
 
 
 
+    //////// Date picker init ///////
 
+    $(".datepickerclass").datepicker({
+            uiLibrary: 'bootstrap4',
+            minDate: 0,
+            dateFormat: 'yy-mm-dd'
+    });
+
+    //////// Date picker init ///////
 
   
   } );
