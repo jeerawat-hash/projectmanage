@@ -194,6 +194,66 @@
 
 
       $("#RegisterModal").modal();
+      $("#RegisterModal").find("#Preload").hide();
+
+
+    });
+
+    $("#RegisterModal").find("#Save").on("click",function(){
+
+
+      var Name = $("#inputEmployeeName").val();
+      var Username = $("#inputUsername");
+      var Password = $("#inputPassword");
+      var DOB = $("#inputDOB");
+      var Telephone = $("#inputTelephone");
+      var Email = $("#inputEmail");
+      var LineToken = $("#inputLineToken");
+
+      if (Name == "") {
+ 
+              swal("ผิดพลาด!", "กรุณาระบุชื่อสกุล", "error"); 
+              return false;
+      }
+      if (Username == "") {
+ 
+              swal("ผิดพลาด!", "กรุณาระบุ Username", "error"); 
+              return false;
+      }
+      if (Password == "") {
+ 
+              swal("ผิดพลาด!", "กรุณาระบุ Password", "error"); 
+              return false;
+      }
+      if (DOB == "") {
+ 
+              swal("ผิดพลาด!", "กรุณาระบุ วันเกิด", "error"); 
+              return false;
+      }
+      if (Telephone == "") {
+ 
+              swal("ผิดพลาด!", "กรุณาระบุ โทรศัพท์", "error"); 
+              return false;
+      }
+      if (Email == "") {
+ 
+              swal("ผิดพลาด!", "กรุณาระบุ Email", "error"); 
+              return false;
+      }
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
 
 
     });
