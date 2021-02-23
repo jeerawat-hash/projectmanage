@@ -114,7 +114,14 @@
 
 
                 <p class="text-sm">ผู้เกี่ยวข้อง
- 
+
+                  <?php
+
+                    foreach ($GroupSign as $value) {
+                        print_r($value);
+                    }
+
+                   ?>
                   
                 
                 </p>
