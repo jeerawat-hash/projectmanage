@@ -210,9 +210,18 @@ class Home extends CI_Controller {
 
 	public function Register()
 	{
+ 
 
-		print_r($_POST);
-		//echo $this->Member_Model->Register($PositionID,$Username,$Password,$Name,$DOB,$Telephone,$Email,$LineToken);
+    	$PositionID = $_POST["PositionID"];
+    	$Username = $_POST["Username"];
+    	$Password = $_POST["Password"];
+    	$Name = $_POST["Name"];
+    	$DOB = $_POST["DOB"];
+    	$Telephone = $_POST["Telephone"];
+    	$Email = $_POST["Email"];
+    	$LineToken = $_POST["LineToken"];
+ 
+		echo $this->Member_Model->Register($PositionID,$Username,$Password,$Name,$DOB,$Telephone,$Email,$LineToken);
 
 
 	}

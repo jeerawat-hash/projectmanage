@@ -274,21 +274,24 @@
         ,function(data){
 
 
-          console.log(data);
+                  if (data == 1) {
+                      $("#RegisterModal").find("#Save").show();
+                      $("#RegisterModal").find("#Preload").hide();
+                      //alert("success");
+                      swal("สำเร็จ!", "ดำเนินการเพิ่มข้อมูลสำเร็จ", "success"); 
+                      $("#RegisterModal").modal("hide");
+                      
+                    }else{
+                      swal("ผิดพลาด!", "ดำเนินการเพิ่มข้อมูลล้มเหลวกรุณาลองใหม่ภายหลัง", "error"); 
 
+                      $("#RegisterModal").find("#Save").show();
+                      $("#RegisterModal").find("#Preload").hide();
+                      return false;
+                    } 
 
+        });
 
-      });
-
-
-
-
-
-
-
-
-
-
+ 
 
     });
 
@@ -314,8 +317,7 @@
     //////// Date picker init ///////
 
     $(".datepickerclass").datepicker({
-            uiLibrary: 'bootstrap4',
-            minDate: 0,
+            uiLibrary: 'bootstrap4', 
             dateFormat: 'yy-mm-dd'
     });
 
