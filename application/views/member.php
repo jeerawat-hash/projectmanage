@@ -126,7 +126,7 @@
               <div class="col-12">
                   <div class="form-group">
                     <label for="inputPassword">Password</label>
-                    <input type="text" id="inputPassword" class="form-control">
+                    <input type="password" id="inputPassword" class="form-control">
                   </div> 
               </div>
               <div class="col-12">
@@ -192,9 +192,8 @@
 
     $("#Register").on("click",function(){
 
-
-      $("#RegisterModal").modal();
       $("#RegisterModal").find("#Preload").hide();
+      $("#RegisterModal").modal();
 
 
     });
@@ -248,7 +247,7 @@
 
 
 
-      
+
 
 
 
