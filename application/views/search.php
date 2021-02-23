@@ -9,23 +9,45 @@
 
             <div class="card card-success">
               <div class="card-header">
-                <h3 class="card-title">ค้นหาข้อมูลโครงการ</h3>
+                <h3 class="card-title">ข้อมูลโครงการ</h3>
               </div>
               
               <!-- /.card-header -->
               <div class="card-body">
 
+                <div class="container">
+                  
+                  <table id="example" class="table table-striped table-bordered" style="width:100%">
+                      <thead>
+                          <tr>
+                              <th>ชื่อ</th>
+                              <th>วันส่งมอบ</th>
+                              <th>สถานะส่งมอบ</th>
+                              <th>สถานะโครงการ</th>
+                              <th></th> 
+                          </tr>
+                      </thead>
+                      <tbody>
+
+
+                          <tr>
+                              <td>1</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td><a href="https://projectmanage.webclient.me/index.php/home/projectinfo/" class="btn btn-primary btn-sm">ดูข้อมูล</a></td> 
+                          
+                          </tr>
+
+
+
+                      </tbody>
+                  </table>
 
 
 
 
-
-
-
-
-
-
-
+                </div>
 
               </div>
             </div>
