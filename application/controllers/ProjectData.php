@@ -16,9 +16,19 @@ class ProjectData extends CI_Controller {
 
  
 	}
+	public function GetDataProgress()
+	{
+
+
+		print_r($this->Project_Model->GetDataProgress());
+		
+		//GetDataSignEmpInGroup($ProjectID)
+
+	}
+
 	public function EditProject()
 	{ 
-		
+
 		$ProjectID = $_POST["ProjectID"];
 		$EditDate = $_POST["EditDate"];
 		$Comment = $_POST["Comment"];
