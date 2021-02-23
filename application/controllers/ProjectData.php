@@ -20,18 +20,15 @@ class ProjectData extends CI_Controller {
 	{
 
 
-		//$Project = $this->Project_Model->GetDataProgress();
+		$Project = $this->Project_Model->GetDataProgress();
  		
 		
-		//$Project[0]->TEST = "";
+		$Project[0]->TEST = $this->Project_Model->GetDataSignEmpInGroup("11");
 
 
- 		//print_r($Project);
+ 		print_r($Project);
 
-		$Member = $this->Project_Model->GetDataSignEmpInGroup("11");
-
-		print_r($Member[0]);
-
+		
 
 	}
 
