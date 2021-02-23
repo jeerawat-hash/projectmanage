@@ -264,6 +264,44 @@
 
 
 
+
+
+
+
+    $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataProgress",function(data){
+
+      var obj = JSON.parse(data);
+      console.log(obj);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+
     var html = "";
 
     html += '<div class="col-sm-4 mt-4">';
