@@ -30,7 +30,7 @@ class ProjectData extends CI_Controller {
 
 		$Member = $this->Project_Model->GetDataSignEmpInGroup("11");
 
-		print_r($Member);
+		print_r($Member[0]);
 
 
 	}
