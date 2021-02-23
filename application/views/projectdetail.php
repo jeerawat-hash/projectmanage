@@ -110,6 +110,30 @@
                 <p class="text-sm">บันทึกข้อความการแก้ไข
                   <b class="d-block"><?php echo $ProjectINFO["ProjectInfo"][0]->Remark; ?></b>
                 </p>
+
+
+
+                <p class="text-sm">ผู้เกี่ยวข้อง
+
+                  <?php
+
+                  for ($i=0; $i < count($GroupSign); $i++) { 
+                    ?>
+
+                      <b class="d-block"><?php echo $GroupSign[$i]->name; ?></b> <br>
+
+
+                    ?>  
+                  }
+
+                   ?>
+                  
+                
+                </p>
+              
+
+
+
               </div>
 
               <h5 class="mt-5 text-muted">เอกสารโครงการ</h5>
