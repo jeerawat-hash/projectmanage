@@ -656,7 +656,14 @@ $(".custom-file-input").on("change", function() {
 
                    status = '<span class="badge badge-success">เสร็จสิ้นรอการส่งมอบ</span>';
 
-                   Operand += '<button class="btn btn-success btn-sm ProjectSuccess" data-projectid="'+obj[i].ID+'"> <i class="fas fa-pencil-alt"></i>ส่งมอบสำเร็จ</button>'; 
+                  
+                   if (obj[i].Policy == "CER") {
+
+                      Operand += '<button class="btn btn-success btn-sm ProjectSuccess" data-projectid="'+obj[i].ID+'"> <i class="fas fa-pencil-alt"></i>ส่งมอบสำเร็จ</button>'; 
+
+                   }
+
+
 
                 }else{
 
