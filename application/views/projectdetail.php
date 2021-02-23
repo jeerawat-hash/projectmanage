@@ -114,19 +114,7 @@
 
 
                 <p class="text-sm">ผู้เกี่ยวข้อง
-
-                  <?php
-
-                  for ($i=0; $i < count($GroupSign); $i++) { 
-                    ?>
-
-                      <b class="d-block"><?php print_r($GroupSign); ?></b> <br>
-
-
-                    ?>  
-                  }
-
-                   ?>
+ 
                   
                 
                 </p>
