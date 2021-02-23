@@ -190,7 +190,13 @@
 
 
 
+    $("#Register").on("click",function(){
 
+
+      $("#RegisterModal").modal();
+
+
+    });
 
 
 
