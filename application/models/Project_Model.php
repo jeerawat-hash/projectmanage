@@ -2,6 +2,17 @@
 class Project_Model extends CI_Model
 { 
 
+
+        public function GetDataProjectSearch()
+        {
+                $this->pmdb = $this->load->database("pmdb",true); 
+
+                $Project =  $this->pmdb->query("  SELECT ID,Name,EndDate,IsSuccess,IsCancel FROM Project  ")->result();
+                
+                return $Project;
+
+
+        }
         public function EditProject($ProjectID,$EditDate,$Comment)
         {
 

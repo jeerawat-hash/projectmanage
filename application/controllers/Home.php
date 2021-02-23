@@ -119,9 +119,10 @@ class Home extends CI_Controller {
 		$header['page_menu'] = 2;
 		$header['Name'] = $sess["Name"];
 
+		$data["ProjectINFO"] = $this->Project_Model->GetDataProjectSearch();
 
 		$this->load->view('template/header',$header);
-		$this->load->view('search');
+		$this->load->view('search',$data);
 		$this->load->view('template/footer');
 
 	
