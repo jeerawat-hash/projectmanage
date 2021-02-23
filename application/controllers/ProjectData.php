@@ -23,7 +23,7 @@ class ProjectData extends CI_Controller {
 		$Project = $this->Project_Model->GetDataProgress();
  		
 		
-		$Project[0]->TEST = $this->Project_Model->GetDataSignEmpInGroup("11");
+		$Project[0]->Group = $this->Project_Model->GetDataSignEmpInGroup($Project[0]->ID);
 
 
  		print_r($Project);
