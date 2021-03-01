@@ -149,6 +149,15 @@ class ProjectData extends CI_Controller {
 
 
 	}
+	public function uploadtest()
+	{
+
+		
+		print_r($_FILES);
+		print_r($_POST);
+
+
+	}
 
 
 
