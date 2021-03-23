@@ -10,11 +10,11 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/fontawesome-free/css/all.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -77,11 +77,11 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="https://projectmanage.webclient.me/assets/plugins/jquery/jquery.js"></script>
+<script src="https://blueprojectmanagement.com/assets/plugins/jquery/jquery.js"></script>
 <!-- Bootstrap 4 -->
-<script src="https://projectmanage.webclient.me/assets/plugins/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="https://blueprojectmanagement.com/assets/plugins/bootstrap/js/bootstrap.bundle.js"></script>
 <!-- AdminLTE App -->
-<script src="https://projectmanage.webclient.me/assets/dist/js/adminlte.js"></script>
+<script src="https://blueprojectmanagement.com/assets/dist/js/adminlte.js"></script>
  
 </body>
 </html>
@@ -108,7 +108,7 @@
             psw.focus();
             return false;
           } 
-        $.post("https://projectmanage.webclient.me/index.php/home/login"
+        $.post("https://blueprojectmanagement.com/index.php/home/login"
               ,
               {
                 username : username,
@@ -120,7 +120,7 @@
                   
 
                   if (data == 1) {
-                    var Pagesite = "https://projectmanage.webclient.me/index.php/home/summary/";
+                    var Pagesite = "https://blueprojectmanagement.com/index.php/home/summary/";
                     location.replace(Pagesite);   
                   }else{
 

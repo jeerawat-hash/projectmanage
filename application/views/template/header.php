@@ -51,23 +51,23 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
-  <link rel="stylesheet" href="https://projectmanage.webclient.me/assets/plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/summernote/summernote-bs4.min.css">
 
   <!-- datapicker -->
     <link href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet">
@@ -84,7 +84,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <!-- jQuery -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/jquery/jquery.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/jquery/jquery.js"></script>
 
 
   <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
@@ -92,37 +92,37 @@
 
 
   <!-- jQuery UI 1.11.4 -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
   <script>
     $.widget.bridge('uibutton', $.ui.button)
   </script>
   <!-- Bootstrap 4 -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- ChartJS -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/chart.js/Chart.min.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/chart.js/Chart.min.js"></script>
   <!-- Sparkline -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/sparklines/sparkline.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/sparklines/sparkline.js"></script>
   <!-- JQVMap -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
-  <script src="https://projectmanage.webclient.me/assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
   <!-- jQuery Knob Chart -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/jquery-knob/jquery.knob.min.js"></script>
   <!-- daterangepicker -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/moment/moment.min.js"></script>
-  <script src="https://projectmanage.webclient.me/assets/plugins/daterangepicker/daterangepicker.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/moment/moment.min.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/daterangepicker/daterangepicker.js"></script>
   <!-- Tempusdominus Bootstrap 4 -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
   <!-- Summernote -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/summernote/summernote-bs4.min.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/summernote/summernote-bs4.min.js"></script>
   <!-- overlayScrollbars -->
-  <script src="https://projectmanage.webclient.me/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
-  <script src="https://projectmanage.webclient.me/assets/dist/js/adminlte.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/dist/js/adminlte.js"></script>
   <!-- AdminLTE for demo purposes -->
-  <script src="https://projectmanage.webclient.me/assets/dist/js/demo.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/dist/js/demo.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="https://projectmanage.webclient.me/assets/dist/js/pages/dashboard.js"></script>
+  <script src="https://blueprojectmanagement.com/assets/dist/js/pages/dashboard.js"></script>
 
 
 
@@ -172,7 +172,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png" class="img-circle elevation-2" alt="User Image">
+          <img src="https://blueprojectmanagement.com/assets/dist/img/avatar4.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $Name; ?></a>

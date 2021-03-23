@@ -47,16 +47,16 @@
                       <hr>
                       <div class="row">
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar.png"> 
                         </div>
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar2.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar2.png"> 
                         </div>
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar3.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar3.png"> 
                         </div>
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar4.png"> 
                         </div>
                       </div>
 
@@ -103,16 +103,16 @@
                       <hr>
                       <div class="row">
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar.png"> 
                         </div>
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar2.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar2.png"> 
                         </div>
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar3.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar3.png"> 
                         </div>
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar4.png"> 
                         </div>
                       </div>
 
@@ -162,16 +162,16 @@
                       <hr>
                       <div class="row">
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar.png"> 
                         </div>
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar2.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar2.png"> 
                         </div>
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar3.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar3.png"> 
                         </div>
                         <div class="col-3 text-center"> 
-                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar4.png"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar4.png"> 
                         </div>
                       </div>
 
@@ -264,7 +264,7 @@
 
     setInterval(function(){ 
 
-    $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataProgress",function(data){
+    $.post("https://blueprojectmanagement.com/index.php/ProjectData/GetDataProgress",function(data){
 
       var obj = JSON.parse(data);
       console.log(obj);
@@ -364,7 +364,7 @@
             for (var j = 0; j < obj[i].Group.length; j++) {
 
                 Content += '<div class="col-3 text-center"> ';
-                Content += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> ';
+                Content += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar.png"> ';
                 Content += '</div>';
 
             }
@@ -408,7 +408,7 @@
 
   setInterval(function(){ 
 
-    $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataNonProgress",function(data){
+    $.post("https://blueprojectmanagement.com/index.php/ProjectData/GetDataNonProgress",function(data){
 
       var obj = JSON.parse(data);
       console.log(obj);
@@ -488,7 +488,7 @@
             for (var j = 0; j < obj[i].Group.length; j++) {
 
                 Content += '<div class="col-3 text-center"> ';
-                Content += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://projectmanage.webclient.me/assets/dist/img/avatar.png"> ';
+                Content += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar.png"> ';
                 Content += '</div>';
 
             }

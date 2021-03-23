@@ -260,7 +260,7 @@
       }
  
 
-      $.post("https://projectmanage.webclient.me/index.php/home/Register",
+      $.post("https://blueprojectmanagement.com/index.php/home/Register",
         {
           PositionID : Position,
           Username : Username,

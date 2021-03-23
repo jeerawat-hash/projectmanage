@@ -637,7 +637,7 @@ $(".custom-file-input").on("change", function() {
 
     setInterval(function(){ 
  
-        $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataProjects",function(data){
+        $.post("https://blueprojectmanagement.com/index.php/ProjectData/GetDataProjects",function(data){
 
           var obj = JSON.parse(data);
     
@@ -667,7 +667,7 @@ $(".custom-file-input").on("change", function() {
 
                 }else{
 
-                    Operand = '<a href="https://projectmanage.webclient.me/index.php/home/projectinfo/'+obj[i].ID+'" class="btn btn-primary btn-sm">ดูข้อมูล</a>';
+                    Operand = '<a href="https://blueprojectmanagement.com/index.php/home/projectinfo/'+obj[i].ID+'" class="btn btn-primary btn-sm">ดูข้อมูล</a>';
                     
 
                     if (obj[i].Policy == "CER") {
@@ -748,7 +748,7 @@ $(".custom-file-input").on("change", function() {
       $("#StampProject").find("#Preload").hide();
       $("#StampProject").find("#ProjectID").val(ProjectID);
 
-        $.post("https://projectmanage.webclient.me/index.php/ProjectData/GetDataAscPreiod",
+        $.post("https://blueprojectmanagement.com/index.php/ProjectData/GetDataAscPreiod",
           {
             ProjectID : ProjectID
           }
@@ -818,7 +818,7 @@ $(".custom-file-input").on("change", function() {
       }
 
 
-        $.post("https://projectmanage.webclient.me/index.php/ProjectData/EditProject",
+        $.post("https://blueprojectmanagement.com/index.php/ProjectData/EditProject",
           {
             ProjectID : ProjectID,
             EditDate : EditDate,
@@ -861,7 +861,7 @@ $(".custom-file-input").on("change", function() {
         $("#DelProject").find("#Save").hide();
 
 
-        $.post("https://projectmanage.webclient.me/index.php/ProjectData/DelProject",
+        $.post("https://blueprojectmanagement.com/index.php/ProjectData/DelProject",
           {
             ProjectID : projectid,
             Comment : Comment
@@ -902,7 +902,7 @@ $(".custom-file-input").on("change", function() {
         $("#StampProject").find("#Preload").show();
         $("#StampProject").find("#Save").hide();
         
-        $.post("https://projectmanage.webclient.me/index.php/ProjectData/StampPeriodProject",
+        $.post("https://blueprojectmanagement.com/index.php/ProjectData/StampPeriodProject",
           {
             PeriodID : periodid,
             Comment : Comment
@@ -1200,7 +1200,7 @@ $(".custom-file-input").on("change", function() {
  
               
                 $.ajax({
-                   url : "https://projectmanage.webclient.me/index.php/ProjectData/CreateProjectData",
+                   url : "https://blueprojectmanagement.com/index.php/ProjectData/CreateProjectData",
                    type : "POST",
                    data : data,
                    contentType : false,

@@ -14,6 +14,7 @@ class ProjectData extends CI_Controller {
 	public function index()
 	{
 
+		echo $this->Project_Model->DB();
  
 	}
 
