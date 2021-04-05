@@ -872,8 +872,8 @@ $(".custom-file-input").on("change", function() {
       var DocFile = $('#DocFileFinal').prop('files')[0]; 
 
       var data = new FormData();   
-      data.append('ProjectID', ProjectName); 
-      data.append('DocFileFinal', ProjectName); 
+      data.append('ProjectID', ProjectID); 
+      data.append('DocFileFinal', DocFile); 
       
       $.ajax({
                    url : "https://blueprojectmanagement.com/index.php/ProjectData/SetDataFinistProject",
