@@ -142,6 +142,12 @@
                   <a href="<?php echo $ProjectINFO["ProjectInfo"][0]->DocFile; ?>" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> <?php echo basename($ProjectINFO["ProjectInfo"][0]->DocFile); ?></a>
                 </li>   
               </ul>
+              <h5 class="mt-5 text-muted">เอกสารประกอบการส่งมอบโครงการ</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="<?php echo $ProjectINFO["ProjectInfo"][0]->FinishDoc; ?>" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i> <?php echo basename($ProjectINFO["ProjectInfo"][0]->FinishDoc); ?></a>
+                </li>   
+              </ul>
               <div class="text-center mt-5 mb-3"> 
 
 
