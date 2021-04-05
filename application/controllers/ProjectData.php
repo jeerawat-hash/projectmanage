@@ -162,8 +162,6 @@ class ProjectData extends CI_Controller {
 
 	public function SetDataFinistProject()
 	{
-		
-		print_r($_FILES);
 		 
 		move_uploaded_file($_FILES["DocFileFinal"]["tmp_name"], "Files/".$_FILES["DocFileFinal"]["name"]);
 
