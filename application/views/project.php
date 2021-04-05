@@ -1121,6 +1121,7 @@ $(".custom-file-input").on("change", function() {
     $("#ModalPeriod").find("#Save").on("click",function(){
 
 
+      var IsExigent = $("#ModalPeriod").find("#inputIsExigent:checked").val(); 
       var ProjectName = $("#ModalPeriod").find("#inputProjectName").val(); 
       var Description = $("#ModalPeriod").find("#inputDescription").val(); 
       var ClientCompany = $("#ModalPeriod").find("#inputClientCompany").val(); 
@@ -1131,7 +1132,8 @@ $(".custom-file-input").on("change", function() {
       var DocFile = $('#DocFile').prop('files')[0]; 
 
 
-
+      alert(IsExigent);
+      return false;
 
 
 
