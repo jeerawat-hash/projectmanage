@@ -283,7 +283,7 @@
           
           
 
-          if(obj[i].Picture == ""){
+          if(obj[i].Picture == null){
 
             obj[i].Picture = "https://blueprojectmanagement.com/assets/dist/img/avatar.png";
 
@@ -431,7 +431,7 @@
           //obj[i].StatusProject //0 = ปกติ 1 = ใกล้ครบกำหนด
           //obj[i].IsOverDue      // 0 = ปกติ 1 = เกินกำหนด
 
-          if(obj[i].Picture == ""){
+          if(obj[i].Picture == null){
 
             obj[i].Picture = "https://blueprojectmanagement.com/assets/dist/img/avatar.png";
 
