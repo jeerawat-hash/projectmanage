@@ -3,6 +3,19 @@ class Project_Model extends CI_Model
 { 
 
 
+        public function SetDataFinistProject($ProjectID,$FinalDoc)
+        {
+
+                $this->pmdb = $this->load->database("pmdb",true); 
+
+
+                $Project =  $this->pmdb->query("  UPDATE `Project` SET `IsSuccess` = '1' ,`FinishDoc` = '".$FinalDoc."' WHERE `Project`.`ID` = '".$ProjectID."' ");
+
+                return 1;
+                 
+
+        }
+
         public function GetDataProjectSearch()
         {
                 $this->pmdb = $this->load->database("pmdb",true); 

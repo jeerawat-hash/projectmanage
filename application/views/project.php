@@ -483,6 +483,55 @@
 
 
 
+<!---- Modal FininshProject  ------>
+<div id="FininshProject" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">บันทึกผลการส่งมอบโครงการ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+        <input type="text" id="ProjectID" hidden>
+
+          <div class="container">
+                        
+            <div class="row">
+              <div class="col-12">
+                  <div class="form-group">
+                    <div class="custom-file mb-3">
+                    <input type="file" class="custom-file-input" id="DocFileFinal" name="filenameF">
+                    <label class="custom-file-label" for="DocFileFinal">เลือกไฟล์</label>
+                    </div>
+                  </div> 
+              </div> 
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          
+          <div class="spinner-border text-warning" id="Preload" role="status">
+          <span class="sr-only">Loading...</span>
+          </div>
+
+        <button type="button" class="btn btn-success" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---- Modal FininshProject  ------>
+
+
 <!---- Modal DelProject  ------>
   <div id="DelProject" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -713,13 +762,30 @@ $(".custom-file-input").on("change", function() {
           } 
 
           $("#ProjectsTable").find("#ProjectsTableDetail").html(html);
+          
  
         }); 
 
     }, 1000);
 
-
+ 
    
+    $("#ProjectsTable").find("#ProjectsTableDetail").on("click",'.ProjectSuccess',function(){
+
+ 
+    var ProjectID = $(this).attr("data-projectid");
+ 
+    //alert(GroupID + ' ' + ProjectID);
+    $("#FininshProject").modal({backdrop: 'static', 
+        keyboard: false});
+
+    $("#FininshProject").find("#Preload").hide();
+    $("#FininshProject").find("#ProjectID").val(ProjectID);
+
+
+    });
+
+
     $("#ProjectsTable").find("#ProjectsTableDetail").on("click",'.ProjectDel',function(){
 
 
@@ -799,6 +865,40 @@ $(".custom-file-input").on("change", function() {
 
 
     ///////// Activity Method ////////
+ 
+    $("#FininshProject").find("#Save").on("click",function(){
+
+      var ProjectID = $("#FininshProject").find("#ProjectID").val();
+      var DocFile = $('#DocFileFinal').prop('files')[0]; 
+
+      var data = new FormData();   
+      data.append('ProjectID', ProjectName); 
+      data.append('DocFileFinal', ProjectName); 
+      
+      $.ajax({
+                   url : "https://blueprojectmanagement.com/index.php/ProjectData/SetDataFinistProject",
+                   type : "POST",
+                   data : data,
+                   contentType : false,
+                   cache : false,
+                   processData : false,
+                   success : function(data){
+
+                    
+
+                   },
+                   error : function(){
+
+
+                   }
+        });
+
+
+
+    });
+
+
+
     
     $("#EditProject").find("#Save").on("click",function(){
 
