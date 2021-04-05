@@ -1138,13 +1138,9 @@ $(".custom-file-input").on("change", function() {
          IsExigent = 0;
       }else{
         IsExigent = 1;
-      }
-      alert(IsExigent);
-      return false;
+      } 
 
-
-
-
+ 
       if (ProjectName == "") {
               //alert("Please Fill ProjectName");
               swal("ผิดพลาด!", "กรุณาระบุชื่อโครงการ", "error");
@@ -1296,9 +1292,10 @@ $(".custom-file-input").on("change", function() {
        /////// getData Period /////
 
 
-  
+       
         var data = new FormData();      
         ////// เพิ่มข้อมูลเข้า          
+        data.append('IsExigent', IsExigent); 
         data.append('ProjectName', ProjectName); 
         data.append('Description', Description); 
         data.append('ClientCompany', ClientCompany); 

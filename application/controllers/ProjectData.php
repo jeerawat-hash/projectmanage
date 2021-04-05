@@ -115,6 +115,8 @@ class ProjectData extends CI_Controller {
 
 		$URL = "https://blueprojectmanagement.com/Files/".$_FILES["DocFile"]["name"];
 
+		$IsExigent = $_POST["IsExigent"];
+
 		$ProjectName = $_POST["ProjectName"];
 		$Description = $_POST["Description"];
 		$ClientCompany = $_POST["ClientCompany"];
@@ -136,7 +138,7 @@ class ProjectData extends CI_Controller {
 		$Member["Role"][] = $Employee[3]["MemberRole"];
 
 
- 		echo  $this->Project_Model->CreateProject(date("Y-m-d"),$EndDate,$ProjectName,$Description,$ClientCompany,$Budget,$PeriodDate,$CreatorID,$CreatorRole,$Member,$PeriodInfo,$URL,$PeriodEndDate);
+ 		echo  $this->Project_Model->CreateProject($IsExigent,date("Y-m-d"),$EndDate,$ProjectName,$Description,$ClientCompany,$Budget,$PeriodDate,$CreatorID,$CreatorRole,$Member,$PeriodInfo,$URL,$PeriodEndDate);
 
 
 
@@ -170,7 +172,7 @@ class ProjectData extends CI_Controller {
 		if(isset($_FILES["DocFileFinal"]["tmp_name"])){
 
 			move_uploaded_file($_FILES["DocFileFinal"]["tmp_name"], "Files/".$_FILES["DocFileFinal"]["name"]);
-			
+
 			$URL = "https://blueprojectmanagement.com/Files/".$_FILES["DocFileFinal"]["name"];
 
 		}

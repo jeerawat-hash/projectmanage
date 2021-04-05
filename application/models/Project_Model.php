@@ -206,7 +206,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
 
         }
  
-	public function CreateProject($StartDate,$StopDate,$ProjectName,$Description,$ClientCompany,$Budget,$PeriodDate,$CreatorID,$CreatorRole,$Member,$PeriodInfo,$URL,$PeriodEndDate)
+	public function CreateProject($IsExigent,$StartDate,$StopDate,$ProjectName,$Description,$ClientCompany,$Budget,$PeriodDate,$CreatorID,$CreatorRole,$Member,$PeriodInfo,$URL,$PeriodEndDate)
 	{ 
 
 		$isSuccess = 0;
@@ -235,7 +235,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
         ////// While Member /////
 
 
-        $this->pmdb->query("INSERT INTO Project (ID, SignGroupID, Name, Detail, Budget, DocFile, BeginDate, EndDate, CheckDate, Remark, IsSuccess, ClientCompany, PeriodEndDate,CreateMemberID) VALUES (NULL, '".$GroupID."', '".$ProjectName."', '".$Description."', '".$Budget."', '".$URL."', '".$StartDate."', '".$StopDate."', '".$PeriodDate."', '', '0','".$ClientCompany."','".$PeriodEndDate."','".$CreatorID."') ");
+        $this->pmdb->query("INSERT INTO Project (ID, SignGroupID, Name, Detail, Budget, DocFile, BeginDate, EndDate, CheckDate, Remark, IsSuccess, ClientCompany, PeriodEndDate,CreateMemberID,IsExigent) VALUES (NULL, '".$GroupID."', '".$ProjectName."', '".$Description."', '".$Budget."', '".$URL."', '".$StartDate."', '".$StopDate."', '".$PeriodDate."', '', '0','".$ClientCompany."','".$PeriodEndDate."','".$CreatorID."','".$IsExigent."') ");
 
 
         $GetCreateRowID = $this->pmdb->query("
