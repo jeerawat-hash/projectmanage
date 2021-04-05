@@ -137,7 +137,7 @@
                   <input type="text" id="inputClientCompany" class="form-control">
                 </div>
                 <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="inputIsExigent">
+                <input type="checkbox" class="form-check-input" value="1" id="inputIsExigent">
                 <label class="form-check-label" for="inputIsExigent">งานเร่งด่วน</label>
               </div> 
               </div> 
