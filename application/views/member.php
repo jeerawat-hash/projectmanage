@@ -208,6 +208,8 @@
         <div class="modal-body">
  
            <div class="container">
+
+                    <input type="text" hidden id="inputEmployeeID" class="form-control ">
                         
             <div class="row">
               <div class="col-12">
@@ -268,11 +270,11 @@
         </div>
         <div class="modal-footer">
           
-          <div class="spinner-border text-warning" id="Preload" role="status">
+          <div class="spinner-border text-success" id="Preload" role="status">
           <span class="sr-only">Loading...</span>
           </div>
 
-        <button type="button" class="btn btn-warning" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-success" id="Save" >บันทึก</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
         </div>
       </div>
@@ -314,17 +316,24 @@
       },function(data){
 
         var obj = JSON.parse(data);
-        console.log(obj);
-
-
+        var ID = obj[0].ID;
+        var Name = obj[0].Name;
+        var Telephone = obj[0].Telephone;
+        var Email = obj[0].Email;
+        var LineToken = obj[0].LineToken;
+        var Username = obj[0].Username;
+        $("#EditModal").find("#inputEmployeeID").val(ID);
+        $("#EditModal").find("#inputEmployeeName").val(Name);
+        $("#EditModal").find("#inputUsername").val(Username); 
+        $("#EditModal").find("#inputTelephone").val(Telephone);
+        $("#EditModal").find("#inputEmail").val(Email);
+        $("#EditModal").find("#inputLineToken").val(LineToken);
+        
+        $("#EditModal").modal();
         
 
       });
-
  
-      
-      $("#EditModal").modal();
-
 
     });
 

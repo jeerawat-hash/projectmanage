@@ -41,8 +41,7 @@ class Member_Model extends CI_Model
         public function GetDataMemberByID($MemberID)
         {
                 $this->pmdb = $this->load->database("pmdb",true); 
-                return $this->pmdb->query(" SELECT a.ID,Name,b.Detail,Telephone,a.LineToken,a.Email FROM Member a
-                join Position b on a.PositionID = b.ID where a.ID = '".$MemberID."' ")->result();
+                return $this->pmdb->query(" SELECT a.Username,a.ID,Name,b.Detail,Telephone,a.LineToken,a.Email FROM Member a join Position b on a.PositionID = b.ID where a.ID = '".$MemberID."' ")->result();
                 
         }
         public function Register($PositionID,$Username,$Password,$Name,$DOB,$Telephone,$Email,$LineToken = "")
