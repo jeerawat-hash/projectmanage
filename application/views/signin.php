@@ -15,6 +15,10 @@
   <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="https://blueprojectmanagement.com/assets/dist/css/adminlte.min.css">
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -94,7 +98,8 @@
 
         console.log(username);
             if (username.trim() == "") {
-              alert("Please fill Username ");
+              //alert("Please fill Username ");
+              swal("ผิดพลาด!", "กรุณาระบุ Username", "error"); 
               $("#btnsub").show();
               username.focus();
               return false;
@@ -103,7 +108,8 @@
 
           var psw =  $("#psw").val();
           if (psw.trim() == "") {
-            alert("Please fill Password ");
+            //alert("Please fill Password ");
+            swal("ผิดพลาด!", "กรุณาระบุรหัสผ่าน", "error"); 
             $("#btnsub").show();
             psw.focus();
             return false;
@@ -124,7 +130,7 @@
                     location.replace(Pagesite);   
                   }else{
 
-                    alert("Fail");
+                    swal("ผิดพลาด!", "ข้อมูลผิดพลาดกรุณาติดต่อผู้ดูแลระบบ", "error"); 
                     return false;
                     
                   }

@@ -189,8 +189,102 @@
       </div>
     </div>
   </div>
-<!---- Modal EditProject  ------>
+<!---- Modal Register  ------>
 
+
+
+
+
+<!---- Modal Edit  ------>
+<div id="EditModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">แก้ไขข้อมูลผู้ใช้งานระบบ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+ 
+           <div class="container">
+                        
+            <div class="row">
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputEmployeeName">ชื่อ - สกุล</label>
+                    <input type="text" id="inputEmployeeName" class="form-control ">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputUsername">Username</label>
+                    <input type="text" id="inputUsername" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" id="inputPassword" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="inputPosition">ตำแหน่ง</label>
+                  <select id="inputPosition" class="form-control custom-select">
+                    <option value="0" selected disabled>กรุณาเลือก</option>
+                    <option value="1" >ผู้อำนวยการ</option>
+                    <option value="2" >ผู้จัดการ</option>
+                    <option value="3" >ที่ปรึกษา</option>
+                    <option value="4" >พนักงาน</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputDOB">วันเกิด</label>
+                    <input type="text" id="inputDOB" class="form-control datepickerclass">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputTelephone">เบอร์โทรศัพท์</label>
+                    <input type="text" id="inputTelephone" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="text" id="inputEmail" class="form-control">
+                  </div> 
+              </div>
+              <div class="col-12">
+                  <div class="form-group">
+                    <label for="inputLineToken">LineToken</label>
+                    <input type="text" id="inputLineToken" class="form-control">
+                  </div> 
+              </div>
+            </div> 
+
+
+          </div>
+
+ 
+
+        </div>
+        <div class="modal-footer">
+          
+          <div class="spinner-border text-warning" id="Preload" role="status">
+          <span class="sr-only">Loading...</span>
+          </div>
+
+        <button type="button" class="btn btn-warning" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---- Modal Edit  ------>
 
 
 
@@ -218,7 +312,10 @@
 
       var MemberID = $(this).attr("data-id");
 
-      alert(MemberID);
+      //alert(MemberID);
+
+      $("#EditModal").find("#Preload").hide();
+      $("#EditModal").modal();
 
 
     });
