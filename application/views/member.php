@@ -64,6 +64,14 @@
                               <?php
                               } 
                               ?> 
+                            <?php 
+                               if($value->Picture == ""){
+                                ?>
+                               <button class="btn btn-info btn-sm BtnMemberUploadImage" data-id="<?php echo $value->ID; ?>" > <i class="fas fa-pencil-alt"> </i> อัพโหลดรูปภาพ </button>
+                              <?php
+                              } 
+                              ?> 
+
                               </td> 
                           
                           </tr>
