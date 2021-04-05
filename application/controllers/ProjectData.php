@@ -164,8 +164,8 @@ class ProjectData extends CI_Controller {
 	{
 		
 		print_r($_FILES);
-		exec("pwd");
-		//move_uploaded_file($_FILES["DocFile"]["tmp_name"], "/home/jeerawatme/web/projectmanage.webclient.me/public_html/Files/".$_FILES["DocFileFinal"]["name"]);
+		 
+		move_uploaded_file($_FILES["DocFileFinal"]["tmp_name"], "Files/".$_FILES["DocFileFinal"]["name"]);
 
 		//$URL = "https://blueprojectmanagement.com/Files/".$_FILES["DocFileFinal"]["name"];
 
