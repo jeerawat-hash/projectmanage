@@ -283,11 +283,7 @@
           
           
 
-          if(obj[i].Picture == null){
-
-            obj[i].Picture = "https://blueprojectmanagement.com/assets/dist/img/avatar.png";
-
-          } 
+          
              
             if (obj[i].Name.length > 40) {
 
@@ -369,8 +365,13 @@
 
             for (var j = 0; j < obj[i].Group.length; j++) {
 
+              if(obj[i].Group[j].Picture == null){
+
+                obj[i].Group[j].Picture = "https://blueprojectmanagement.com/assets/dist/img/avatar.png";
+
+              } 
                 Content += '<div class="col-3 text-center"> ';
-                Content += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="'+obj[i].Picture+'"> ';
+                Content += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="'+obj[i].Group[j].Picture+'"> ';
                 Content += '</div>';
 
             }
@@ -431,11 +432,7 @@
           //obj[i].StatusProject //0 = ปกติ 1 = ใกล้ครบกำหนด
           //obj[i].IsOverDue      // 0 = ปกติ 1 = เกินกำหนด
 
-          if(obj[i].Picture == null){
-
-            obj[i].Picture = "https://blueprojectmanagement.com/assets/dist/img/avatar.png";
-
-            } 
+           
  
             obj[i].Name = obj[i].Name.substring(0, 40);
             obj[i].Detail = obj[i].Detail.substring(0, 30);
@@ -499,8 +496,13 @@
 
             for (var j = 0; j < obj[i].Group.length; j++) {
 
+              if(obj[i].Group[j].Picture == null){
+
+              obj[i].Group[j].Picture = "https://blueprojectmanagement.com/assets/dist/img/avatar.png";
+
+              } 
                 Content += '<div class="col-3 text-center"> ';
-                Content += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="'+obj[i].Picture+'"> ';
+                Content += '<img alt="Avatar" class="table-avatar" style="width: 50%" src="'+obj[i].Group[j].Picture+'"> ';
                 Content += '</div>';
 
             }
