@@ -1132,6 +1132,13 @@ $(".custom-file-input").on("change", function() {
       var DocFile = $('#DocFile').prop('files')[0]; 
 
 
+      
+      
+      if(IsExigent == undefined){
+         IsExigent = 0;
+      }else{
+        IsExigent = 1;
+      }
       alert(IsExigent);
       return false;
 
