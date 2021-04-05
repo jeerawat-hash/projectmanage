@@ -303,6 +303,55 @@
 
 
 
+<!---- Modal UploadImage  ------>
+<div id="UploadImage" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">อัพโหลดรูปภาพโปรไฟล์</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+        <input type="text" hidden id="inputEmployeeID" class="form-control ">
+
+          <div class="container">
+                        
+            <div class="row">
+              <div class="col-12">
+                  <div class="form-group">
+                    <div class="custom-file mb-3">
+                    <input type="file" accept="image/*" class="custom-file-input" id="Image" name="filenameF">
+                    <label class="custom-file-label" for="Image">เลือกไฟล์ภาพ</label>
+                    </div>
+                  </div> 
+              </div> 
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          
+          <div class="spinner-border text-warning" id="Preload" role="status">
+          <span class="sr-only">Loading...</span>
+          </div>
+
+        <button type="button" class="btn btn-success" id="Save" >บันทึก</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ออก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---- Modal UploadImage  ------>
+
+
 
 
 <script type="text/javascript">
@@ -352,6 +401,60 @@
 
       });
  
+
+    });
+
+
+    $("#MemberTable").on("click",'.BtnMemberUploadImage',function(){
+
+    var ID = $(this).attr("data-id");
+    $("#UploadImage").find("#inputEmployeeID").val(ID);
+    $("#UploadImage").find("#Preload").hide();
+    $("#UploadImage").modal();
+      
+    });
+
+    $("#UploadImage").find("#Save").on("click",function(){
+
+      var MemberID = $("#UploadImage").find("#inputEmployeeID").val();
+      var Image = $('#Image').prop('files')[0]; 
+
+      var data = new FormData();   
+      data.append('MemberID', MemberID); 
+      data.append('ImageUrl', Image); 
+
+      
+      $.ajax({
+                   url : "https://blueprojectmanagement.com/index.php/home/UploadDataImage",
+                   type : "POST",
+                   data : data,
+                   contentType : false,
+                   cache : false,
+                   processData : false,
+                   success : function(data){
+
+                    if (data == 1) {
+                      $("#UploadImage").modal("hide");
+                      swal("สำเร็จ!", "บันทึกภาพสำเร็จ", "success");
+                      $("#UploadImage").find("#Preload").hide();
+                      $("#UploadImage").find("#Save").show();
+                    }else{
+                      $("#UploadImage").modal("hide");
+                      swal("ล้มเหลว!", "กรุณาลองใหม่ภายหลัง", "error");
+                      $("#UploadImage").find("#Preload").hide();
+                      $("#UploadImage").find("#Save").show();
+                    }
+
+                   },
+                   error : function(){
+
+
+                   }
+        });
+
+
+
+
 
     });
 

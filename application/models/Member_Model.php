@@ -31,6 +31,18 @@ class Member_Model extends CI_Model
         $this->pmdb = $this->load->database("pmdb",true); 
         return $this->pmdb->query("SELECT * FROM Member where  Username =  '".$username."'  and  Password  = '".$password."'  ")->result(); 
 	}
+
+        public function UploadDataImage($MemberID,$ImageUrl)
+        {
+
+                $this->pmdb = $this->load->database("pmdb",true); 
+                
+                $this->pmdb->query("  UPDATE `Member` SET `Picture` = '".$ImageUrl."' WHERE `Member`.`ID` = '".$MemberID."' ");
+                return 1;
+               
+
+        }
+
         public function GetDataMember()
         {
                 $this->pmdb = $this->load->database("pmdb",true); 
