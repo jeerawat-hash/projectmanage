@@ -324,7 +324,7 @@
               <div class="col-12">
                   <div class="form-group">
                     <div class="custom-file mb-3">
-                    <input type="file" accept="image/*" class="custom-file-input" id="Image" name="filenameF">
+                    <input type="file" accept="image/*" class="custom-file-input" id="Image" name="Image">
                     <label class="custom-file-label" for="Image">เลือกไฟล์ภาพ</label>
                     </div>
                   </div> 
