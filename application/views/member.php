@@ -29,8 +29,9 @@
                   
                   <table id="MemberTable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
-                          <tr>
-                              <th>ชื่อ</th>
+                          <tr> 
+                            <th>UserName</th>
+                              <th>ชื่อ</th> 
                               <th>ตำแหน่ง</th>
                               <th>หมายเลขโทรศัพท์</th>
                               <th>Email</th>
@@ -43,18 +44,26 @@
                         <?php 
 
                         foreach ($MemberINFO as $value) {
- 
+                          
+                          
 
                         ?> 
 
                           <tr>
+                              <td><?php echo $value->Username; ?></td>
                               <td><?php echo $value->Name; ?></td>
                               <td><?php echo $value->Detail; ?></td>
                               <td><?php echo $value->Telephone; ?></td>
                               <td><?php echo $value->Email; ?></td>
                               <td><?php echo $value->LineToken; ?></td>
                               <td >
-                              <button class="btn btn-warning btn-sm BtnMemberEdit" data-id="<?php echo $value->ID; ?>" > <i class="fas fa-pencil-alt"> </i> แก้ไขข้อมูล </button>
+                              <?php 
+                              if($value->Username != "admin"){
+                                ?>
+                               <button class="btn btn-warning btn-sm BtnMemberEdit" data-id="<?php echo $value->ID; ?>" > <i class="fas fa-pencil-alt"> </i> แก้ไขข้อมูล </button>
+                              <?php
+                              } 
+                              ?> 
                               </td> 
                           
                           </tr>
