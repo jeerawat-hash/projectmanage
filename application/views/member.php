@@ -34,7 +34,8 @@
                               <th>ตำแหน่ง</th>
                               <th>หมายเลขโทรศัพท์</th>
                               <th>Email</th>
-                              <th hidden></th> 
+                              <th>LineToken</th>
+                              <th ></th> 
                           </tr>
                       </thead>
                       <tbody>
@@ -47,11 +48,14 @@
                         ?> 
 
                           <tr>
-                              <td><?php echo $value->Name; ?></td>
+                              <td><?php echo $value->ID; ?> <?php echo $value->Name; ?></td>
                               <td><?php echo $value->Detail; ?></td>
                               <td><?php echo $value->Telephone; ?></td>
                               <td><?php echo $value->Email; ?></td>
-                              <td hidden>-</td> 
+                              <td><?php echo $value->LineToken; ?></td>
+                              <td >
+                              <button class="btn btn-primary btn-sm" > <i class="fas fa-pencil-alt"> </i> แก้ไขข้อมูล </button>
+                              </td> 
                           
                           </tr>
 
