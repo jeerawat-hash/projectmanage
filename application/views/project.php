@@ -136,6 +136,10 @@
                   <label for="inputClientCompany">บริษัทลูกค้า</label>
                   <input type="text" id="inputClientCompany" class="form-control">
                 </div>
+                <div class="form-group">
+                  <label for="inputClientCompany">งานเร่งด่วน</label>
+                  <input type="check" id="inputIsExigent" class="form-control">
+                </div>
               </div> 
   
 
