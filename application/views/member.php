@@ -410,7 +410,8 @@
                     //alert("success");
                     swal("สำเร็จ!", "ดำเนินการแก้ไขข้อมูลสำเร็จ", "success"); 
                     $("#EditModal").modal("hide");
-                    
+                    location.reload();
+
                   }else{
                     swal("ผิดพลาด!", "ดำเนินการแก้ไขข้อมูลล้มเหลวกรุณาลองใหม่ภายหลัง", "error"); 
 
@@ -495,6 +496,8 @@
                       //alert("success");
                       swal("สำเร็จ!", "ดำเนินการเพิ่มข้อมูลสำเร็จ", "success"); 
                       $("#RegisterModal").modal("hide");
+                      location.reload();
+
                       
                     }else{
                       swal("ผิดพลาด!", "ดำเนินการเพิ่มข้อมูลล้มเหลวกรุณาลองใหม่ภายหลัง", "error"); 
