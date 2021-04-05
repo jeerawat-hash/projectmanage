@@ -219,7 +219,7 @@
               <div class="col-12">
                   <div class="form-group">
                     <label for="inputUsername">Username</label>
-                    <input type="text" id="inputUsername" class="form-control">
+                    <input type="text" disabled id="inputUsername" class="form-control">
                   </div> 
               </div>
               <div class="col-12">
@@ -239,13 +239,7 @@
                     <option value="4" >พนักงาน</option>
                   </select>
                 </div>
-              </div>
-              <div class="col-12">
-                  <div class="form-group">
-                    <label for="inputDOB">วันเกิด</label>
-                    <input type="text" id="inputDOB" class="form-control datepickerclass">
-                  </div> 
-              </div>
+              </div> 
               <div class="col-12">
                   <div class="form-group">
                     <label for="inputTelephone">เบอร์โทรศัพท์</label>
@@ -310,11 +304,25 @@
 
     $("#MemberTable").on("click",'.BtnMemberEdit',function(){
 
-      var MemberID = $(this).attr("data-id");
-
-      //alert(MemberID);
-
+      var ID = $(this).attr("data-id");
+ 
       $("#EditModal").find("#Preload").hide();
+
+      $.post("https://blueprojectmanagement.com/index.php/home/GetDataMemberByID",
+      {
+        MemberID : ID
+      },function(data){
+
+        var obj = JSON.parse(data);
+        console.log(obj);
+
+
+        
+
+      });
+
+ 
+      
       $("#EditModal").modal();
 
 

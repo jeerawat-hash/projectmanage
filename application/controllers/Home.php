@@ -225,6 +225,13 @@ class Home extends CI_Controller {
 
 
 	}
+	public function GetDataMemberByID()
+	{
+
+		echo json_encode($this->Member_Model->GetDataMemberByID($_POST["MemberID"]));
+
+
+	}
 
 
 
