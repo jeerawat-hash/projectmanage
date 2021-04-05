@@ -256,7 +256,7 @@ class Home extends CI_Controller {
 		ImageDestroy($images_orig);
 		ImageDestroy($images_fin);
 
-		$URL = "https://blueprojectmanagement.com/Files/".$_FILES["ImageUrl"]["name"]."-".rand(1,200);
+		$URL = "https://blueprojectmanagement.com/Files/".rand(1,200)."-".$_FILES["ImageUrl"]["name"];
 	
 		echo $this->Member_Model->UploadDataImage($_POST["MemberID"],$URL);
 
