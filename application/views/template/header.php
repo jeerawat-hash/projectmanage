@@ -216,7 +216,7 @@
               </li> 
               <li class="nav-item">
                 <a href="<?php echo base_url(); ?>index.php/home/search" class="nav-link <?php echo $project[1][2]; ?>">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-edit nav-icon"></i>
                   <p>สืบค้นข้อมูล</p>
                 </a>
               </li> 
