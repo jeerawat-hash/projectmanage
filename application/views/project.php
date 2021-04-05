@@ -884,7 +884,17 @@ $(".custom-file-input").on("change", function() {
                    processData : false,
                    success : function(data){
 
-                    console.log(data);
+                    if (data == 1) {
+                      $("#FininshProject").modal("hide");
+                      swal("สำเร็จ!", "บันทึกผลการส่งมอบสำเร็จ", "success");
+                      $("#FininshProject").find("#Preload").hide();
+                      $("#FininshProject").find("#Save").show();
+                    }else{
+                      $("#FininshProject").modal("hide");
+                      swal("ล้มเหลว!", "กรุณาลองใหม่ภายหลัง", "error");
+                      $("#FininshProject").find("#Preload").hide();
+                      $("#FininshProject").find("#Save").show();
+                    }
 
                    },
                    error : function(){

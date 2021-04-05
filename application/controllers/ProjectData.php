@@ -111,9 +111,9 @@ class ProjectData extends CI_Controller {
 		$Employee = json_decode($_POST["Employee"],true);
 		$PeriodInfo = json_decode($_POST["PeriodInfo"],true);
 
-		move_uploaded_file($_FILES["DocFile"]["tmp_name"], "/home/jeerawatme/web/projectmanage.webclient.me/public_html/Files/".$_FILES["DocFile"]["name"]);
+		move_uploaded_file($_FILES["DocFile"]["tmp_name"], "Files/".$_FILES["DocFile"]["name"]);
 
-		$URL = "https://projectmanage.webclient.me/Files/".$_FILES["DocFile"]["name"];
+		$URL = "https://blueprojectmanagement.com/Files/".$_FILES["DocFile"]["name"];
 
 		$ProjectName = $_POST["ProjectName"];
 		$Description = $_POST["Description"];
@@ -167,9 +167,9 @@ class ProjectData extends CI_Controller {
 		 
 		move_uploaded_file($_FILES["DocFileFinal"]["tmp_name"], "Files/".$_FILES["DocFileFinal"]["name"]);
 
-		//$URL = "https://blueprojectmanagement.com/Files/".$_FILES["DocFileFinal"]["name"];
+		$URL = "https://blueprojectmanagement.com/Files/".$_FILES["DocFileFinal"]["name"];
 
-		//echo $this->Project_Model->SetDataFinistProject($_POST["ProjectID"],$_POST["DocFileFinal"]);
+		echo $this->Project_Model->SetDataFinistProject($_POST["ProjectID"],$_POST["DocFileFinal"]);
 
 	}
 
