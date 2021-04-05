@@ -48,13 +48,13 @@
                         ?> 
 
                           <tr>
-                              <td><?php echo $value->ID; ?> <?php echo $value->Name; ?></td>
+                              <td><?php echo $value->Name; ?></td>
                               <td><?php echo $value->Detail; ?></td>
                               <td><?php echo $value->Telephone; ?></td>
                               <td><?php echo $value->Email; ?></td>
                               <td><?php echo $value->LineToken; ?></td>
                               <td >
-                              <button class="btn btn-primary btn-sm" > <i class="fas fa-pencil-alt"> </i> แก้ไขข้อมูล </button>
+                              <button class="btn btn-warning btn-sm BtnMemberEdit" data-id="<?php echo $value->ID; ?>" > <i class="fas fa-pencil-alt"> </i> แก้ไขข้อมูล </button>
                               </td> 
                           
                           </tr>
@@ -210,6 +210,15 @@
 
       $("#RegisterModal").find("#Preload").hide();
       $("#RegisterModal").modal();
+
+
+    });
+
+    $("#MemberTable").on("click",'.BtnMemberEdit',function(){
+
+      var MemberID = $(this).attr("data-id");
+
+      alert(MemberID);
 
 
     });
