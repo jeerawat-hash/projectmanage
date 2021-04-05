@@ -163,11 +163,21 @@ class ProjectData extends CI_Controller {
 	public function SetDataFinistProject()
 	{
 		 
-		move_uploaded_file($_FILES["DocFileFinal"]["tmp_name"], "Files/".$_FILES["DocFileFinal"]["name"]);
+		
+		
+		$URL = "https://blueprojectmanagement.com/Files/0";
 
-		$URL = "https://blueprojectmanagement.com/Files/".$_FILES["DocFileFinal"]["name"];
+		if(isset($_FILES["DocFileFinal"]["tmp_name"])){
 
-		echo $this->Project_Model->SetDataFinistProject($_POST["ProjectID"],$_POST["DocFileFinal"]);
+			move_uploaded_file($_FILES["DocFileFinal"]["tmp_name"], "Files/".$_FILES["DocFileFinal"]["name"]);
+			
+			$URL = "https://blueprojectmanagement.com/Files/".$_FILES["DocFileFinal"]["name"];
+
+		}
+
+		
+
+		echo $this->Project_Model->SetDataFinistProject($_POST["ProjectID"],$URL);
 
 	}
 
