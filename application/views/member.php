@@ -346,6 +346,85 @@
 
     });
 
+
+    $("#EditModal").find("#Save").on("click",function(){
+
+      
+    var ID = $("#EditModal").find("#inputEmployeeID").val();
+    var Name = $("#EditModal").find("#inputEmployeeName").val(); 
+    var Password = $("#EditModal").find("#inputPassword").val(); 
+    var Telephone = $("#EditModal").find("#inputTelephone").val();
+    var Email = $("#EditModal").find("#inputEmail").val();
+    var LineToken = $("#EditModal").find("#inputLineToken").val();
+    var Position = $("#EditModal").find("#inputPosition").val();
+
+
+    if (Name == "") {
+
+            swal("ผิดพลาด!", "กรุณาระบุชื่อสกุล", "error"); 
+            return false;
+    } 
+    if (Password == "") {
+
+            swal("ผิดพลาด!", "กรุณาระบุ Password", "error"); 
+            return false;
+    } 
+    if (Telephone == "") {
+
+            swal("ผิดพลาด!", "กรุณาระบุ โทรศัพท์", "error"); 
+            return false;
+    }
+    if (Email == "") {
+
+            swal("ผิดพลาด!", "กรุณาระบุ Email", "error"); 
+            return false;
+    }
+    if (Position == null) {
+
+            swal("ผิดพลาด!", "กรุณาระบุเลือกตำแหน่ง", "error"); 
+            return false;
+    }
+    if (LineToken == null) {
+
+            swal("ผิดพลาด!", "กรุณาระบุ LineToken", "error"); 
+            return false;
+    }
+
+
+    $.post("https://blueprojectmanagement.com/index.php/home/EditDataMemberByID",
+      {
+        MemberID : ID,
+        PositionID : Position, 
+        Password : Password,
+        Name : Name, 
+        Telephone : Telephone,
+        Email : Email,
+        LineToken : LineToken
+      }
+      ,function(data){
+
+
+                if (data == 1) {
+                    $("#EditModal").find("#Save").show();
+                    $("#EditModal").find("#Preload").hide();
+                    //alert("success");
+                    swal("สำเร็จ!", "ดำเนินการแก้ไขข้อมูลสำเร็จ", "success"); 
+                    $("#EditModal").modal("hide");
+                    
+                  }else{
+                    swal("ผิดพลาด!", "ดำเนินการแก้ไขข้อมูลล้มเหลวกรุณาลองใหม่ภายหลัง", "error"); 
+
+                    $("#EditModal").find("#Save").show();
+                    $("#EditModal").find("#Preload").hide();
+                    return false;
+                  } 
+
+      });
+
+
+
+    });
+
     $("#RegisterModal").find("#Save").on("click",function(){
 
 

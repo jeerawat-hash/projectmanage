@@ -44,6 +44,13 @@ class Member_Model extends CI_Model
                 return $this->pmdb->query(" SELECT a.Username,a.ID,Name,b.Detail,Telephone,a.LineToken,a.Email FROM Member a join Position b on a.PositionID = b.ID where a.ID = '".$MemberID."' ")->result();
                 
         }
+        public function EditDataMemberByID($MemberID,$Name,$PositionID,$Password,$Telephone,$Email,$LineToken)
+        {
+                $this->pmdb = $this->load->database("pmdb",true); 
+                
+                $this->pmdb->query(" UPDATE `Member` SET  `Name` = '".$Name."' , `PositionID` = '".$PositionID."' , `Password` = '".$Password."' , `Telephone` = '".$Telephone."' , `Email` = '".$Email."' , `LineToken` = '".$LineToken."'  WHERE ID = '".$MemberID."'  ");
+                return 1;
+        }
         public function Register($PositionID,$Username,$Password,$Name,$DOB,$Telephone,$Email,$LineToken = "")
         {
                 $this->pmdb = $this->load->database("pmdb",true); 

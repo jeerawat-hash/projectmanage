@@ -232,6 +232,12 @@ class Home extends CI_Controller {
 
 
 	}
+	public function EditDataMemberByID()
+	{
+
+		echo $this->Member_Model->EditDataMemberByID($_POST["MemberID"],$_POST["Name"],$_POST["PositionID"],$_POST["Password"],$_POST["Telephone"],$_POST["Email"],$_POST["LineToken"]);
+
+	}
 
 
 
