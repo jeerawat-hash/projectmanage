@@ -182,6 +182,14 @@ class ProjectData extends CI_Controller {
 		echo $this->Project_Model->SetDataFinistProject($_POST["ProjectID"],$URL);
 
 	}
+	public function setDataNotify()
+	{
+ 
+		
+		$this->Project_Model->setDataNotify();
+
+
+	}
 
 
 
