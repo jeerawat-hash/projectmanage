@@ -440,6 +440,9 @@
 
             var TXTstatus = "";
             var BarStatus = "";
+
+
+             
             if (obj[i].IsOverDue == 1) {
 
               TXTstatus = '<div class="ribbon bg-danger text-lg">เกินกำหนด</div>';
@@ -464,7 +467,14 @@
 
               }
 
+              if(obj[i].IsExigent == 1) {
 
+                TXTstatus = '<div class="ribbon bg-info text-lg">งานด่วน</div>';
+                BarStatus = '<div class="progress-bar bg-info progress-bar-striped" role="progressbar"aria-valuenow="'+obj[i].percent+'" aria-valuemin="0" aria-valuemax="100" style="width: '+obj[i].percent+'%"><span class="sr-only">'+obj[i].percent+'% Complete </span>';
+
+
+              }
+ 
 
             }
 
