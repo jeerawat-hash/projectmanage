@@ -700,8 +700,19 @@ $(".custom-file-input").on("change", function() {
           var html = '';
           for (var i = 0; i < obj.length; i++) {
 
+            
+            var status = "";
+                if(obj[i].IsExigent == 1){
 
-                var status = '<span class="badge badge-warning">ดำเนินการ</span>';
+                  status = '<span class="badge badge-info">เร่งด่วน</span>';
+
+                }else{
+
+                  status = '<span class="badge badge-warning">ดำเนินการ</span>';
+
+                }
+
+                
 
                 var Operand = '';
 
