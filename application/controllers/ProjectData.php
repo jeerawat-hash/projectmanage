@@ -9,6 +9,9 @@ class ProjectData extends CI_Controller {
 		parent::__construct();
 		$this->load->model("Project_Model"); 
 		$this->load->library("session"); 
+		///// inital mail lib ///////
+        require '3rd/mail/class.phpmailer.php'; 
+        ///// inital mail lib ///////
 
 	}
 	public function index()
@@ -185,8 +188,18 @@ class ProjectData extends CI_Controller {
 	public function setDataNotify()
 	{
  
-		
+
 		$this->Project_Model->setDataNotify();
+
+
+	}
+	public function SendNotify()
+	{
+
+
+
+		SendMail_attach( "p.jeerawat.th@gmail.com", "Hello","TEST","jeerawat" );
+
 
 
 	}
@@ -197,3 +210,43 @@ class ProjectData extends CI_Controller {
 
 
 }
+
+
+
+
+
+function SendMail_attach( $ToEmail, $MessageHTML,$header,$Fromname ) {
+  
+	$Mail = new PHPMailer();
+	$Mail->IsSMTP(); // Use SMTP 
+	$Mail->Host        = "127.0.0.1";
+	#$Mail->SMTPDebug   = 2; // 2 to enable SMTP debug information
+	$Mail->SMTPAuth    = TRUE; // enable SMTP authentication
+	$Mail->SMTPSecure  = "tls"; //Secure conection
+	$Mail->Port        =  25; // set the SMTP port //edit
+	$Mail->Username    = 'noreply@blueprojectmanagement.com';  //edit
+	$Mail->Password    = 'p@ssw0rd123456789';  //edit
+   
+	$Mail->CharSet     = 'UTF-8'; 
+	$Mail->Subject     = $header; //edit  
+	$Mail->ContentType = 'text/html; charset=utf-8\r\n';
+	$Mail->From        = 'noreply@blueprojectmanagement.com'; //edit
+	$Mail->FromName    = $Fromname;  //edit
+	$Mail->WordWrap    = 900; // RFC 2822 Compliant for Max 998 characters per line
+   
+   
+	$Mail->AddAddress( $ToEmail ); 
+	$Mail->Body   = $MessageHTML; 
+   
+  
+	if ( $Mail->Send() ) {
+  
+	$Mail->ClearAddresses($ToEmail);
+	$Mail->SmtpClose();
+  
+		return '200';
+	}else{
+		return '400';
+	}
+  
+  }
