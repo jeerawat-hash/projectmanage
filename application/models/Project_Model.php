@@ -20,7 +20,7 @@ class Project_Model extends CI_Model
         {
                 $this->pmdb = $this->load->database("pmdb",true); 
 
-                $Project =  $this->pmdb->query("  SELECT ID,Name,EndDate,IsSuccess,IsCancel FROM Project  ")->result();
+                $Project =  $this->pmdb->query("  SELECT ID,Name,EndDate,IsSuccess,IsCancel FROM Project where IsSuspend = 0  ")->result();
                 
                 return $Project;
 
@@ -84,7 +84,7 @@ class Project_Model extends CI_Model
 SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1)/(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) * 100) ) as percent,
                 ( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) - (SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1 )) ) as Progress
                 FROM Project a where IsSuccess = 0  and IsCancel = 0
-)a where Progress != 0 ")->result();
+)a where Progress != 0 and  IsSuspend = 0 ")->result();
 
 
                 return $Project;
@@ -117,7 +117,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
 SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1)/(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) * 100) ) as percent,
                 ( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID) - (SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 1 )) ) as Progress
                 FROM Project a where IsSuccess = 0  and IsCancel = 0
-)a where Progress = 0 ")->result();
+)a where Progress = 0 and  IsSuspend = 0 ")->result();
 
 
                 return $Project;
@@ -160,7 +160,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
                 $this->pmdb = $this->load->database("pmdb",true); 
 
 
-                $Project =  $this->pmdb->query(" SELECT a.*,(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = '".$ProjectID."' ) as CoutPreiod,b.Name as CreateMemberName FROM Project a join Member b on a.CreateMemberID = b.ID WHERE a.ID = '".$ProjectID."' ")->result();
+                $Project =  $this->pmdb->query(" SELECT a.*,(SELECT count(*) FROM ProjectPeriod WHERE ProjectID = '".$ProjectID."' ) as CoutPreiod,b.Name as CreateMemberName FROM Project a join Member b on a.CreateMemberID = b.ID WHERE a.ID = '".$ProjectID."' and  IsSuspend = 0 ")->result();
 
 
                 $ProjectPeriod = $this->pmdb->query(" SELECT PeriodDetail,DueDate,SignStatus,Comment FROM ProjectPeriod WHERE ProjectID = ".$ProjectID." ")->result();
@@ -190,7 +190,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
                 join Member b on a.MemberID = b.ID
                 join Project c on a.ID = c.SignGroupID where a.MemberID = ".$Member." and c.ID = ab.ID
                 ) as Policy
-                FROM Project ab where IsSuccess = 0 and IsCancel = 0 ")->result();
+                FROM Project ab where IsSuccess = 0 and IsCancel = 0 and  IsSuspend = 0 ")->result();
  
 
 
