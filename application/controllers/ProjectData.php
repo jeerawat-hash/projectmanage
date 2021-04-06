@@ -197,11 +197,12 @@ class ProjectData extends CI_Controller {
 	{
 
 
-		print_r($this->Project_Model->getDataForNotify());
-		SendMail_attach( "p.jeerawat.th@gmail.com", "Hello","TEST","jeerawat" );
-		notify("test","HxmtCfbCf8tSBgQIS2tJxpTOLYE6DFKJ4444shwaAWt");
+		$data = $this->Project_Model->getDataForNotify();
+		$msg = "แจ้งเตือนโครงการใกล้ครบกำหนด\nลูกค้า : ".$data[0]->ClientCompany."\nงาน : ".$data[0]->Name."\nกรุณาตรวจสอบรายละเอียดเพิ่มเติมที่\nhttps://blueprojectmanagement.com/";
+		SendMail_attach( $data[0]->Email, $msg,"แจ้งเตือนโครงการ ".$data[0]->Name." ใกล้ครบกำหนด","ระบบบริหารจัดการโครงการ Blueprojectmanagement" );
+		notify($msg,$data[0]->LineToken);
 
-
+		
 	}
 
 
