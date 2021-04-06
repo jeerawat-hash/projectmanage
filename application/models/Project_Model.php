@@ -292,6 +292,16 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
  
 
         }
+        public function getDataForNotify()
+        {
+
+
+                $this->pmdb = $this->load->database("pmdb",true); 
+
+                return $this->pmdb->query("  SELECT a.RowID,b.Email,b.LineToken,c.* FROM `Notify` a JOIN Member b on a.MemberID = b.ID JOIN Project c on a.ProjectID = c.ID where IsSend = 0 ")->result();
+
+                
+        }
 
 
  

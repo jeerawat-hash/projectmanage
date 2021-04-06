@@ -197,7 +197,7 @@ class ProjectData extends CI_Controller {
 	{
 
 
-
+		print_r($this->Project_Model->getDataForNotify());
 		SendMail_attach( "p.jeerawat.th@gmail.com", "Hello","TEST","jeerawat" );
 		notify("test","HxmtCfbCf8tSBgQIS2tJxpTOLYE6DFKJ4444shwaAWt");
 
