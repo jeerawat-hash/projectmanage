@@ -32,7 +32,7 @@
                           <tr> 
                             <th>UserName</th>
                               <th>ชื่อ</th> 
-                              <th>ตำแหน่ง</th>
+                              <th hidden>ตำแหน่ง</th>
                               <th>หมายเลขโทรศัพท์</th>
                               <th>Email</th>
                               <th>LineToken</th>
@@ -52,7 +52,7 @@
                           <tr>
                               <td><?php echo $value->Username; ?></td>
                               <td><?php echo $value->Name; ?></td>
-                              <td><?php echo $value->Detail; ?></td>
+                              <td hidden><?php echo $value->Detail; ?></td>
                               <td><?php echo $value->Telephone; ?></td>
                               <td><?php echo $value->Email; ?></td>
                               <td><?php echo $value->LineToken; ?></td>
