@@ -298,8 +298,11 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
 
                 $this->pmdb = $this->load->database("pmdb",true); 
 
-                return $this->pmdb->query("  SELECT a.RowID,b.Email,b.LineToken,c.* FROM `Notify` a JOIN Member b on a.MemberID = b.ID JOIN Project c on a.ProjectID = c.ID where IsSend = 0 ")->result();
+                $detail =  $this->pmdb->query("  SELECT a.RowID,b.Email,b.LineToken,c.* FROM `Notify` a JOIN Member b on a.MemberID = b.ID JOIN Project c on a.ProjectID = c.ID where IsSend = 0 limit 1 ")->result();
+                
+                $this->pmdb->query(" UPDATE `Notify` SET `IsSend` = '1' WHERE `Notify`.`RowID` = '".$detail[0]->RowID."' ");
 
+                return $detail;
                 
         }
 
