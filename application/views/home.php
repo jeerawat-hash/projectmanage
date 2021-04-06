@@ -458,22 +458,29 @@
 
                 TXTstatus = '<div class="ribbon bg-success text-lg">ปกติ</div>';
                 BarStatus = '<div class="progress-bar bg-success progress-bar-striped" role="progressbar"aria-valuenow="'+obj[i].percent+'" aria-valuemin="0" aria-valuemax="100" style="width: '+obj[i].percent+'%"><span class="sr-only">'+obj[i].percent+'% Complete </span>';
+                if(obj[i].IsExigent == 1) {
 
+                TXTstatus = '<div class="ribbon bg-info text-lg">เร่งด่วน</div>';
+                BarStatus = '<div class="progress-bar bg-info progress-bar-striped" role="progressbar"aria-valuenow="'+obj[i].percent+'" aria-valuemin="0" aria-valuemax="100" style="width: '+obj[i].percent+'%"><span class="sr-only">'+obj[i].percent+'% Complete </span>';
+
+
+                }
 
               }else{
 
                 TXTstatus = '<div class="ribbon bg-warning text-lg">ใกล้ครบกำหนด</div>';
                 BarStatus = '<div class="progress-bar bg-warning progress-bar-striped" role="progressbar"aria-valuenow="'+obj[i].percent+'" aria-valuemin="0" aria-valuemax="100" style="width: '+obj[i].percent+'%"><span class="sr-only">'+obj[i].percent+'% Complete </span>';
+                
+                if(obj[i].IsExigent == 1) {
 
-              }
-
-              if(obj[i].IsExigent == 1) {
-
-                TXTstatus = '<div class="ribbon bg-info text-lg">งานด่วน</div>';
+                TXTstatus = '<div class="ribbon bg-info text-lg">เร่งด่วน</div>';
                 BarStatus = '<div class="progress-bar bg-info progress-bar-striped" role="progressbar"aria-valuenow="'+obj[i].percent+'" aria-valuemin="0" aria-valuemax="100" style="width: '+obj[i].percent+'%"><span class="sr-only">'+obj[i].percent+'% Complete </span>';
 
 
+                }
               }
+
+              
  
 
             }
