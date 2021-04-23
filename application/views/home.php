@@ -47,17 +47,11 @@
                       <div class="row">
                         
 
-                        <table>
-                        <tr>
-                          <td>1</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                        </tr>
-                        </table>
+                      <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                      </ul>
 
 
                       </div>  
@@ -83,17 +77,11 @@
                       <hr>
                       <div class="row">
                         
-                        <table>
-                        <tr>
-                          <td>1</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                        </tr>
-                        </table>
+                      <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                      </ul>
 
 
                       </div> 
@@ -122,17 +110,11 @@
                       <hr>
                       <div class="row">
                         
-                        <table>
-                        <tr>
-                          <td>1</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                        </tr>
-                        </table>
+                      <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                      </ul>
 
 
 
@@ -160,17 +142,11 @@
                       <div class="row">
                         
 
-                        <table>
-                        <tr>
-                          <td>1</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                        </tr>
-                        </table>
+                      <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                      </ul>
 
 
 
