@@ -86,12 +86,14 @@
  
                               if($MemberID == 5){
 
+                                if($value->Username != "admin"){
 
-                                ?> 
-                                <button class="btn btn-warning btn-sm BtnMemberEdit" data-id="<?php echo $value->ID; ?>" > <i class="fas fa-pencil-alt"> </i> แก้ไขข้อมูล </button>
-                                <?php
-                             
+                                  ?> 
+                                  <button class="btn btn-warning btn-sm BtnMemberEdit" data-id="<?php echo $value->ID; ?>" > <i class="fas fa-pencil-alt"> </i> แก้ไขข้อมูล </button>
+                                  <?php
 
+                                }
+                               
                               }
  
                               ?> 
