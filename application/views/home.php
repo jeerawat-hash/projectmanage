@@ -10,7 +10,7 @@
 
 
 
-          <div class="card card-success">
+          <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">ผลรวมการดำเนินโครงการ</h3>
               </div>
@@ -23,18 +23,12 @@
 
 
 
-
-
-
-
-
-
-
+ 
 
 
 
 <!--------------------- -->
-                <div class="col-sm-4 mt-4">
+                <div class="col-sm-6 mt-4">
                     <div class="position-relative p-3 bg-gray" style="height: 220px">
                       <div class="ribbon-wrapper ribbon-lg">
                         <div class="ribbon bg-success text-lg">
@@ -91,7 +85,7 @@
 
 
 
-                  <div class="col-sm-4 mt-4">
+                  <div class="col-sm-6 mt-4">
                     <div class="position-relative p-3 bg-gray" style="height: 220px">
                       <div class="ribbon-wrapper ribbon-xl">
                         <div class="ribbon bg-warning text-lg">
@@ -150,7 +144,7 @@
 
 
 
-                  <div class="col-sm-4 mt-4">
+                  <div class="col-sm-6 mt-4">
                     <div class="position-relative p-3 bg-gray" style="height: 220px">
                       <div class="ribbon-wrapper ribbon-xl">
                         <div class="ribbon bg-danger text-lg">
