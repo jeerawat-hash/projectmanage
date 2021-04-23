@@ -267,25 +267,25 @@ class Home extends CI_Controller {
 	public function GetDataNormal()
 	{
 
-		echo json_encode($this->Member_Model->GetDataNormal());
+		echo json_encode($this->Project_Model->GetDataNormal());
 
 	}
 	public function GetDataProOverDue()
 	{
 
-		echo json_encode($this->Member_Model->GetDataProOverDue());
+		echo json_encode($this->Project_Model->GetDataProOverDue());
 
 	}
 	public function GetDataOverDue()
 	{
 
-		echo json_encode($this->Member_Model->GetDataOverDue());
+		echo json_encode($this->Project_Model->GetDataOverDue());
 
 	}
 	public function GetDataExi()
 	{
 
-		echo json_encode($this->Member_Model->GetDataExi());
+		echo json_encode($this->Project_Model->GetDataExi());
 
 	} 
 
