@@ -203,19 +203,19 @@
             <ul class="nav nav-treeview">
               
               <li class="nav-item">
-                <a href="<?php echo base_url(); ?>/home/summary" class="nav-link <?php echo $project[1][0]; ?>">
+                <a href="<?php echo base_url(); ?>home/summary" class="nav-link <?php echo $project[1][0]; ?>">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>ภาพรวมโครงการ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?php echo base_url(); ?>/home/project" class="nav-link <?php echo $project[1][1]; ?>">
+                <a href="<?php echo base_url(); ?>home/project" class="nav-link <?php echo $project[1][1]; ?>">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>จัดการโครงการ</p>
                 </a>
               </li> 
               <li class="nav-item">
-                <a href="<?php echo base_url(); ?>/home/search" class="nav-link <?php echo $project[1][2]; ?>">
+                <a href="<?php echo base_url(); ?>home/search" class="nav-link <?php echo $project[1][2]; ?>">
                   <i class="far fa-edit nav-icon"></i>
                   <p>สืบค้นข้อมูล</p>
                 </a>
@@ -238,13 +238,13 @@
               
                
               <li class="nav-item">
-                <a href="<?php echo base_url(); ?>/home/employee" class="nav-link <?php echo $employee[1][0]; ?>">
+                <a href="<?php echo base_url(); ?>home/employee" class="nav-link <?php echo $employee[1][0]; ?>">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>ผู้ใช้งาน</p>
                 </a>
               </li>  
               <li class="nav-item">
-                <a href="<?php echo base_url(); ?>/home/logout" class="nav-link">
+                <a href="<?php echo base_url(); ?>home/logout" class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>ออกจากระบบ</p>
                 </a>

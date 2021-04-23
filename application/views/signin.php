@@ -126,7 +126,7 @@
                   
 
                   if (data == 1) {
-                    var Pagesite = "https://blueprojectmanagement.com/index.php/home/summary/";
+                    var Pagesite = "https://blueprojectmanagement.com/home/summary/";
                     location.replace(Pagesite);   
                   }else{
 
