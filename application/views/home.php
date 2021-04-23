@@ -39,19 +39,25 @@
                       <div class="row">
 
                         <div class="col-12"> 
-                                 [ชื่อโครงการ]
-                        </div> 
-                        <div class="col-12"> 
-                                 [รายละเอียดย่อ]
-                        </div> 
+                                <h3>ยอดรวม 20 โครงการ</h3> 
+                        </div>  
 
                       </div>
                       <hr>
                       <div class="row">
-                       
-                         
                         
-                        
+
+                        <table>
+                        <tr>
+                          <td>1</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                        </tr>
+                        </table>
 
 
                       </div>  
@@ -70,17 +76,24 @@
                       <div class="row">
 
                         <div class="col-12"> 
-                                 [ชื่อโครงการ]
-                        </div> 
-                        <div class="col-12"> 
-                                 [รายละเอียดย่อ]
-                        </div> 
+                                <h3>ยอดรวม 20 โครงการ</h3> 
+                        </div>  
 
                       </div>
                       <hr>
                       <div class="row">
                         
-
+                        <table>
+                        <tr>
+                          <td>1</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                        </tr>
+                        </table>
 
 
                       </div> 
@@ -101,21 +114,25 @@
                       </div>
                       <div class="row">
 
-                        <div class="col-12"> 
-                                 [ชื่อโครงการ]
-                        </div> 
-                        <div class="col-12"> 
-                                 [รายละเอียดย่อ]
-                        </div> 
+                      <div class="col-12"> 
+                                <h3>ยอดรวม 20 โครงการ</h3> 
+                        </div>   
 
                       </div>
                       <hr>
                       <div class="row">
                         
-
-
-
-
+                        <table>
+                        <tr>
+                          <td>1</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                        </tr>
+                        </table>
 
 
 
@@ -134,11 +151,8 @@
                       </div>
                       <div class="row">
 
-                        <div class="col-12"> 
-                                 [ชื่อโครงการ]
-                        </div> 
-                        <div class="col-12"> 
-                                 [รายละเอียดย่อ]
+                      <div class="col-12"> 
+                                <h3>ยอดรวม 20 โครงการ</h3> 
                         </div> 
 
                       </div>
@@ -146,7 +160,17 @@
                       <div class="row">
                         
 
-
+                        <table>
+                        <tr>
+                          <td>1</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                        </tr>
+                        </table>
 
 
 
