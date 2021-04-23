@@ -768,6 +768,7 @@
       $("#ProjectNormal").find("#ProjectDetail").html(html);
 
     });
+
     $.post("https://blueprojectmanagement.com/index.php/Home/GetDataProOverDue", function(data) {
 
 
@@ -784,8 +785,6 @@
       html += " </ul>";
 
       $("#ProjectPreOverdue").find("#ProjectDetail").html(html);
-
-    });
 
 
   });
