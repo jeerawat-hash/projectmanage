@@ -405,6 +405,38 @@
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="ProjectDetailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">รายละเอียดโครงการ</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <table id="Project">
+          <tr>
+            <th>ชื่อโครงการ</th>
+          </tr>
+          <tbody id="ProjectDetail">
+
+          </tbody>
+        </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <script type="text/javascript">
   $(function() {
@@ -838,6 +870,17 @@
 
         var obj = JSON.parse(data);
         console.log(obj);
+        $("#ProjectDetailModal").find("#ModalLabel").text("รายละเอียดโครงการปกติ");
+        $("#ProjectDetailModal").modal();
+
+        var html = "";
+        for (let index = 0; index < obj.length; index++) {
+
+          html += "<tr> <td>" + obj[index].Name + "</td> </tr>";
+
+        }
+        $("#ProjectDetailModal").find("#ProjectDetail").html(html);
+
 
       });
 
@@ -849,6 +892,16 @@
 
         var obj = JSON.parse(data);
         console.log(obj);
+        $("#ProjectDetailModal").find("#ModalLabel").text("รายละเอียดโครงการใกล้ครบกำหนด");
+        $("#ProjectDetailModal").modal();
+
+        var html = "";
+        for (let index = 0; index < obj.length; index++) {
+
+          html += "<tr> <td>" + obj[index].Name + "</td> </tr>";
+
+        }
+        $("#ProjectDetailModal").find("#ProjectDetail").html(html);
 
       });
 
@@ -861,6 +914,17 @@
 
         var obj = JSON.parse(data);
         console.log(obj);
+        $("#ProjectDetailModal").find("#ModalLabel").text("รายละเอียดโครงการเกินกำหนด");
+        $("#ProjectDetailModal").modal();
+
+        var html = "";
+        for (let index = 0; index < obj.length; index++) {
+
+          html += "<tr> <td>" + obj[index].Name + "</td> </tr>";
+
+        }
+        $("#ProjectDetailModal").find("#ProjectDetail").html(html);
+
 
       });
 
@@ -872,6 +936,17 @@
 
         var obj = JSON.parse(data);
         console.log(obj);
+        $("#ProjectDetailModal").find("#ModalLabel").text("รายละเอียดโครงการเร่งด่วน");
+        $("#ProjectDetailModal").modal();
+
+        var html = "";
+        for (let index = 0; index < obj.length; index++) {
+
+          html += "<tr> <td>" + obj[index].Name + "</td> </tr>";
+
+        }
+        $("#ProjectDetailModal").find("#ProjectDetail").html(html);
+
 
       });
 
