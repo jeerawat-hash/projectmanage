@@ -25,7 +25,7 @@
               <!-- /.card-header -->
               <div class="card-body">
 
-                <div class="container">
+                <div class="container" style="overflow-x:auto;">
 
                   <table id="MemberTable" class="table table-striped table-bordered" style="width:100%">
                     <thead>
