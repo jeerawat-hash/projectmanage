@@ -66,17 +66,21 @@
                                   <button class="btn btn-info btn-sm BtnMemberUploadImage" data-id="<?php echo $value->ID; ?>" > <i class="fas fa-pencil-alt"> </i> อัพโหลดรูปภาพ </button>
                                   <?php
                                   } 
-
                                   if($value->ID == $MemberID){
  
                                     ?> 
                                   <button class="btn btn-warning btn-sm BtnMemberEdit" data-id="<?php echo $value->ID; ?>" > <i class="fas fa-pencil-alt"> </i> แก้ไขข้อมูล </button>
                                   <?php
- 
+
                                   }
-                                  
-                              } 
+ 
+                              }else{
+                                  ?> 
+                                  <button class="btn btn-warning btn-sm BtnMemberEdit" data-id="<?php echo $value->ID; ?>" > <i class="fas fa-pencil-alt"> </i> แก้ไขข้อมูลผู้ดูแลระบบ </button>
+                                  <?php
+                              }
                               ?> 
+                              
                             
 
                               </td> 
