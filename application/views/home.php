@@ -197,6 +197,62 @@
 
                     </div>
                   </div>
+
+
+
+                  <div class="col-sm-6 mt-4">
+                    <div class="position-relative p-3 bg-gray" style="height: 220px">
+                      <div class="ribbon-wrapper ribbon-xl">
+                        <div class="ribbon bg-info text-lg">
+                          เร่งด่วน
+                        </div>
+                      </div>
+                      <div class="row">
+
+                        <div class="col-12"> 
+                                 [ชื่อโครงการ]
+                        </div> 
+                        <div class="col-12"> 
+                                 [รายละเอียดย่อ]
+                        </div> 
+
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-3 text-center"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar.png"> 
+                        </div>
+                        <div class="col-3 text-center"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar2.png"> 
+                        </div>
+                        <div class="col-3 text-center"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar3.png"> 
+                        </div>
+                        <div class="col-3 text-center"> 
+                                  <img alt="Avatar" class="table-avatar" style="width: 50%" src="https://blueprojectmanagement.com/assets/dist/img/avatar4.png"> 
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+                        <div class="col-12">
+                          
+
+                          <small> ดำเนินการแล้วเสร็จ </small>
+                          <div class="progress">
+                            <div class="progress-bar bg-danger progress-bar-striped" role="progressbar"
+                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                              <span class="sr-only">40% Complete </span>
+                            </div>
+                          </div>
+                          
+  
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
 <!--------------------- -->
 
 
