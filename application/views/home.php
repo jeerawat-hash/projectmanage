@@ -417,9 +417,9 @@
       </div>
       <div class="modal-body">
 
-        <table id="Project">
+        <table id="Project" class="table">
           <tr>
-            <th>ชื่อโครงการ</th>
+            <th scope="col">ชื่อโครงการ</th>
           </tr>
           <tbody id="ProjectDetail">
 
@@ -874,9 +874,10 @@
         $("#ProjectDetailModal").modal();
 
         var html = "";
+        var i = 0;
         for (let index = 0; index < obj.length; index++) {
-
-          html += "<tr> <td>" + obj[index].Name + "</td> </tr>";
+          i++
+          html += "<tr> <td>"+i+". " + obj[index].Name + "</td> </tr>";
 
         }
         $("#ProjectDetailModal").find("#ProjectDetail").html(html);
@@ -896,9 +897,10 @@
         $("#ProjectDetailModal").modal();
 
         var html = "";
+        var i = 0;
         for (let index = 0; index < obj.length; index++) {
-
-          html += "<tr> <td>" + obj[index].Name + "</td> </tr>";
+          i++
+          html += "<tr> <td>"+i+". " + obj[index].Name + "</td> </tr>";
 
         }
         $("#ProjectDetailModal").find("#ProjectDetail").html(html);
@@ -918,9 +920,10 @@
         $("#ProjectDetailModal").modal();
 
         var html = "";
+        var i = 0;
         for (let index = 0; index < obj.length; index++) {
-
-          html += "<tr> <td>" + obj[index].Name + "</td> </tr>";
+          i++
+          html += "<tr> <td>"+i+". " + obj[index].Name + "</td> </tr>";
 
         }
         $("#ProjectDetailModal").find("#ProjectDetail").html(html);
@@ -940,10 +943,11 @@
         $("#ProjectDetailModal").modal();
 
         var html = "";
+        var i = 0;
         for (let index = 0; index < obj.length; index++) {
-
-          html += "<tr> <td>" + obj[index].Name + "</td> </tr>";
-
+          i++
+          html += "<tr> <td>"+i+". " + obj[index].Name + "</td> </tr>";
+          
         }
         $("#ProjectDetailModal").find("#ProjectDetail").html(html);
 
