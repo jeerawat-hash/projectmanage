@@ -755,6 +755,18 @@
 
       var obj = JSON.parse(data);
       console.log(obj);
+      $("#ProjectNormal").find("#ProjectCount").text("ยอดรวม "+obj.Count[0].Normal+" โครงการ");
+
+      var html = "<ul>";
+
+      for (let index = 0; index < obj.Detail.length; index++) {
+        
+          html += "<li>"+obj.Detail[index].Name+"</li>";
+        
+      }
+      html += " </ul>";
+
+      $("#ProjectNormal").find("#ProjectDetail").html(html);
 
 
     });
