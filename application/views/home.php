@@ -755,19 +755,17 @@
 
       var obj = JSON.parse(data);
       console.log(obj);
-      $("#ProjectNormal").find("#ProjectCount").text("ยอดรวม "+obj.Count[0].Normal+" โครงการ");
+      $("#ProjectNormal").find("#ProjectCount").text("ยอดรวม " + obj.Count[0].Normal + " โครงการ");
 
       var html = "<ul>";
 
       for (let index = 0; index < obj.Detail.length; index++) {
-        
-          html += "<li>"+obj.Detail[index].Name+"</li>";
-        
+
+        html += "<li>" + obj.Detail[index].Name + "</li>";
       }
       html += " </ul>";
 
       $("#ProjectNormal").find("#ProjectDetail").html(html);
-
 
     });
     $.post("https://blueprojectmanagement.com/index.php/Home/GetDataProOverDue", function(data) {
@@ -775,56 +773,91 @@
 
       var obj = JSON.parse(data);
       console.log(obj);
+      $("#ProjectPreOverdue").find("#ProjectCount").text("ยอดรวม " + obj.Count[0].PreOverDue + " โครงการ");
 
+      var html = "<ul>";
 
-    });
-    $.post("https://blueprojectmanagement.com/index.php/Home/GetDataOverDue", function(data) {
+      for (let index = 0; index < obj.Detail.length; index++) {
 
+        html += "<li>" + obj.Detail[index].Name + "</li>";
+      }
+      html += " </ul>";
 
-      var obj = JSON.parse(data);
-      console.log(obj);
-
-
-    });
-    $.post("https://blueprojectmanagement.com/index.php/Home/GetDataExi", function(data) {
-
-
-      var obj = JSON.parse(data);
-      console.log(obj);
-
+      $("#ProjectPreOverdue").find("#ProjectDetail").html(html);
 
     });
 
 
+  });
+  $.post("https://blueprojectmanagement.com/index.php/Home/GetDataOverDue", function(data) {
+
+
+    var obj = JSON.parse(data);
+    console.log(obj);
+    $("#ProjectOverdue").find("#ProjectCount").text("ยอดรวม " + obj.Count[0].OverDue + " โครงการ");
+
+    var html = "<ul>";
+
+    for (let index = 0; index < obj.Detail.length; index++) {
+
+      html += "<li>" + obj.Detail[index].Name + "</li>";
+    }
+    html += " </ul>";
+
+    $("#ProjectOverdue").find("#ProjectDetail").html(html);
+
+
+  });
+  $.post("https://blueprojectmanagement.com/index.php/Home/GetDataExi", function(data) {
+
+
+    var obj = JSON.parse(data);
+    console.log(obj);
+    $("#ProjectExigent").find("#ProjectCount").text("ยอดรวม " + obj.Count[0].Exi + " โครงการ");
+
+    var html = "<ul>";
+
+    for (let index = 0; index < obj.Detail.length; index++) {
+
+      html += "<li>" + obj.Detail[index].Name + "</li>";
+    }
+    html += " </ul>";
+
+    $("#ProjectExigent").find("#ProjectDetail").html(html);
+
+
+  });
 
 
 
 
-    $("#ProjectNormal").on("click", function() {
-
-      alert();
-
-    });
-
-    $("#ProjectPreOverdue").on("click", function() {
-
-      alert();
 
 
-    });
+  $("#ProjectNormal").on("click", function() {
 
-    $("#ProjectOverdue").on("click", function() {
+    alert();
 
-      alert();
+  });
 
-    });
+  $("#ProjectPreOverdue").on("click", function() {
 
-    $("#ProjectExigent").on("click", function() {
-
-      alert();
+    alert();
 
 
-    });
+  });
+
+  $("#ProjectOverdue").on("click", function() {
+
+    alert();
+
+  });
+
+  $("#ProjectExigent").on("click", function() {
+
+  alert();
+
+
+  });
 
 
 
