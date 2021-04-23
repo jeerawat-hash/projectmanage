@@ -317,7 +317,9 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
  
 
         public function GetDataNormalDetail()
-        {
+        {       
+
+                $this->pmdb = $this->load->database("pmdb",true); 
 
                 $ProjectDetail = $this->pmdb->query(" select * from (
                         select *, (DATE_ADD((SELECT DueDate FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 0 order by DueDate asc limit 1), INTERVAL -a.PeriodEndDate DAY) ) as PeriodNotify ,(SELECT DueDate FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 0 order by DueDate asc limit 1) as LastPeriodDate  ,(case 
@@ -349,6 +351,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
         public function GetDataPreOverDueDetail()
         {
 
+                $this->pmdb = $this->load->database("pmdb",true); 
                 $ProjectDetail = $this->pmdb->query(" select * from (
                         select *, (DATE_ADD((SELECT DueDate FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 0 order by DueDate asc limit 1), INTERVAL -a.PeriodEndDate DAY) ) as PeriodNotify ,(SELECT DueDate FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 0 order by DueDate asc limit 1) as LastPeriodDate  ,(case 
                         
@@ -377,7 +380,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
 
         public function GetDataOverDueDetail()
         {
-
+                $this->pmdb = $this->load->database("pmdb",true); 
                 $ProjectDetail = $this->pmdb->query(" select * from (
                         select *, (DATE_ADD((SELECT DueDate FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 0 order by DueDate asc limit 1), INTERVAL -a.PeriodEndDate DAY) ) as PeriodNotify ,(SELECT DueDate FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 0 order by DueDate asc limit 1) as LastPeriodDate  ,(case 
                         
@@ -406,7 +409,7 @@ SELECT *,( select ((SELECT count(*) FROM ProjectPeriod WHERE ProjectID = a.ID an
 
         public function GetDataProjectExiDetail()
         {
-
+                $this->pmdb = $this->load->database("pmdb",true); 
                 $ProjectDetail = $this->pmdb->query("  select * from (
                         select *, (DATE_ADD((SELECT DueDate FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 0 order by DueDate asc limit 1), INTERVAL -a.PeriodEndDate DAY) ) as PeriodNotify ,(SELECT DueDate FROM ProjectPeriod WHERE ProjectID = a.ID and DueStatus = 0 order by DueDate asc limit 1) as LastPeriodDate  ,(case 
                         
