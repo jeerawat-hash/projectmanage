@@ -38,19 +38,14 @@
                   <div class="row">
 
                     <div class="col-12">
-                      <h3>ยอดรวม 20 โครงการ</h3>
+                      <h3 id="ProjectCount">ยอดรวม 20 โครงการ</h3>
                     </div>
 
                   </div>
                   <hr>
-                  <div class="row">
+                  <div class="row" id="ProjectDetail">
 
 
-                    <ul>
-                      <li>Coffee</li>
-                      <li>Tea</li>
-                      <li>Milk</li>
-                    </ul>
 
 
                   </div>
@@ -69,18 +64,13 @@
                   <div class="row">
 
                     <div class="col-12">
-                      <h3>ยอดรวม 20 โครงการ</h3>
+                      <h3 id="ProjectCount">ยอดรวม 20 โครงการ</h3>
                     </div>
 
                   </div>
                   <hr>
-                  <div class="row">
+                  <div class="row" id="ProjectDetail">
 
-                    <ul>
-                      <li>Coffee</li>
-                      <li>Tea</li>
-                      <li>Milk</li>
-                    </ul>
 
 
                   </div>
@@ -102,18 +92,13 @@
                   <div class="row">
 
                     <div class="col-12">
-                      <h3>ยอดรวม 20 โครงการ</h3>
+                      <h3 id="ProjectCount">ยอดรวม 20 โครงการ</h3>
                     </div>
 
                   </div>
                   <hr>
-                  <div class="row">
+                  <div class="row" id="ProjectDetail">
 
-                    <ul>
-                      <li>Coffee</li>
-                      <li>Tea</li>
-                      <li>Milk</li>
-                    </ul>
 
 
                   </div>
@@ -132,19 +117,12 @@
                   <div class="row">
 
                     <div class="col-12">
-                      <h3>ยอดรวม 20 โครงการ</h3>
+                      <h3 id="ProjectCount">ยอดรวม 20 โครงการ</h3>
                     </div>
 
                   </div>
                   <hr>
-                  <div class="row">
-
-
-                    <ul>
-                      <li>Coffee</li>
-                      <li>Tea</li>
-                      <li>Milk</li>
-                    </ul>
+                  <div class="row" id="ProjectDetail">
 
 
 
@@ -772,6 +750,43 @@
 
 
 
+    $.post("https://blueprojectmanagement.com/index.php/Home/GetDataNormal", function(data) {
+
+
+      var obj = JSON.parse(data);
+      console.log(obj);
+
+
+    });
+    $.post("https://blueprojectmanagement.com/index.php/Home/GetDataProOverDue", function(data) {
+
+
+      var obj = JSON.parse(data);
+      console.log(obj);
+
+
+    });
+    $.post("https://blueprojectmanagement.com/index.php/Home/GetDataOverDue", function(data) {
+
+
+      var obj = JSON.parse(data);
+      console.log(obj);
+
+
+    });
+    $.post("https://blueprojectmanagement.com/index.php/Home/GetDataExi", function(data) {
+
+
+      var obj = JSON.parse(data);
+      console.log(obj);
+
+
+    });
+
+
+
+
+
 
     $("#ProjectNormal").on("click", function() {
 
@@ -789,7 +804,6 @@
     $("#ProjectOverdue").on("click", function() {
 
       alert();
-
 
     });
 
